@@ -53,7 +53,7 @@ class User extends Component {
         </Header>
 
         <Content padder>
-          <Card>
+          <Card style={styles.card}>
             <CardItem button>
               <Icon name="logo-googleplus" />
               <Text>Google Plus</Text>
@@ -67,7 +67,7 @@ class User extends Component {
               <Text>Google Plus</Text>
             </CardItem>
           </Card>
-          <Card>
+          <Card style={styles.card}>
             <CardItem button>
               <Icon name="logo-googleplus" style={{ color: '#DD5044' }} />
               <Text>Google Plus</Text>
