@@ -8,6 +8,15 @@ module.exports = StyleSheet.create({
     backgroundColor: '#FBFAFA',
   },
   card:{
-    margin:24,
-  }
+    margin:8,
+  },
+  content: {
+    backgroundColor: 'transparent',
+    borderRadius: 3,
+    alignItems: 'center',
+    // Image's source contains explicit size, but we want
+    // it to prefer flex: 1
+    width: undefined,
+    height: undefined,
+  },
 });

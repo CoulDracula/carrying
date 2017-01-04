@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {TouchableOpacity} from 'react-native';
+import {TouchableOpacity,Image} from 'react-native';
 import {connect} from 'react-redux';
 import {actions} from 'react-native-navigation-redux-helpers';
 import {Container, Header, Title, Content, Text, Footer, FooterTab, Button, Badge, Icon} from 'native-base';
@@ -30,7 +30,6 @@ class Home extends Component {
       key: React.PropTypes.string,
     }),
   }
-
   pushRoute (route, index) {
     this.props.setIndex(index);
     this.props.pushRoute({ key: route, index: 1 }, this.props.navigation.key);
@@ -43,6 +42,9 @@ class Home extends Component {
   render () {
     return (
       <Container theme={myTheme} style={styles.container}>
+        <Image
+          style={styles.content}
+          source={require('./img/background.png')} >
         <Header>
           <Button transparent onPress={() => this.props.reset(this.props.navigation.key)}>
             <Icon name="ios-power"/>
@@ -56,6 +58,7 @@ class Home extends Component {
         </Header>
 
         <Content>
+
           <Grid style={styles.mt}>
             {this.props.list.map((item, i) =>
               <Row key={i}>
@@ -71,13 +74,13 @@ class Home extends Component {
         </Content>
         <Footer >
           <FooterTab>
-            <Button onPress={() => this.navigateTo('blankPage')}>
+            <Button onPress={() => this.navigateTo('appPage')}>
               Apps
               <Icon name='ios-apps-outline'/>
             </Button>
             <Button onPress={() => this.navigateTo('blankPage')}>
-              Camera
-              <Icon name='ios-camera-outline'/>
+              Share
+              <Icon name='ios-home-outline'/>
             </Button>
             <Button active onPress={() => this.navigateTo('memoPage')}>
               Memo
@@ -89,7 +92,7 @@ class Home extends Component {
             </Button>
           </FooterTab>
         </Footer>
-
+        </Image>
       </Container>
     );
   }

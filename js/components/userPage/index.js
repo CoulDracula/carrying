@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { actions } from 'react-native-navigation-redux-helpers';
 import { Container, Header, Title, Content, Text, Button, Icon ,Card, CardItem} from 'native-base';
-
 import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
 
@@ -51,34 +50,19 @@ class UserPage extends Component {
             <Icon name="ios-menu" />
           </Button>
         </Header>
-
         <Content padder>
           <Card style={styles.card}>
             <CardItem button>
               <Icon name="logo-googleplus" />
-              <Text>Google Plus</Text>
+              <Text>My Information</Text>
             </CardItem>
             <CardItem button >
               <Icon name="logo-googleplus" style={{ color: '#DD5044' }} />
-              <Text>Google Plus</Text>
+              <Text>Google Center</Text>
             </CardItem>
             <CardItem button>
               <Icon name="logo-googleplus" style={{ color: '#DD5044' }} />
-              <Text>Google Plus</Text>
-            </CardItem>
-          </Card>
-          <Card style={styles.card}>
-            <CardItem button>
-              <Icon name="logo-googleplus" style={{ color: '#DD5044' }} />
-              <Text>Google Plus</Text>
-            </CardItem>
-            <CardItem button>
-              <Icon name="logo-googleplus" style={{ color: '#DD5044' }} />
-              <Text>Google Plus</Text>
-            </CardItem>
-            <CardItem button>
-              <Icon name="logo-googleplus" style={{ color: '#DD5044' }} />
-              <Text>Google Plus</Text>
+              <Text>Google Center</Text>
             </CardItem>
           </Card>
         </Content>

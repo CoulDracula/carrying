@@ -1,4 +1,3 @@
-
 import type { Action } from '../actions/types';
 import { SET_INDEX } from '../actions/list';
 
@@ -14,7 +13,6 @@ const initialState = {
     'NativeBase',
     'CodePush',
     'Redux',
-    'Test',
   ],
   selectedIndex: undefined,
 };
