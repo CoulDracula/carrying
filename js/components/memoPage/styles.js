@@ -7,4 +7,8 @@ module.exports = StyleSheet.create({
   container: {
     backgroundColor: '#FBFAFA',
   },
+  card:{
+    margin:8,
+  }
+
 });

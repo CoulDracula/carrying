@@ -58,7 +58,7 @@ class Login extends Component {
                     secureTextEntry
                   />
                 </InputGroup>
-                <Button style={styles.btn} onPress={() => this.replaceRoute('home')}>
+                <Button success style={styles.btn} onPress={() => this.replaceRoute('home')}>
                   Login
                 </Button>
               </View>

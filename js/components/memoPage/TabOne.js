@@ -1,25 +1,39 @@
+import React, {Component} from 'react';
+import { Image ,View} from 'react-native';
+import {actions} from 'react-native-navigation-redux-helpers';
+import { Container, Content, Card, CardItem, Thumbnail, Text, Spinner, Icon } from 'native-base';
 
-import React, { Component } from 'react';
-// import { connect } from 'react-redux';
-import { actions } from 'react-native-navigation-redux-helpers';
-import { Container, Header, Title, Content, Text, Button, Icon } from 'native-base';
-// import TabOne from './tabOne';
-// import TabTwo from './tabTwo';
-//
-// import { openDrawer } from '../../actions/drawer';
-// import styles from './styles';
+import styles from './styles';
+const TabOne = ({ publicMemos }) => {
 
 
-const TabOne = ()=> {
+  return (
+    <Container>
+      <Content>
+        {publicMemos.length<=0 &&
 
-
-    return (
-      <Container>
-        <Content>
-          <Text>ghgffdddhjgfd</Text>
-        </Content>
-      </Container>
-    );
+        <Spinner />
+        }
+        {publicMemos.map(
+          publicMemo => {
+            return (
+            <Card style={styles.card}>
+              <CardItem >
+                  <Thumbnail source={require('./img/logo.png')} />
+                  <Text>{publicMemo.title}</Text>
+                  <Text note>{publicMemo.date}</Text>
+                  <Text>{publicMemo.grade}</Text>
+              </CardItem>
+              <CardItem cardBody>
+                <Text>{publicMemo.content}</Text>
+              </CardItem>
+            </Card>
+            )
+          }
+        )}
+      </Content>
+    </Container>
+  );
 
 }
 

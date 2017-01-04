@@ -12,6 +12,7 @@ import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
 
 const {
+  pushRoute,
   popRoute,
 } = actions;
 
@@ -38,8 +39,12 @@ class MemoPage extends Component {
   popRoute() {
     this.props.popRoute(this.props.navigation.key);
   }
+  editMemo(){
+    this.props.pushRoute({ key: 'memoEditPage', index: 1 }, this.props.navigation.key);
+  }
 
   render() {
+    const {publicMemos}=this.props;
     return (
       <Container style={styles.container}>
         <Header>
@@ -49,14 +54,14 @@ class MemoPage extends Component {
 
           <Title>Memo</Title>
 
-          <Button transparent onPress={this.props.openDrawer}>
-            <Icon name="ios-menu" />
+          <Button transparent onPress={() => this.editMemo()}>
+            <Icon name="ios-add" />
           </Button>
         </Header>
-        <Content theme={myTheme}>
-          <Tabs>
-            <TabOne tabLabel='private' />
-            <TabTwo tabLabel='public' />
+        <Content >
+          <Tabs tabTextColor="#AAAAAA">
+            <TabOne tabLabel='public' tabTextColor="#AAAAAA" publicMemos={publicMemos} />
+            <TabTwo tabLabel='private' />
           </Tabs>
         </Content>
       </Container>
@@ -66,6 +71,7 @@ class MemoPage extends Component {
 
 function bindAction(dispatch) {
   return {
+    pushRoute: (route, key) => dispatch(pushRoute(route, key)),
     loadPublicMemos:  () => dispatch(loadPublicMemos()),
     openDrawer: () => dispatch(openDrawer()),
     popRoute: key => dispatch(popRoute(key)),
@@ -77,6 +83,8 @@ const mapStateToProps = state => ({
   name: state.user.name,
   index: state.list.selectedIndex,
   list: state.list.list,
+  publicMemos:state.memo.publicMemos,
+
 });
 
 
