@@ -5,6 +5,7 @@ import drawer from './drawer';
 import cardNavigation from './cardNavigation';
 import user from './user';
 import list from './list';
+import memo from './memo';
 
 export default combineReducers({
 
@@ -12,5 +13,5 @@ export default combineReducers({
   user,
   list,
   cardNavigation,
-
+  memo,
 });

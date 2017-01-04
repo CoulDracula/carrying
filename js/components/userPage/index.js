@@ -13,7 +13,7 @@ const {
     pushRoute,
 } = actions;
 
-class User extends Component {
+class UserPage extends Component {
 
   static propTypes = {
     name: React.PropTypes.string,
@@ -103,4 +103,4 @@ const mapStateToProps = state => ({
 });
 
 
-export default connect(mapStateToProps, bindAction)(User);
+export default connect(mapStateToProps, bindAction)(UserPage);

@@ -12,7 +12,8 @@ import Home from './components/home/';
 import BlankPage from './components/blankPage';
 import SplashPage from './components/splashscreen/';
 import SideBar from './components/sideBar';
-import User from './components/user';
+import UserPage from './components/userPage';
+import MemoPage from './components/memoPage';
 import { statusBarColor } from './themes/base-theme';
 
 const {
@@ -83,7 +84,9 @@ class AppNavigator extends Component {
       case 'blankPage':
         return <BlankPage />;
       case 'user':
-        return <User />;
+        return <UserPage />;
+      case 'memoPage':
+        return <MemoPage />;
       default :
         return <SplashPage />;
     }

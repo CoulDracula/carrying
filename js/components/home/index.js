@@ -79,8 +79,8 @@ class Home extends Component {
               Camera
               <Icon name='ios-camera-outline'/>
             </Button>
-            <Button active onPress={() => this.navigateTo('blankPage')}>
-              Navigate
+            <Button active onPress={() => this.navigateTo('memoPage')}>
+              Memo
               <Icon name='ios-compass'/>
             </Button>
             <Button onPress={() => this.navigateTo('user')}>
