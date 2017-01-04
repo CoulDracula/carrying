@@ -16,7 +16,7 @@ class MemoEditPage extends Component {
     super(props);
     this.state = {
       selectedItem: undefined,
-      selected1: 'key0',
+      grade: 'key0',
       results: {
         items: [],
       },
@@ -24,7 +24,7 @@ class MemoEditPage extends Component {
   }
   onValueChange(value: string) {
     this.setState({
-      selected1: value,
+      grade: value,
     });
   }
 
@@ -61,49 +61,43 @@ class MemoEditPage extends Component {
         </Header>
         <Content>
           <List>
-            <ListItem>
-              <InputGroup>
-                <Input inlineLabel label="First Name" placeholder="John" />
-              </InputGroup>
-            </ListItem>
 
             <ListItem>
               <InputGroup>
                 <Icon name="ios-person" style={{ color: '#0A69FE' }} />
-                <Input placeholder="EMAIL" />
+                <Input placeholder="Title" />
               </InputGroup>
             </ListItem>
             <ListItem>
               <InputGroup>
                 <Icon name="ios-unlock" style={{ color: '#0A69FE' }} />
-                <Input placeholder="PASSWORD" secureTextEntry />
+                <Input placeholder="Content" secureTextEntry />
               </InputGroup>
             </ListItem>
             <ListItem>
               <InputGroup>
                 <Icon name="ios-call" style={{ color: '#0A69FE' }} />
-                <Input placeholder="PHONE" keyboardType="numeric" />
+                <Input placeholder="date" keyboardType="numeric" />
               </InputGroup>
             </ListItem>
-
+            <ListItem>
+              <InputGroup>
+                <Icon name="ios-call" style={{ color: '#0A69FE' }} />
+                <Input placeholder="Author" keyboardType="numeric" />
+              </InputGroup>
+            </ListItem>
             <ListItem iconLeft>
               <Icon name="ios-transgender" style={{ color: '#0A69FE' }} />
-              <Text>GENDER</Text>
+              <Text>Grade</Text>
               <Picker
-                iosHeader="Select one"
+                iosHeader="Grade"
                 mode="dropdown"
-                selectedValue={this.state.selected1}
+                selectedValue={this.state.grade}
                 onValueChange={this.onValueChange.bind(this)} >
-                <Item label="Male" value="key0" />
-                <Item label="Female" value="key1" />
-                <Item label="Other" value="key2" />
+                <Item label="High" value="key0" />
+                <Item label="Middle" value="key1" />
+                <Item label="Low" value="key2" />
               </Picker>
-            </ListItem>
-
-            <ListItem>
-              <InputGroup >
-                <Input stackedLabel label="Permanent Address" placeholder="Address" />
-              </InputGroup>
             </ListItem>
           </List>
           <Button bordered success style={{ alignSelf: 'center', marginTop: 20, marginBottom: 20 }}>
