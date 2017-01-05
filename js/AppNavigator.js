@@ -1,11 +1,10 @@
+import React, {Component} from 'react';
+import {BackAndroid, StatusBar, NavigationExperimental} from 'react-native';
+import {connect} from 'react-redux';
+import {Drawer} from 'native-base';
+import {actions} from 'react-native-navigation-redux-helpers';
 
-import React, { Component } from 'react';
-import { BackAndroid, StatusBar, NavigationExperimental } from 'react-native';
-import { connect } from 'react-redux';
-import { Drawer } from 'native-base';
-import { actions } from 'react-native-navigation-redux-helpers';
-
-import { closeDrawer } from './actions/drawer';
+import {closeDrawer} from './actions/drawer';
 
 import Login from './components/login/';
 import Home from './components/home/';
@@ -17,7 +16,9 @@ import MemoPage from './components/memoPage';
 import AppPage from './components/appPage';
 import TimeTablePage from './components/timeTablePage';
 import MemoEditPage from './components/memoPage/MemoEditPage';
-import { statusBarColor } from './themes/base-theme';
+import StrongBoxPage from './components/strongBoxPage';
+import MapPage from './components/map';
+import {statusBarColor} from './themes/base-theme';
 
 const {
   popRoute,
@@ -39,7 +40,7 @@ class AppNavigator extends Component {
     }),
   }
 
-  componentDidMount() {
+  componentDidMount () {
     BackAndroid.addEventListener('hardwareBackPress', () => {
       const routes = this.props.navigation.routes;
 
@@ -52,7 +53,7 @@ class AppNavigator extends Component {
     });
   }
 
-  componentDidUpdate() {
+  componentDidUpdate () {
     if (this.props.drawerState === 'opened') {
       this.openDrawer();
     }
@@ -62,21 +63,21 @@ class AppNavigator extends Component {
     }
   }
 
-  popRoute() {
+  popRoute () {
     this.props.popRoute();
   }
 
-  openDrawer() {
+  openDrawer () {
     this._drawer.open();
   }
 
-  closeDrawer() {
+  closeDrawer () {
     if (this.props.drawerState === 'opened') {
       this.props.closeDrawer();
     }
   }
 
-  _renderScene(props) { // eslint-disable-line class-methods-use-this
+  _renderScene (props) { // eslint-disable-line class-methods-use-this
     switch (props.scene.route.key) {
       case 'splashscreen':
         return <SplashPage />;
@@ -96,12 +97,16 @@ class AppNavigator extends Component {
         return <MemoPage />;
       case 'timeTable' :
         return <TimeTablePage/>;
+      case 'strongBox' :
+        return <StrongBoxPage/>;
+      case 'map':
+        return <MapPage/>;
       default :
         return <SplashPage />;
     }
   }
 
-  render() {
+  render () {
     return (
       <Drawer
         ref={(ref) => { this._drawer = ref; }}
@@ -144,7 +149,7 @@ class AppNavigator extends Component {
   }
 }
 
-function bindAction(dispatch) {
+function bindAction (dispatch) {
   return {
     closeDrawer: () => dispatch(closeDrawer()),
     popRoute: key => dispatch(popRoute(key)),

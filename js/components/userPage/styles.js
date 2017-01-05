@@ -19,4 +19,7 @@ module.exports = StyleSheet.create({
     width: undefined,
     height: undefined,
   },
+  icon:{
+    color: '#0A69FE'
+  }
 });

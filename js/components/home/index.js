@@ -64,7 +64,7 @@ class Home extends Component {
 
           <Header>
             {this.state.page != 'User Center' &&
-              <Button transparent onPress={() => this.popRoute()}>
+              <Button transparent >
                 <Icon name="ios-arrow-back" />
               </Button>
             }

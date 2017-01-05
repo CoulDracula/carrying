@@ -47,10 +47,17 @@ class AppPage extends Component {
             </CardItem>
           </Card>
           <Card style={styles.card}>
-            <CardItem>
+            <CardItem onPress={() => this.pushRoute('strongBox')}>
               <Thumbnail />
-              <Text>NativeBase</Text>
-              <Text note>GeekyAnts</Text>
+              <Text>Strong Box</Text>
+              <Text note>safe center</Text>
+            </CardItem>
+          </Card>
+          <Card style={styles.card}>
+            <CardItem onPress={() => this.pushRoute('map')}>
+              <Thumbnail />
+              <Text>Map Map</Text>
+              <Text note>position</Text>
             </CardItem>
           </Card>
         </Content>

@@ -2,7 +2,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { actions } from 'react-native-navigation-redux-helpers';
-import { Container, Content, List, ListItem, Text, Icon, Badge } from 'native-base';
+import { Container, Header, Title, Content, Text, Button, Icon ,Card, CardItem,Thumbnail} from 'native-base';
+import { Col, Row, Grid } from 'react-native-easy-grid';
+import { Image } from 'react-native';
 
 import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
@@ -13,8 +15,7 @@ const {
     pushRoute,
 } = actions;
 
-class UserPage extends Component {
-
+class MapPage extends Component {
   static propTypes = {
     name: React.PropTypes.string,
     index: React.PropTypes.number,
@@ -27,6 +28,9 @@ class UserPage extends Component {
     }),
   }
 
+  componentWillMount(){
+
+  }
   popRoute() {
     this.props.popRoute(this.props.navigation.key);
   }
@@ -39,26 +43,17 @@ class UserPage extends Component {
   render() {
 
     return (
-
+      <Container style={styles.container}>
+        <Header>
+          <Button transparent onPress={() => this.popRoute()}>
+            <Icon name="ios-arrow-back" />
+          </Button>
+          <Title>Strong Box</Title>
+        </Header>
         <Content padder>
-          <List>
-            <ListItem iconLeft>
-              <Icon name="ios-plane" style={styles.icon} />
-              <Text>Airplane Mode</Text>
-              <Text note>Off</Text>
-            </ListItem>
-            <ListItem iconLeft>
-              <Icon name="ios-settings-outline" style={styles.icon} />
-              <Text>Software Update</Text>
-              <Badge style={{ backgroundColor: '#8C97B5' }}>2</Badge>
-            </ListItem>
-            <ListItem iconLeft>
-              <Icon name="ios-mail-outline" style={styles.icon} />
-              <Text>Mail Center</Text>
-              <Badge>12</Badge>
-            </ListItem>
-          </List>
+
         </Content>
+      </Container>
     );
   }
 }
@@ -79,4 +74,4 @@ const mapStateToProps = state => ({
 });
 
 
-export default connect(mapStateToProps, bindAction)(UserPage);
+export default connect(mapStateToProps, bindAction)(MapPage);

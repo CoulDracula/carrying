@@ -115302,7 +115302,6 @@ if(this.props.backButtonClose&&Platform.OS==='android')BackAndroid.removeEventLi
 module.exports=ModalBox;
 }, "react-native-modalbox/index.js");
 __d(860 /* NativeStarterKit/js/AppNavigator.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _react2=require(409 /* react */);var _react3=_interopRequireDefault(_react2);var _index=require(226 /* ./../node_modules/react-transform-hmr/lib/index.js */);var _index2=_interopRequireDefault(_index);var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _class,_temp;
-
 var _reactNative=require(12 /* react-native */);
 var _reactRedux=require(660 /* react-redux */);
 var _nativeBase=require(690 /* native-base */);
@@ -115320,6 +115319,8 @@ var _memoPage=require(886 /* ./components/memoPage */);var _memoPage2=_interopRe
 var _appPage=require(897 /* ./components/appPage */);var _appPage2=_interopRequireDefault(_appPage);
 var _timeTablePage=require(899 /* ./components/timeTablePage */);var _timeTablePage2=_interopRequireDefault(_timeTablePage);
 var _MemoEditPage=require(901 /* ./components/memoPage/MemoEditPage */);var _MemoEditPage2=_interopRequireDefault(_MemoEditPage);
+var _strongBoxPage=require(1036 /* ./components/strongBoxPage */);var _strongBoxPage2=_interopRequireDefault(_strongBoxPage);
+var _map=require(1038 /* ./components/map */);var _map2=_interopRequireDefault(_map);
 var _baseTheme=require(876 /* ./themes/base-theme */);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={AppNavigator:{displayName:'AppNavigator'}};var _node_modulesReactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/js/AppNavigator.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _node_modulesReactTransformHmrLibIndexJs2(Component,id);};}var
 
 
@@ -115399,6 +115400,10 @@ case'memoPage':
 return _react3.default.createElement(_memoPage2.default,null);
 case'timeTable':
 return _react3.default.createElement(_timeTablePage2.default,null);
+case'strongBox':
+return _react3.default.createElement(_strongBoxPage2.default,null);
+case'map':
+return _react3.default.createElement(_map2.default,null);
 default:
 return _react3.default.createElement(_splashscreen2.default,null);}
 
@@ -116114,7 +116119,7 @@ _react3.default.createElement(_nativeBase.Container,{theme:_baseTheme2.default,s
 
 _react3.default.createElement(_nativeBase.Header,null,
 this.state.page!='User Center'&&
-_react3.default.createElement(_nativeBase.Button,{transparent:true,onPress:function onPress(){return _this2.popRoute();}},
+_react3.default.createElement(_nativeBase.Button,{transparent:true},
 _react3.default.createElement(_nativeBase.Icon,{name:'ios-arrow-back'})),
 
 
@@ -134074,15 +134079,13 @@ _react2.default.createElement(_nativeBase.Spinner,null),
 publicMemos.map(
 function(publicMemo){
 return(
-_react2.default.createElement(_nativeBase.Card,{style:_styles2.default.card,key:publicMemo._id},
-_react2.default.createElement(_nativeBase.CardItem,null,
-_react2.default.createElement(_nativeBase.Thumbnail,{source:require(895 /* ./img/logo.png */)}),
+_react2.default.createElement(_nativeBase.List,null,
+_react2.default.createElement(_nativeBase.ListItem,{key:publicMemo._id},
+_react2.default.createElement(_nativeBase.Thumbnail,{square:true,size:80,source:require(895 /* ./img/logo.png */)}),
 _react2.default.createElement(_nativeBase.Text,null,publicMemo.title),
-_react2.default.createElement(_nativeBase.Text,{note:true},publicMemo.date),
-_react2.default.createElement(_nativeBase.Text,null,publicMemo.grade)),
+_react2.default.createElement(_nativeBase.Text,{note:true},publicMemo.grade))));
 
-_react2.default.createElement(_nativeBase.CardItem,{cardBody:true},
-_react2.default.createElement(_nativeBase.Text,null,publicMemo.content))));
+
 
 
 
@@ -134096,6 +134099,17 @@ _react2.default.createElement(_nativeBase.Text,null,publicMemo.content))));
 
 
 TabOne;
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
 }, "NativeStarterKit/js/components/memoPage/TabOne.js");
 __d(894 /* NativeStarterKit/js/components/memoPage/styles.js */, function(global, require, module, exports) {
 var React=require(12 /* react-native */);var
@@ -134179,19 +134193,6 @@ this.props.pushRoute({key:route,index:1},this.props.navigation.key);
 {var _this2=this;
 
 return(
-_react3.default.createElement(_nativeBase.Container,{style:_styles2.default.container},
-_react3.default.createElement(_nativeBase.Header,null,
-_react3.default.createElement(_nativeBase.Button,{transparent:true,onPress:function onPress(){return _this2.popRoute();}},
-_react3.default.createElement(_nativeBase.Icon,{name:'ios-arrow-back'})),
-
-
-_react3.default.createElement(_nativeBase.Title,null,'App Center'),
-
-_react3.default.createElement(_nativeBase.Button,{transparent:true,onPress:this.props.openDrawer},
-_react3.default.createElement(_nativeBase.Icon,{name:'ios-menu'}))),
-
-
-
 _react3.default.createElement(_nativeBase.Content,{padder:true},
 _react3.default.createElement(_nativeBase.Card,{style:_styles2.default.card},
 _react3.default.createElement(_nativeBase.CardItem,{onPress:function onPress(){return _this2.pushRoute('timeTable');}},
@@ -134201,11 +134202,17 @@ _react3.default.createElement(_nativeBase.Text,{note:true},'when and where'))),
 
 
 _react3.default.createElement(_nativeBase.Card,{style:_styles2.default.card},
-_react3.default.createElement(_nativeBase.CardItem,null,
+_react3.default.createElement(_nativeBase.CardItem,{onPress:function onPress(){return _this2.pushRoute('strongBox');}},
 _react3.default.createElement(_nativeBase.Thumbnail,null),
-_react3.default.createElement(_nativeBase.Text,null,'NativeBase'),
-_react3.default.createElement(_nativeBase.Text,{note:true},'GeekyAnts'))))));
+_react3.default.createElement(_nativeBase.Text,null,'Strong Box'),
+_react3.default.createElement(_nativeBase.Text,{note:true},'safe center'))),
 
+
+_react3.default.createElement(_nativeBase.Card,{style:_styles2.default.card},
+_react3.default.createElement(_nativeBase.CardItem,{onPress:function onPress(){return _this2.pushRoute('map');}},
+_react3.default.createElement(_nativeBase.Thumbnail,null),
+_react3.default.createElement(_nativeBase.Text,null,'Map Map'),
+_react3.default.createElement(_nativeBase.Text,{note:true},'position')))));
 
 
 
@@ -134248,6 +134255,7 @@ __d(884 /* NativeStarterKit/js/components/userPage/index.js */, function(global,
 var _reactRedux=require(660 /* react-redux */);
 var _reactNativeNavigationReduxHelpers=require(861 /* react-native-navigation-redux-helpers */);
 var _nativeBase=require(690 /* native-base */);
+
 var _drawer=require(862 /* ../../actions/drawer */);
 var _styles=require(885 /* ./styles */);var _styles2=_interopRequireDefault(_styles);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={UserPage:{displayName:'UserPage'}};var _node_modulesReactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/js/components/userPage/index.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _node_modulesReactTransformHmrLibIndexJs2(Component,id);};}var
 
@@ -134285,18 +134293,21 @@ this.props.pushRoute({key:route,index:1},this.props.navigation.key);
 return(
 
 _react3.default.createElement(_nativeBase.Content,{padder:true},
-_react3.default.createElement(_nativeBase.Card,{style:_styles2.default.card},
-_react3.default.createElement(_nativeBase.CardItem,{button:true},
-_react3.default.createElement(_nativeBase.Icon,{name:'logo-googleplus'}),
-_react3.default.createElement(_nativeBase.Text,null,'My Information')),
+_react3.default.createElement(_nativeBase.List,null,
+_react3.default.createElement(_nativeBase.ListItem,{iconLeft:true},
+_react3.default.createElement(_nativeBase.Icon,{name:'ios-plane',style:_styles2.default.icon}),
+_react3.default.createElement(_nativeBase.Text,null,'Airplane Mode'),
+_react3.default.createElement(_nativeBase.Text,{note:true},'Off')),
 
-_react3.default.createElement(_nativeBase.CardItem,{button:true},
-_react3.default.createElement(_nativeBase.Icon,{name:'logo-googleplus',style:{color:'#DD5044'}}),
-_react3.default.createElement(_nativeBase.Text,null,'Google Center')),
+_react3.default.createElement(_nativeBase.ListItem,{iconLeft:true},
+_react3.default.createElement(_nativeBase.Icon,{name:'ios-settings-outline',style:_styles2.default.icon}),
+_react3.default.createElement(_nativeBase.Text,null,'Software Update'),
+_react3.default.createElement(_nativeBase.Badge,{style:{backgroundColor:'#8C97B5'}},'2')),
 
-_react3.default.createElement(_nativeBase.CardItem,{button:true},
-_react3.default.createElement(_nativeBase.Icon,{name:'logo-googleplus',style:{color:'#DD5044'}}),
-_react3.default.createElement(_nativeBase.Text,null,'Google Center')))));
+_react3.default.createElement(_nativeBase.ListItem,{iconLeft:true},
+_react3.default.createElement(_nativeBase.Icon,{name:'ios-mail-outline',style:_styles2.default.icon}),
+_react3.default.createElement(_nativeBase.Text,null,'Mail Center'),
+_react3.default.createElement(_nativeBase.Badge,null,'12')))));
 
 
 
@@ -134341,7 +134352,10 @@ alignItems:'center',
 
 
 width:undefined,
-height:undefined}});
+height:undefined},
+
+icon:{
+color:'#0A69FE'}});
 }, "NativeStarterKit/js/components/userPage/styles.js");
 __d(879 /* NativeStarterKit/js/components/blankPage/index.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _react2=require(409 /* react */);var _react3=_interopRequireDefault(_react2);var _index=require(226 /* ./../../../node_modules/react-transform-hmr/lib/index.js */);var _index2=_interopRequireDefault(_index);var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _class,_temp;
 
@@ -138588,6 +138602,186 @@ justifyContent:'center'}});
 
 module.exports=stylesheet;
 }, "tcomb-form-native/lib/stylesheets/bootstrap.js");
+__d(1036 /* NativeStarterKit/js/components/strongBoxPage/index.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _react2=require(409 /* react */);var _react3=_interopRequireDefault(_react2);var _index=require(226 /* ./../../../node_modules/react-transform-hmr/lib/index.js */);var _index2=_interopRequireDefault(_index);var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _class,_temp;
+
+var _reactRedux=require(660 /* react-redux */);
+var _reactNativeNavigationReduxHelpers=require(861 /* react-native-navigation-redux-helpers */);
+var _nativeBase=require(690 /* native-base */);
+var _reactNativeEasyGrid=require(868 /* react-native-easy-grid */);
+var _reactNative=require(12 /* react-native */);
+
+var _drawer=require(862 /* ../../actions/drawer */);
+var _styles=require(1037 /* ./styles */);var _styles2=_interopRequireDefault(_styles);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={StrongBoxPage:{displayName:'StrongBoxPage'}};var _node_modulesReactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/js/components/strongBoxPage/index.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _node_modulesReactTransformHmrLibIndexJs2(Component,id);};}var
+
+
+_popRoute=_reactNativeNavigationReduxHelpers.actions.popRoute,
+reset=_reactNativeNavigationReduxHelpers.actions.reset,
+_pushRoute=_reactNativeNavigationReduxHelpers.actions.pushRoute;var StrongBoxPage=_wrapComponent('StrongBoxPage')((_temp=_class=function(_Component){_inherits(StrongBoxPage,_Component);function StrongBoxPage(){_classCallCheck(this,StrongBoxPage);return _possibleConstructorReturn(this,(StrongBoxPage.__proto__||Object.getPrototypeOf(StrongBoxPage)).apply(this,arguments));}_createClass(StrongBoxPage,[{key:'componentWillMount',value:function componentWillMount()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+
+}},{key:'popRoute',value:function popRoute()
+{
+this.props.popRoute(this.props.navigation.key);
+}},{key:'pushRoute',value:function pushRoute(
+
+route,index){
+this.props.setIndex(index);
+this.props.pushRoute({key:route,index:1},this.props.navigation.key);
+}},{key:'render',value:function render()
+
+{var _this2=this;
+
+return(
+_react3.default.createElement(_nativeBase.Container,{style:_styles2.default.container},
+_react3.default.createElement(_nativeBase.Header,null,
+_react3.default.createElement(_nativeBase.Button,{transparent:true,onPress:function onPress(){return _this2.popRoute();}},
+_react3.default.createElement(_nativeBase.Icon,{name:'ios-arrow-back'})),
+
+_react3.default.createElement(_nativeBase.Title,null,'Strong Box')),
+
+_react3.default.createElement(_nativeBase.Content,{padder:true})));
+
+
+
+
+}}]);return StrongBoxPage;}(_react2.Component),_class.propTypes={name:_react3.default.PropTypes.string,index:_react3.default.PropTypes.number,list:_react3.default.PropTypes.arrayOf(_react3.default.PropTypes.string),openDrawer:_react3.default.PropTypes.func,popRoute:_react3.default.PropTypes.func,pushRoute:_react3.default.PropTypes.func,navigation:_react3.default.PropTypes.shape({key:_react3.default.PropTypes.string})},_temp));
+
+
+function bindAction(dispatch){
+return{
+openDrawer:function openDrawer(){return dispatch((0,_drawer.openDrawer)());},
+popRoute:function popRoute(key){return dispatch(_popRoute(key));},
+pushRoute:function pushRoute(route,key){return dispatch(_pushRoute(route,key));}};
+
+}
+
+var mapStateToProps=function mapStateToProps(state){return{
+navigation:state.cardNavigation,
+name:state.user.name,
+index:state.list.selectedIndex,
+list:state.list.list};};exports.default=
+
+
+
+(0,_reactRedux.connect)(mapStateToProps,bindAction)(StrongBoxPage);
+}, "NativeStarterKit/js/components/strongBoxPage/index.js");
+__d(1037 /* NativeStarterKit/js/components/strongBoxPage/styles.js */, function(global, require, module, exports) {
+var React=require(12 /* react-native */);var
+
+StyleSheet=React.StyleSheet;
+
+module.exports=StyleSheet.create({
+container:{
+backgroundColor:'#FBFAFA'},
+
+card:{
+margin:8}});
+}, "NativeStarterKit/js/components/strongBoxPage/styles.js");
+__d(1038 /* NativeStarterKit/js/components/map/index.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _react2=require(409 /* react */);var _react3=_interopRequireDefault(_react2);var _index=require(226 /* ./../../../node_modules/react-transform-hmr/lib/index.js */);var _index2=_interopRequireDefault(_index);var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _class,_temp;
+
+var _reactRedux=require(660 /* react-redux */);
+var _reactNativeNavigationReduxHelpers=require(861 /* react-native-navigation-redux-helpers */);
+var _nativeBase=require(690 /* native-base */);
+var _reactNativeEasyGrid=require(868 /* react-native-easy-grid */);
+var _reactNative=require(12 /* react-native */);
+
+var _drawer=require(862 /* ../../actions/drawer */);
+var _styles=require(1039 /* ./styles */);var _styles2=_interopRequireDefault(_styles);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={MapPage:{displayName:'MapPage'}};var _node_modulesReactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/js/components/map/index.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _node_modulesReactTransformHmrLibIndexJs2(Component,id);};}var
+
+
+_popRoute=_reactNativeNavigationReduxHelpers.actions.popRoute,
+reset=_reactNativeNavigationReduxHelpers.actions.reset,
+_pushRoute=_reactNativeNavigationReduxHelpers.actions.pushRoute;var MapPage=_wrapComponent('MapPage')((_temp=_class=function(_Component){_inherits(MapPage,_Component);function MapPage(){_classCallCheck(this,MapPage);return _possibleConstructorReturn(this,(MapPage.__proto__||Object.getPrototypeOf(MapPage)).apply(this,arguments));}_createClass(MapPage,[{key:'componentWillMount',value:function componentWillMount()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+
+}},{key:'popRoute',value:function popRoute()
+{
+this.props.popRoute(this.props.navigation.key);
+}},{key:'pushRoute',value:function pushRoute(
+
+route,index){
+this.props.setIndex(index);
+this.props.pushRoute({key:route,index:1},this.props.navigation.key);
+}},{key:'render',value:function render()
+
+{var _this2=this;
+
+return(
+_react3.default.createElement(_nativeBase.Container,{style:_styles2.default.container},
+_react3.default.createElement(_nativeBase.Header,null,
+_react3.default.createElement(_nativeBase.Button,{transparent:true,onPress:function onPress(){return _this2.popRoute();}},
+_react3.default.createElement(_nativeBase.Icon,{name:'ios-arrow-back'})),
+
+_react3.default.createElement(_nativeBase.Title,null,'Strong Box')),
+
+_react3.default.createElement(_nativeBase.Content,{padder:true})));
+
+
+
+
+}}]);return MapPage;}(_react2.Component),_class.propTypes={name:_react3.default.PropTypes.string,index:_react3.default.PropTypes.number,list:_react3.default.PropTypes.arrayOf(_react3.default.PropTypes.string),openDrawer:_react3.default.PropTypes.func,popRoute:_react3.default.PropTypes.func,pushRoute:_react3.default.PropTypes.func,navigation:_react3.default.PropTypes.shape({key:_react3.default.PropTypes.string})},_temp));
+
+
+function bindAction(dispatch){
+return{
+openDrawer:function openDrawer(){return dispatch((0,_drawer.openDrawer)());},
+popRoute:function popRoute(key){return dispatch(_popRoute(key));},
+pushRoute:function pushRoute(route,key){return dispatch(_pushRoute(route,key));}};
+
+}
+
+var mapStateToProps=function mapStateToProps(state){return{
+navigation:state.cardNavigation,
+name:state.user.name,
+index:state.list.selectedIndex,
+list:state.list.list};};exports.default=
+
+
+
+(0,_reactRedux.connect)(mapStateToProps,bindAction)(MapPage);
+}, "NativeStarterKit/js/components/map/index.js");
+__d(1039 /* NativeStarterKit/js/components/map/styles.js */, function(global, require, module, exports) {
+var React=require(12 /* react-native */);var
+
+StyleSheet=React.StyleSheet;
+
+module.exports=StyleSheet.create({
+container:{
+backgroundColor:'#FBFAFA'},
+
+card:{
+margin:8}});
+}, "NativeStarterKit/js/components/map/styles.js");
 __d(902 /* NativeStarterKit/js/components/loaders/ProgressBar.ios.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();
 
 var _react=require(409 /* react */);var _react2=_interopRequireDefault(_react);
