@@ -134075,7 +134075,7 @@ publicMemos:state.memo.publicMemos};};exports.default=
 
 (0,_reactRedux.connect)(mapStateToProps,bindAction)(MemoPage);
 }, "NativeStarterKit/js/components/memoPage/index.js");
-__d(887 /* NativeStarterKit/js/actions/memoActions.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});exports.deletePublicMemo=exports.deletePrivateMemo=exports.editPublicMemo=exports.editPrivateMemo=exports.loadPublicMemo=exports.loadPublicMemos=exports.updatePublicMemoSuccess=exports.loadPublicMemoSuccess=exports.loadPublicMemosSuccess=undefined;var _actionTypes=require(888 /* ../constants/actionTypes */);var types=_interopRequireWildcard(_actionTypes);
+__d(887 /* NativeStarterKit/js/actions/memoActions.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});exports.deletePublicMemo=exports.deletePrivateMemo=exports.updatePublicMemo=exports.updatePrivateMemo=exports.loadPublicMemo=exports.loadPublicMemos=exports.updatePublicMemoSuccess=exports.loadPublicMemoSuccess=exports.loadPublicMemosSuccess=undefined;var _actionTypes=require(888 /* ../constants/actionTypes */);var types=_interopRequireWildcard(_actionTypes);
 var _api=require(889 /* ./api */);var _api2=_interopRequireDefault(_api);
 var _utils=require(890 /* ../businessLogic/utils */);
 var _ajaxStatusActions=require(891 /* ./ajaxStatusActions */);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _interopRequireWildcard(obj){if(obj&&obj.__esModule){return obj;}else{var newObj={};if(obj!=null){for(var key in obj){if(Object.prototype.hasOwnProperty.call(obj,key))newObj[key]=obj[key];}}newObj.default=obj;return newObj;}}
@@ -134113,7 +134113,7 @@ dispatch(loadPublicMemoSuccess(json));
 };
 };
 
-var editPrivateMemo=exports.editPrivateMemo=function editPrivateMemo(userId,memoId,memo){
+var updatePrivateMemo=exports.updatePrivateMemo=function updatePrivateMemo(userId,memoId,memo){
 return function(dispatch){
 if(memoId){
 return _api2.default.patch("memos/private/"+userId+"/"+memoId+"/",memo).then(
@@ -134135,7 +134135,7 @@ function(json){
 };
 };
 
-var editPublicMemo=exports.editPublicMemo=function editPublicMemo(memo,memoId){
+var updatePublicMemo=exports.updatePublicMemo=function updatePublicMemo(memo,memoId){
 var formData={};
 formData.title=memo.title;
 formData.content=memo.content;
@@ -134166,6 +134166,7 @@ body:JSON.stringify(formData)}).
 then(_utils.checkHttpStatus).
 then(_utils.parseJSON).
 then(function(json){
+console.log(json);
 dispatch(updatePublicMemoSuccess(json));
 }).
 catch(function(error){
@@ -134614,8 +134615,8 @@ var _nativeBase=require(690 /* native-base */);
 var _drawer=require(862 /* ../../actions/drawer */);
 
 var _memoActions=require(887 /* ../../actions/memoActions */);
-var _MemoEditForm=require(1035 /* ./MemoEditForm */);var _MemoEditForm2=_interopRequireDefault(_MemoEditForm);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={MemoEditPage:{displayName:'MemoEditPage'}};var _node_modulesReactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/js/components/memoPage/MemoEditPage.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _node_modulesReactTransformHmrLibIndexJs2(Component,id);};}
-var Item=_nativeBase.Picker.Item;var
+var _MemoEditForm=require(1035 /* ./MemoEditForm */);var _MemoEditForm2=_interopRequireDefault(_MemoEditForm);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={MemoEditPage:{displayName:'MemoEditPage'}};var _node_modulesReactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/js/components/memoPage/MemoEditPage.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _node_modulesReactTransformHmrLibIndexJs2(Component,id);};}var
+
 
 _popRoute=_reactNativeNavigationReduxHelpers.actions.popRoute,
 reset=_reactNativeNavigationReduxHelpers.actions.reset,
@@ -134663,7 +134664,13 @@ this.props.pushRoute({key:route,index:1},this.props.navigation.key);
 }},{key:'pushValue',value:function pushValue(
 
 form){
-this.props.editPublicMemo(form);
+console.log(form);
+if(form.private!=true){
+this.props.updatePublicMemo(form);
+}
+if(form.private==true){
+this.props.updatePrivateMemo(form);
+}
 this.props.popRoute(this.props.navigation.key);
 
 
@@ -134740,7 +134747,8 @@ _react3.default.createElement(_MemoEditForm2.default,{pushValue:this.pushValue})
 function bindAction(dispatch){
 return{
 openDrawer:function openDrawer(){return dispatch((0,_drawer.openDrawer)());},
-editPublicMemo:function editPublicMemo(form){return dispatch((0,_memoActions.editPublicMemo)(form));},
+updatePublicMemo:function updatePublicMemo(form){return dispatch((0,_memoActions.updatePublicMemo)(form));},
+updatePrivateMemo:function updatePrivateMemo(form){return dispatch((0,_memoActions.updatePrivateMemo)(form));},
 popRoute:function popRoute(key){return dispatch(_popRoute(key));},
 pushRoute:function pushRoute(route,key){return dispatch(_pushRoute(route,key));}};
 
@@ -134783,7 +134791,8 @@ title:_tcombFormNative2.default.String,
 content:_tcombFormNative2.default.maybe(_tcombFormNative2.default.String),
 date:_tcombFormNative2.default.Date,
 grade:_tcombFormNative2.default.String,
-author:_tcombFormNative2.default.String});
+author:_tcombFormNative2.default.String,
+private:_tcombFormNative2.default.Boolean});
 
 
 var options={

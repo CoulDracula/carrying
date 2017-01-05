@@ -17,9 +17,9 @@ import {
 } from 'native-base';
 import {openDrawer} from '../../actions/drawer';
 
-import {editPublicMemo} from '../../actions/memoActions';
+import {updatePublicMemo,updatePrivateMemo} from '../../actions/memoActions';
 import MemoEditForm from './MemoEditForm';
-const Item = Picker.Item;
+// const Item = Picker.Item;
 const {
   popRoute,
   reset,
@@ -67,7 +67,13 @@ class MemoEditPage extends Component {
   }
 
   pushValue (form) {
-    this.props.editPublicMemo(form);
+    console.log(form);
+    if(form.private!=true){
+      this.props.updatePublicMemo(form);
+    }
+    if(form.private==true){
+      this.props.updatePrivateMemo(form);
+    }
     this.props.popRoute(this.props.navigation.key);
     // this.props.editPublicMemo(form).then(
     //   ()=>{
@@ -144,7 +150,8 @@ class MemoEditPage extends Component {
 function bindAction (dispatch) {
   return {
     openDrawer: () => dispatch(openDrawer()),
-    editPublicMemo: form => dispatch(editPublicMemo(form)),
+    updatePublicMemo: form => dispatch(updatePublicMemo(form)),
+    updatePrivateMemo: form => dispatch(updatePrivateMemo(form)),
     popRoute: key => dispatch(popRoute(key)),
     pushRoute: (route, key) => dispatch(pushRoute(route, key)),
   };

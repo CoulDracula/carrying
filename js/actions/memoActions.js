@@ -36,7 +36,7 @@ export const loadPublicMemo = (memoId) => {
   }
 };
 
-export const editPrivateMemo = (userId, memoId, memo) => {
+export const updatePrivateMemo = (userId, memoId, memo) => {
   return dispatch => {
     if (memoId) {
       return api.patch(`memos/private/${userId}/${memoId}/`, memo).then(
@@ -58,7 +58,7 @@ export const editPrivateMemo = (userId, memoId, memo) => {
   }
 };
 
-export const editPublicMemo = (memo, memoId) => {
+export const updatePublicMemo = (memo, memoId) => {
   let formData = {};
   formData.title=memo.title;
   formData.content=memo.content;
@@ -89,6 +89,7 @@ export const editPublicMemo = (memo, memoId) => {
         .then(checkHttpStatus)
         .then(parseJSON)
         .then((json) => {
+        console.log(json);
           dispatch(updatePublicMemoSuccess(json));
         })
         .catch(error => {

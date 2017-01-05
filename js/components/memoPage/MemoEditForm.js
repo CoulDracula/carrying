@@ -26,6 +26,7 @@ let Person = tcomb.struct({
   date:tcomb.Date,
   grade: tcomb.String,
   author: tcomb.String,
+  private: tcomb.Boolean,
 });
 
 let options = {
