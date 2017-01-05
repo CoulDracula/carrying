@@ -116105,6 +116105,10 @@ this.props.navigateTo(route,'home');
 return(
 _react3.default.createElement(_nativeBase.Container,{theme:_baseTheme2.default,style:_styles2.default.container},
 
+
+
+
+
 _react3.default.createElement(_nativeBase.Header,null,
 this.state.page!='User Center'&&
 _react3.default.createElement(_nativeBase.Button,{transparent:true,onPress:function onPress(){return _this2.popRoute();}},
@@ -116130,10 +116134,6 @@ _react3.default.createElement(_nativeBase.Icon,{name:'ios-add'}))),
 
 _react3.default.createElement(_nativeBase.Content,null,
 this.state.page=='Home'&&
-_react3.default.createElement(_reactNative.Image,{
-style:_styles2.default.content,
-source:require(878 /* ./img/background.png */)},
-
 _react3.default.createElement(_reactNativeEasyGrid.Grid,{style:_styles2.default.mt},
 this.props.list.map(function(item,i){return(
 _react3.default.createElement(_reactNativeEasyGrid.Row,{key:i},
@@ -116141,8 +116141,7 @@ _react3.default.createElement(_reactNative.TouchableOpacity,{
 style:_styles2.default.row,
 onPress:function onPress(){return _this2.pushRoute('blankPage',i);}},
 
-_react3.default.createElement(_nativeBase.Text,{style:_styles2.default.text},item))));}))),
-
+_react3.default.createElement(_nativeBase.Text,{style:_styles2.default.text},item))));})),
 
 
 
@@ -116165,7 +116164,7 @@ onPress:function onPress(){return _this2.setState({page:'App Center'});}},'Apps'
 
 _react3.default.createElement(_nativeBase.Icon,{name:'ios-apps-outline'})),
 
-_react3.default.createElement(_nativeBase.Button,{active:true,onPress:function onPress(){return _this2.setState({page:'Home'});}},'Home',
+_react3.default.createElement(_nativeBase.Button,{onPress:function onPress(){return _this2.setState({page:'Home'});}},'Home',
 
 _react3.default.createElement(_nativeBase.Icon,{name:'ios-home-outline'})),
 
@@ -134487,8 +134486,6 @@ alignItems:'center',
 width:undefined,
 height:undefined}});
 }, "NativeStarterKit/js/components/userPage/styles.js");
-__d(878 /* NativeStarterKit/js/components/home/img/background.png */, function(global, require, module, exports) {module.exports = require(168 /* react-native/Libraries/Image/AssetRegistry */).registerAsset({"__packager_asset":true,"httpServerLocation":"/assets/js/components/home/img","width":375,"height":667,"scales":[1],"hash":"50fda425f2d3a1a96de657cb3d6d9c72","name":"background","type":"png"});
-}, "NativeStarterKit/js/components/home/img/background.png");
 __d(879 /* NativeStarterKit/js/components/blankPage/index.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _react2=require(409 /* react */);var _react3=_interopRequireDefault(_react2);var _index=require(226 /* ./../../../node_modules/react-transform-hmr/lib/index.js */);var _index2=_interopRequireDefault(_index);var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _class,_temp;
 
 var _reactRedux=require(660 /* react-redux */);
