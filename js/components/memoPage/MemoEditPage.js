@@ -1,10 +1,25 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { actions } from 'react-native-navigation-redux-helpers';
-import { Container, Content,Header,Title, List, ListItem, InputGroup, Input, Icon, Text, Picker, Button } from 'native-base';
-import { openDrawer } from '../../actions/drawer';
-import styles from './styles';
-const Item = Picker.Item;
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import {actions} from 'react-native-navigation-redux-helpers';
+import {
+  Container,
+  Content,
+  Header,
+  Title,
+  List,
+  ListItem,
+  InputGroup,
+  Input,
+  Icon,
+  Text,
+  Picker,
+  Button
+} from 'native-base';
+import {openDrawer} from '../../actions/drawer';
+
+import {updatePublicMemo,updatePrivateMemo} from '../../actions/memoActions';
+import MemoEditForm from './MemoEditForm';
+// const Item = Picker.Item;
 const {
   popRoute,
   reset,
@@ -12,21 +27,23 @@ const {
 } = actions;
 
 class MemoEditPage extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props);
     this.state = {
       selectedItem: undefined,
-      grade: 'key0',
+      selected1: 'key0',
       results: {
         items: [],
       },
     };
+    this.pushValue=this.pushValue.bind(this);
   }
-  onValueChange(value: string) {
-    this.setState({
-      grade: value,
-    });
-  }
+
+  // onValueChange (value: string) {
+  //   this.setState({
+  //     selected1: value,
+  //   });
+  // }
 
   static propTypes = {
     name: React.PropTypes.string,
@@ -40,7 +57,7 @@ class MemoEditPage extends Component {
     }),
   }
 
-  popRoute() {
+  popRoute () {
     this.props.popRoute(this.props.navigation.key);
   }
 
@@ -49,69 +66,92 @@ class MemoEditPage extends Component {
     this.props.pushRoute({ key: route, index: 1 }, this.props.navigation.key);
   }
 
-  render() {
+  pushValue (form) {
+    console.log(form);
+    if(form.private!=true){
+      this.props.updatePublicMemo(form);
+    }
+    if(form.private==true){
+      this.props.updatePrivateMemo(form);
+    }
+    this.props.popRoute(this.props.navigation.key);
+    // this.props.editPublicMemo(form).then(
+    //   ()=>{
+    //   this.props.popRoute(this.props.navigation.key);
+    //   }
+    // );
+  }
+
+  render () {
 
     return (
       <Container>
         <Header>
           <Button transparent onPress={() => this.popRoute()}>
-            <Icon name="ios-arrow-back" />
+            <Icon name="ios-arrow-back"/>
           </Button>
           <Title>Memo Edit</Title>
         </Header>
         <Content>
-          <List>
+          <MemoEditForm pushValue={this.pushValue}/>
+          {/*<List>*/}
+          {/*<ListItem>*/}
+          {/*<InputGroup>*/}
+          {/*<Input inlineLabel label="First Name" placeholder="John" />*/}
+          {/*</InputGroup>*/}
+          {/*</ListItem>*/}
 
-            <ListItem>
-              <InputGroup>
-                <Icon name="ios-person" style={{ color: '#0A69FE' }} />
-                <Input placeholder="Title" />
-              </InputGroup>
-            </ListItem>
-            <ListItem>
-              <InputGroup>
-                <Icon name="ios-unlock" style={{ color: '#0A69FE' }} />
-                <Input placeholder="Content" secureTextEntry />
-              </InputGroup>
-            </ListItem>
-            <ListItem>
-              <InputGroup>
-                <Icon name="ios-call" style={{ color: '#0A69FE' }} />
-                <Input placeholder="date" keyboardType="numeric" />
-              </InputGroup>
-            </ListItem>
-            <ListItem>
-              <InputGroup>
-                <Icon name="ios-call" style={{ color: '#0A69FE' }} />
-                <Input placeholder="Author" keyboardType="numeric" />
-              </InputGroup>
-            </ListItem>
-            <ListItem iconLeft>
-              <Icon name="ios-transgender" style={{ color: '#0A69FE' }} />
-              <Text>Grade</Text>
-              <Picker
-                iosHeader="Grade"
-                mode="dropdown"
-                selectedValue={this.state.grade}
-                onValueChange={this.onValueChange.bind(this)} >
-                <Item label="High" value="key0" />
-                <Item label="Middle" value="key1" />
-                <Item label="Low" value="key2" />
-              </Picker>
-            </ListItem>
-          </List>
-          <Button bordered success style={{ alignSelf: 'center', marginTop: 20, marginBottom: 20 }}>
-            push
-          </Button>
+          {/*<ListItem>*/}
+          {/*<InputGroup>*/}
+          {/*<Icon name="ios-person" style={{ color: '#0A69FE' }} />*/}
+          {/*<Input placeholder="EMAIL" />*/}
+          {/*</InputGroup>*/}
+          {/*</ListItem>*/}
+          {/*<ListItem>*/}
+          {/*<InputGroup>*/}
+          {/*<Icon name="ios-unlock" style={{ color: '#0A69FE' }} />*/}
+          {/*<Input placeholder="PASSWORD" secureTextEntry />*/}
+          {/*</InputGroup>*/}
+          {/*</ListItem>*/}
+          {/*<ListItem>*/}
+          {/*<InputGroup>*/}
+          {/*<Icon name="ios-call" style={{ color: '#0A69FE' }} />*/}
+          {/*<Input placeholder="PHONE" keyboardType="numeric" />*/}
+          {/*</InputGroup>*/}
+          {/*</ListItem>*/}
+
+          {/*<ListItem iconLeft>*/}
+          {/*<Icon name="ios-transgender" style={{ color: '#0A69FE' }} />*/}
+          {/*<Text>GENDER</Text>*/}
+          {/*<Picker*/}
+          {/*iosHeader="Select one"*/}
+          {/*mode="dropdown"*/}
+          {/*selectedValue={this.state.selected1}*/}
+          {/*onValueChange={this.onValueChange.bind(this)} >*/}
+          {/*<Item label="Male" value="key0" />*/}
+          {/*<Item label="Female" value="key1" />*/}
+          {/*<Item label="Other" value="key2" />*/}
+          {/*</Picker>*/}
+          {/*</ListItem>*/}
+
+          {/*<ListItem>*/}
+          {/*<InputGroup >*/}
+          {/*<Input stackedLabel label="Permanent Address" placeholder="Address" />*/}
+          {/*</InputGroup>*/}
+          {/*</ListItem>*/}
+          {/*</List>*/}
+          {/*<Button bordered success style={{ alignSelf: 'center', marginTop: 20, marginBottom: 20 }}>push</Button>*/}
         </Content>
       </Container>
     );
   }
 }
 
-function bindAction(dispatch) {
+function bindAction (dispatch) {
   return {
     openDrawer: () => dispatch(openDrawer()),
+    updatePublicMemo: form => dispatch(updatePublicMemo(form)),
+    updatePrivateMemo: form => dispatch(updatePrivateMemo(form)),
     popRoute: key => dispatch(popRoute(key)),
     pushRoute: (route, key) => dispatch(pushRoute(route, key)),
   };

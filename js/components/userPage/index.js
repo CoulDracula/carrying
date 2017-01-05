@@ -38,18 +38,7 @@ class UserPage extends Component {
   render() {
 
     return (
-      <Container style={styles.container}>
-        <Header>
-          <Button transparent onPress={() => this.popRoute()}>
-            <Icon name="ios-arrow-back" />
-          </Button>
 
-          <Title>User Center</Title>
-
-          <Button transparent onPress={this.props.openDrawer}>
-            <Icon name="ios-menu" />
-          </Button>
-        </Header>
         <Content padder>
           <Card style={styles.card}>
             <CardItem button>
@@ -66,7 +55,6 @@ class UserPage extends Component {
             </CardItem>
           </Card>
         </Content>
-      </Container>
     );
   }
 }

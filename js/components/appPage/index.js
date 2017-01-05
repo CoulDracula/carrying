@@ -40,19 +40,6 @@ class AppPage extends Component {
   render() {
 
     return (
-      <Container style={styles.container}>
-        <Header>
-          <Button transparent onPress={() => this.popRoute()}>
-            <Icon name="ios-arrow-back" />
-          </Button>
-
-          <Title>App Center</Title>
-
-          <Button transparent onPress={this.props.openDrawer}>
-            <Icon name="ios-menu" />
-          </Button>
-        </Header>
-
         <Content padder>
           <Row>
             <Col>
@@ -211,7 +198,6 @@ class AppPage extends Component {
             </Col>
           </Row>
         </Content>
-      </Container>
     );
   }
 }

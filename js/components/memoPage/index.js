@@ -33,7 +33,9 @@ class MemoPage extends Component {
   componentWillMount() {
     // const {loadPublicMemos}=this.props.memoActions;
     // loadPrivateMemos();
-    this.props.loadPublicMemos();
+    if(this.props.publicMemos.length<=0) {
+      this.props.loadPublicMemos();
+    }
   }
 
   popRoute() {
@@ -46,25 +48,12 @@ class MemoPage extends Component {
   render() {
     const {publicMemos}=this.props;
     return (
-      <Container style={styles.container}>
-        <Header>
-          <Button transparent onPress={() => this.popRoute()}>
-            <Icon name="ios-arrow-back" />
-          </Button>
-
-          <Title>Memo</Title>
-
-          <Button transparent onPress={() => this.editMemo()}>
-            <Icon name="ios-add" />
-          </Button>
-        </Header>
         <Content >
           <Tabs tabTextColor="#AAAAAA">
             <TabOne tabLabel='public' tabTextColor="#AAAAAA" publicMemos={publicMemos} />
             <TabTwo tabLabel='private' />
           </Tabs>
         </Content>
-      </Container>
     );
   }
 }
