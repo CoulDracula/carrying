@@ -82,7 +82,7 @@ class Home extends Component {
               Home
               <Icon name='ios-home-outline'/>
             </Button>
-            <Button active onPress={() => this.navigateTo('memoPage')}>
+            <Button onPress={() => this.navigateTo('memoPage')}>
               Memo
               <Icon name='ios-compass'/>
             </Button>
