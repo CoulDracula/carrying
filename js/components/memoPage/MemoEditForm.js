@@ -23,7 +23,7 @@ const Form = tcomb.form.Form;
 let Person = tcomb.struct({
   title: tcomb.String,
   content: tcomb.maybe(tcomb.String),
-  date: tcomb.Date,
+  date:tcomb.Date,
   grade: tcomb.String,
   author: tcomb.String,
   private: tcomb.Boolean,
@@ -38,18 +38,18 @@ let options = {
 };
 
 class MemoEditForm extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props);
-    this.onPress = this.onPress.bind(this);
+    this.onPress=this.onPress.bind(this);
   }
 
   onPress () {
-    var value = this.refs.form.getValue();
-    if (value) {
-      const { pushValue }=this.props;
-      pushValue(value);
-    }
+  var value = this.refs.form.getValue();
+  if (value) {
+    const {pushValue}=this.props;
+    pushValue(value);
   }
+}
 
   render () {
 

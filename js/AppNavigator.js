@@ -15,6 +15,7 @@ import SideBar from './components/sideBar';
 import UserPage from './components/userPage';
 import MemoPage from './components/memoPage';
 import AppPage from './components/appPage';
+import TimeTablePage from './components/timeTablePage';
 import MemoEditPage from './components/memoPage/MemoEditPage';
 import { statusBarColor } from './themes/base-theme';
 
@@ -93,6 +94,8 @@ class AppNavigator extends Component {
         return <MemoEditPage />;
       case 'memoPage':
         return <MemoPage />;
+      case 'timeTable' :
+        return <TimeTablePage/>;
       default :
         return <SplashPage />;
     }

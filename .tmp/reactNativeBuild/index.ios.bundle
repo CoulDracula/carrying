@@ -115318,6 +115318,7 @@ var _sideBar=require(882 /* ./components/sideBar */);var _sideBar2=_interopRequi
 var _userPage=require(884 /* ./components/userPage */);var _userPage2=_interopRequireDefault(_userPage);
 var _memoPage=require(886 /* ./components/memoPage */);var _memoPage2=_interopRequireDefault(_memoPage);
 var _appPage=require(897 /* ./components/appPage */);var _appPage2=_interopRequireDefault(_appPage);
+var _timeTablePage=require(899 /* ./components/timeTablePage */);var _timeTablePage2=_interopRequireDefault(_timeTablePage);
 var _MemoEditPage=require(901 /* ./components/memoPage/MemoEditPage */);var _MemoEditPage2=_interopRequireDefault(_MemoEditPage);
 var _baseTheme=require(876 /* ./themes/base-theme */);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={AppNavigator:{displayName:'AppNavigator'}};var _node_modulesReactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/js/AppNavigator.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _node_modulesReactTransformHmrLibIndexJs2(Component,id);};}var
 
@@ -115396,6 +115397,8 @@ case'memoEditPage':
 return _react3.default.createElement(_MemoEditPage2.default,null);
 case'memoPage':
 return _react3.default.createElement(_memoPage2.default,null);
+case'timeTable':
+return _react3.default.createElement(_timeTablePage2.default,null);
 default:
 return _react3.default.createElement(_splashscreen2.default,null);}
 
@@ -133771,6 +133774,7 @@ this.props.loadPublicMemos();
 {
 this.props.popRoute(this.props.navigation.key);
 }},{key:'editMemo',value:function editMemo()
+
 {
 this.props.pushRoute({key:'memoEditPage',index:1},this.props.navigation.key);
 }},{key:'render',value:function render()
@@ -133900,6 +133904,7 @@ body:JSON.stringify(formData)}).
 then(_utils.checkHttpStatus).
 then(_utils.parseJSON).
 then(function(json){
+console.log(json);
 dispatch(updatePublicMemoSuccess(json));
 }).
 catch(function(error){
@@ -133953,27 +133958,10 @@ var LOAD_PUBLIC_MEMO_SUCCESS=exports.LOAD_PUBLIC_MEMO_SUCCESS='LOAD_PUBLIC_MEMO_
 var LOAD_PRIVATE_MEMOS_SUCCESS=exports.LOAD_PRIVATE_MEMOS_SUCCESS='LOAD_PRIVATE_MEMOS_SUCCESS';
 var LOAD_PRIVATE_MEMO_SUCCESS=exports.LOAD_PRIVATE_MEMO_SUCCESS='LOAD_PRIVATE_MEMO_SUCCESS';
 
-var LOAD_ASSIGNMENT_SUCCESS=exports.LOAD_ASSIGNMENT_SUCCESS='LOAD_ASSIGNMENT_SUCCESS';
-var LOAD_ASSIGNMENT_SUBMISSIONS_SUCCESS=exports.LOAD_ASSIGNMENT_SUBMISSIONS_SUCCESS='LOAD_ASSIGNMENT_SUBMISSIONS_SUCCESS';
-var LOAD_ASSIGNMENT_REVIEWS_SUCCESS=exports.LOAD_ASSIGNMENT_REVIEWS_SUCCESS='LOAD_ASSIGNMENT_REVIEWS_SUCCESS';
-var CREATE_ASSIGNMENT_SUCCESS=exports.CREATE_ASSIGNMENT_SUCCESS='CREATE_ASSIGNMENT_SUCCESS';
-var UPDATE_ASSIGNMENT_SUCCESS=exports.UPDATE_ASSIGNMENT_SUCCESS='UPDATE_ASSIGNMENT_SUCCESS';
-var DELETE_ASSIGNMENT_SUCCESS=exports.DELETE_ASSIGNMENT_SUCCESS='DELETE_ASSIGNMENT_SUCCESS';
+var UPDATE_PUBLIC_MEMO_SUCCESS=exports.UPDATE_PUBLIC_MEMO_SUCCESS='UPDATE_PUBLIC_MEMO_SUCCESS';
 
 var BEGIN_AJAX_CALL=exports.BEGIN_AJAX_CALL='BEGIN_AJAX_CALL';
 var AJAX_CALL_ERROR=exports.AJAX_CALL_ERROR='AJAX_CALL_ERROR';
-
-var SAVE_FUEL_SAVINGS=exports.SAVE_FUEL_SAVINGS='SAVE_FUEL_SAVINGS';
-var CALCULATE_FUEL_SAVINGS=exports.CALCULATE_FUEL_SAVINGS='CALCULATE_FUEL_SAVINGS';
-
-var LOAD_SUBJECTS_SUCCESS=exports.LOAD_SUBJECTS_SUCCESS="LOAD_SUBJECTS_SUCCESS";
-var LOAD_SUBJECT_KNOWLEDGE_SUCCESS=exports.LOAD_SUBJECT_KNOWLEDGE_SUCCESS="LOAD_SUBJECT_KNOWLEDGE_SUCCESS";
-
-
-var LOAD_VIDEOS_SUCCESS=exports.LOAD_VIDEOS_SUCCESS='LOAD_VIDEOS_SUCCESS';
-var LOAD_VIDEO_SUCCESS=exports.LOAD_VIDEO_SUCCESS='LOAD_VIDEO_SUCCESS';
-var UPDATE_VIDEOS_PAGE_NUMBER=exports.UPDATE_VIDEOS_PAGE_NUMBER='UPDATE_VIDEOS_PAGE_NUMBER';
-var LOAD_USER_PLAY_RECORD_SET_SUCCESS=exports.LOAD_USER_PLAY_RECORD_SET_SUCCESS='LOAD_USER_PLAY_RECORD_SET_SUCCESS';
 }, "NativeStarterKit/js/constants/actionTypes.js");
 __d(889 /* NativeStarterKit/js/actions/api.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++){var source=arguments[i];for(var key in source){if(Object.prototype.hasOwnProperty.call(source,key)){target[key]=source[key];}}}return target;};var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _utils=require(890 /* ../businessLogic/utils */);
 var _ajaxStatusActions=require(891 /* ./ajaxStatusActions */);
@@ -133983,8 +133971,8 @@ api=function(){function api(){_classCallCheck(this,api);}_createClass(api,null,[
 {
 return{
 'Accept':'application/json',
-'Content-Type':'application/json',
-'Authorization':_config.Authorization};
+'Content-Type':'application/json'};
+
 
 }},{key:"get",value:function get(
 
@@ -134009,8 +133997,7 @@ return this.fetchFunc(route,parms,'PUT');
 }},{key:"fetchFunc",value:function fetchFunc(
 
 route,params,verb){
-var host=""+_config.SERVER_URL;
-var url=host+"/api/"+route;
+var url=_config.SERVER_URL+"/api/"+route;
 var options=_extends({method:verb},params?{body:JSON.stringify(params)}:null);
 options.header=api.headers();
 return fetch(url,options).
@@ -134020,7 +134007,7 @@ then(function(json){
 return json;
 }).
 catch(function(error){
-dispatch((0,_ajaxStatusActions.ajaxCallError)());
+
 throw error;
 });
 }}]);return api;}();exports.default=
@@ -134153,7 +134140,6 @@ _react2.default.createElement(_nativeBase.Text,null,'two'))));
 TabTwo;
 }, "NativeStarterKit/js/components/memoPage/TabTwo.js");
 __d(897 /* NativeStarterKit/js/components/appPage/index.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _react2=require(409 /* react */);var _react3=_interopRequireDefault(_react2);var _index=require(226 /* ./../../../node_modules/react-transform-hmr/lib/index.js */);var _index2=_interopRequireDefault(_index);var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _class,_temp;
-
 var _reactRedux=require(660 /* react-redux */);
 var _reactNativeNavigationReduxHelpers=require(861 /* react-native-navigation-redux-helpers */);
 var _nativeBase=require(690 /* native-base */);
@@ -134186,168 +134172,39 @@ _pushRoute=_reactNativeNavigationReduxHelpers.actions.pushRoute;var AppPage=_wra
 this.props.popRoute(this.props.navigation.key);
 }},{key:'pushRoute',value:function pushRoute(
 
-route,index){
-this.props.setIndex(index);
+route){
 this.props.pushRoute({key:route,index:1},this.props.navigation.key);
 }},{key:'render',value:function render()
 
-{
+{var _this2=this;
 
 return(
+_react3.default.createElement(_nativeBase.Container,{style:_styles2.default.container},
+_react3.default.createElement(_nativeBase.Header,null,
+_react3.default.createElement(_nativeBase.Button,{transparent:true,onPress:function onPress(){return _this2.popRoute();}},
+_react3.default.createElement(_nativeBase.Icon,{name:'ios-arrow-back'})),
+
+
+_react3.default.createElement(_nativeBase.Title,null,'App Center'),
+
+_react3.default.createElement(_nativeBase.Button,{transparent:true,onPress:this.props.openDrawer},
+_react3.default.createElement(_nativeBase.Icon,{name:'ios-menu'}))),
+
+
+
 _react3.default.createElement(_nativeBase.Content,{padder:true},
-_react3.default.createElement(_reactNativeEasyGrid.Row,null,
-_react3.default.createElement(_reactNativeEasyGrid.Col,null,
+_react3.default.createElement(_nativeBase.Card,{style:_styles2.default.card},
+_react3.default.createElement(_nativeBase.CardItem,{onPress:function onPress(){return _this2.pushRoute('timeTable');}},
+_react3.default.createElement(_nativeBase.Thumbnail,null),
+_react3.default.createElement(_nativeBase.Text,null,'TimeTable'),
+_react3.default.createElement(_nativeBase.Text,{note:true},'when and where'))),
+
+
 _react3.default.createElement(_nativeBase.Card,{style:_styles2.default.card},
 _react3.default.createElement(_nativeBase.CardItem,null,
 _react3.default.createElement(_nativeBase.Thumbnail,null),
 _react3.default.createElement(_nativeBase.Text,null,'NativeBase'),
-_react3.default.createElement(_nativeBase.Text,{note:true},'GeekyAnts')),
-
-_react3.default.createElement(_nativeBase.CardItem,null,
-_react3.default.createElement(_reactNativeEasyGrid.Row,null,
-_react3.default.createElement(_reactNativeEasyGrid.Col,null,
-_react3.default.createElement(_nativeBase.Button,{transparent:true},
-_react3.default.createElement(_nativeBase.Icon,{name:'logo-github'}),'1,926')),
-
-
-
-_react3.default.createElement(_reactNativeEasyGrid.Col,null,
-_react3.default.createElement(_nativeBase.Button,{transparent:true},
-_react3.default.createElement(_nativeBase.Icon,{name:'logo-github'}),'1,926')))))),
-
-
-
-
-
-
-
-_react3.default.createElement(_reactNativeEasyGrid.Col,null,
-_react3.default.createElement(_nativeBase.Card,{style:_styles2.default.card},
-_react3.default.createElement(_nativeBase.CardItem,null,
-_react3.default.createElement(_nativeBase.Thumbnail,null),
-_react3.default.createElement(_nativeBase.Text,null,'NativeBase'),
-_react3.default.createElement(_nativeBase.Text,{note:true},'GeekyAnts')),
-
-_react3.default.createElement(_nativeBase.CardItem,null,
-_react3.default.createElement(_reactNativeEasyGrid.Row,null,
-_react3.default.createElement(_reactNativeEasyGrid.Col,null,
-_react3.default.createElement(_nativeBase.Button,{transparent:true},
-_react3.default.createElement(_nativeBase.Icon,{name:'logo-github'}),'1,926')),
-
-
-
-_react3.default.createElement(_reactNativeEasyGrid.Col,null,
-_react3.default.createElement(_nativeBase.Button,{transparent:true},
-_react3.default.createElement(_nativeBase.Icon,{name:'logo-github'}),'1,926'))))))),
-
-
-
-
-
-
-
-
-_react3.default.createElement(_reactNativeEasyGrid.Row,null,
-_react3.default.createElement(_reactNativeEasyGrid.Col,null,
-_react3.default.createElement(_nativeBase.Card,{style:_styles2.default.card},
-_react3.default.createElement(_nativeBase.CardItem,null,
-_react3.default.createElement(_nativeBase.Thumbnail,null),
-_react3.default.createElement(_nativeBase.Text,null,'NativeBase'),
-_react3.default.createElement(_nativeBase.Text,{note:true},'GeekyAnts')),
-
-_react3.default.createElement(_nativeBase.CardItem,null,
-_react3.default.createElement(_reactNativeEasyGrid.Row,null,
-_react3.default.createElement(_reactNativeEasyGrid.Col,null,
-_react3.default.createElement(_nativeBase.Button,{transparent:true},
-_react3.default.createElement(_nativeBase.Icon,{name:'logo-github'}),'1,926')),
-
-
-
-_react3.default.createElement(_reactNativeEasyGrid.Col,null,
-_react3.default.createElement(_nativeBase.Button,{transparent:true},
-_react3.default.createElement(_nativeBase.Icon,{name:'logo-github'}),'1,926')))))),
-
-
-
-
-
-
-
-_react3.default.createElement(_reactNativeEasyGrid.Col,null,
-_react3.default.createElement(_nativeBase.Card,{style:_styles2.default.card},
-_react3.default.createElement(_nativeBase.CardItem,null,
-_react3.default.createElement(_nativeBase.Thumbnail,null),
-_react3.default.createElement(_nativeBase.Text,null,'NativeBase'),
-_react3.default.createElement(_nativeBase.Text,{note:true},'GeekyAnts')),
-
-_react3.default.createElement(_nativeBase.CardItem,null,
-_react3.default.createElement(_reactNativeEasyGrid.Row,null,
-_react3.default.createElement(_reactNativeEasyGrid.Col,null,
-_react3.default.createElement(_nativeBase.Button,{transparent:true},
-_react3.default.createElement(_nativeBase.Icon,{name:'logo-github'}),'1,926')),
-
-
-
-_react3.default.createElement(_reactNativeEasyGrid.Col,null,
-_react3.default.createElement(_nativeBase.Button,{transparent:true},
-_react3.default.createElement(_nativeBase.Icon,{name:'logo-github'}),'1,926'))))))),
-
-
-
-
-
-
-
-
-_react3.default.createElement(_reactNativeEasyGrid.Row,null,
-_react3.default.createElement(_reactNativeEasyGrid.Col,null,
-_react3.default.createElement(_nativeBase.Card,{style:_styles2.default.card},
-_react3.default.createElement(_nativeBase.CardItem,null,
-_react3.default.createElement(_nativeBase.Thumbnail,null),
-_react3.default.createElement(_nativeBase.Text,null,'NativeBase'),
-_react3.default.createElement(_nativeBase.Text,{note:true},'GeekyAnts')),
-
-_react3.default.createElement(_nativeBase.CardItem,null,
-_react3.default.createElement(_reactNativeEasyGrid.Row,null,
-_react3.default.createElement(_reactNativeEasyGrid.Col,null,
-_react3.default.createElement(_nativeBase.Button,{transparent:true},
-_react3.default.createElement(_nativeBase.Icon,{name:'logo-github'}),'1,926')),
-
-
-
-_react3.default.createElement(_reactNativeEasyGrid.Col,null,
-_react3.default.createElement(_nativeBase.Button,{transparent:true},
-_react3.default.createElement(_nativeBase.Icon,{name:'logo-github'}),'1,926')))))),
-
-
-
-
-
-
-
-_react3.default.createElement(_reactNativeEasyGrid.Col,null,
-_react3.default.createElement(_nativeBase.Card,{style:_styles2.default.card},
-_react3.default.createElement(_nativeBase.CardItem,null,
-_react3.default.createElement(_nativeBase.Thumbnail,null),
-_react3.default.createElement(_nativeBase.Text,null,'NativeBase'),
-_react3.default.createElement(_nativeBase.Text,{note:true},'GeekyAnts')),
-
-_react3.default.createElement(_nativeBase.CardItem,null,
-_react3.default.createElement(_reactNativeEasyGrid.Row,null,
-_react3.default.createElement(_reactNativeEasyGrid.Col,null,
-_react3.default.createElement(_nativeBase.Button,{transparent:true},
-_react3.default.createElement(_nativeBase.Icon,{name:'logo-github'}),'1,926')),
-
-
-
-_react3.default.createElement(_reactNativeEasyGrid.Col,null,
-_react3.default.createElement(_nativeBase.Button,{transparent:true},
-_react3.default.createElement(_nativeBase.Icon,{name:'logo-github'}),'1,926')))))))));
-
-
-
-
-
+_react3.default.createElement(_nativeBase.Text,{note:true},'GeekyAnts'))))));
 
 
 
@@ -134660,6 +134517,96 @@ paddingRight:0,
 paddingTop:30,
 backgroundColor:'#fff'}});
 }, "NativeStarterKit/js/components/sideBar/style.js");
+__d(899 /* NativeStarterKit/js/components/timeTablePage/index.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _react2=require(409 /* react */);var _react3=_interopRequireDefault(_react2);var _index=require(226 /* ./../../../node_modules/react-transform-hmr/lib/index.js */);var _index2=_interopRequireDefault(_index);var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _class,_temp;
+
+var _reactRedux=require(660 /* react-redux */);
+var _reactNativeNavigationReduxHelpers=require(861 /* react-native-navigation-redux-helpers */);
+var _nativeBase=require(690 /* native-base */);
+var _reactNativeEasyGrid=require(868 /* react-native-easy-grid */);
+var _reactNative=require(12 /* react-native */);
+
+var _drawer=require(862 /* ../../actions/drawer */);
+var _styles=require(900 /* ./styles */);var _styles2=_interopRequireDefault(_styles);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={TimeTablePage:{displayName:'TimeTablePage'}};var _node_modulesReactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/js/components/timeTablePage/index.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _node_modulesReactTransformHmrLibIndexJs2(Component,id);};}var
+
+
+_popRoute=_reactNativeNavigationReduxHelpers.actions.popRoute,
+reset=_reactNativeNavigationReduxHelpers.actions.reset,
+_pushRoute=_reactNativeNavigationReduxHelpers.actions.pushRoute;var TimeTablePage=_wrapComponent('TimeTablePage')((_temp=_class=function(_Component){_inherits(TimeTablePage,_Component);function TimeTablePage(){_classCallCheck(this,TimeTablePage);return _possibleConstructorReturn(this,(TimeTablePage.__proto__||Object.getPrototypeOf(TimeTablePage)).apply(this,arguments));}_createClass(TimeTablePage,[{key:'componentWillMount',value:function componentWillMount()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+
+}},{key:'popRoute',value:function popRoute()
+{
+this.props.popRoute(this.props.navigation.key);
+}},{key:'pushRoute',value:function pushRoute(
+
+route,index){
+this.props.setIndex(index);
+this.props.pushRoute({key:route,index:1},this.props.navigation.key);
+}},{key:'render',value:function render()
+
+{var _this2=this;
+
+return(
+_react3.default.createElement(_nativeBase.Container,{style:_styles2.default.container},
+_react3.default.createElement(_nativeBase.Header,null,
+_react3.default.createElement(_nativeBase.Button,{transparent:true,onPress:function onPress(){return _this2.popRoute();}},
+_react3.default.createElement(_nativeBase.Icon,{name:'ios-arrow-back'})),
+
+_react3.default.createElement(_nativeBase.Title,null,'Time Table')),
+
+_react3.default.createElement(_nativeBase.Content,{padder:true})));
+
+
+
+
+}}]);return TimeTablePage;}(_react2.Component),_class.propTypes={name:_react3.default.PropTypes.string,index:_react3.default.PropTypes.number,list:_react3.default.PropTypes.arrayOf(_react3.default.PropTypes.string),openDrawer:_react3.default.PropTypes.func,popRoute:_react3.default.PropTypes.func,pushRoute:_react3.default.PropTypes.func,navigation:_react3.default.PropTypes.shape({key:_react3.default.PropTypes.string})},_temp));
+
+
+function bindAction(dispatch){
+return{
+openDrawer:function openDrawer(){return dispatch((0,_drawer.openDrawer)());},
+popRoute:function popRoute(key){return dispatch(_popRoute(key));},
+pushRoute:function pushRoute(route,key){return dispatch(_pushRoute(route,key));}};
+
+}
+
+var mapStateToProps=function mapStateToProps(state){return{
+navigation:state.cardNavigation,
+name:state.user.name,
+index:state.list.selectedIndex,
+list:state.list.list};};exports.default=
+
+
+
+(0,_reactRedux.connect)(mapStateToProps,bindAction)(TimeTablePage);
+}, "NativeStarterKit/js/components/timeTablePage/index.js");
+__d(900 /* NativeStarterKit/js/components/timeTablePage/styles.js */, function(global, require, module, exports) {
+var React=require(12 /* react-native */);var
+
+StyleSheet=React.StyleSheet;
+
+module.exports=StyleSheet.create({
+container:{
+backgroundColor:'#FBFAFA'},
+
+card:{
+margin:8}});
+}, "NativeStarterKit/js/components/timeTablePage/styles.js");
 __d(901 /* NativeStarterKit/js/components/memoPage/MemoEditPage.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _react2=require(409 /* react */);var _react3=_interopRequireDefault(_react2);var _index=require(226 /* ./../../../node_modules/react-transform-hmr/lib/index.js */);var _index2=_interopRequireDefault(_index);var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _class,_temp;
 var _reactRedux=require(660 /* react-redux */);
 var _reactNativeNavigationReduxHelpers=require(861 /* react-native-navigation-redux-helpers */);
@@ -144225,7 +144172,6 @@ __d(963 /* NativeStarterKit/js/reducers/memo.js */, function(global, require, mo
 
 
 
-
 function(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
 switch(action.type){
 case types.LOAD_PUBLIC_MEMOS_SUCCESS:
@@ -144236,10 +144182,17 @@ case types.LOAD_PRIVATE_MEMOS_SUCCESS:
 return _extends({},state,{privateMemo:action.privateMemos});
 case types.LOAD_PRIVATE_MEMO_SUCCESS:
 return _extends({},state,{privateMemo:action.privateMemo});
+case types.UPDATE_PUBLIC_MEMO_SUCCESS:
+return _extends({},state,{
+publicMemos:[].concat(_toConsumableArray(
+state.publicMemos.filter(function(publicMemo){return publicMemo._id!==action.publicMemo._id;})),[
+action.publicMemo])});
+
+
 default:
 return state;}
 
-};var _actionTypes=require(888 /* ../constants/actionTypes */);var types=_interopRequireWildcard(_actionTypes);function _interopRequireWildcard(obj){if(obj&&obj.__esModule){return obj;}else{var newObj={};if(obj!=null){for(var key in obj){if(Object.prototype.hasOwnProperty.call(obj,key))newObj[key]=obj[key];}}newObj.default=obj;return newObj;}}var initialState={memo:null,publicMemos:[],privateMemos:[]};
+};var _actionTypes=require(888 /* ../constants/actionTypes */);var types=_interopRequireWildcard(_actionTypes);function _interopRequireWildcard(obj){if(obj&&obj.__esModule){return obj;}else{var newObj={};if(obj!=null){for(var key in obj){if(Object.prototype.hasOwnProperty.call(obj,key))newObj[key]=obj[key];}}newObj.default=obj;return newObj;}}function _toConsumableArray(arr){if(Array.isArray(arr)){for(var i=0,arr2=Array(arr.length);i<arr.length;i++){arr2[i]=arr[i];}return arr2;}else{return Array.from(arr);}}var initialState={memo:null,publicMemos:[],privateMemos:[]};
 }, "NativeStarterKit/js/reducers/memo.js");
 __d(964 /* NativeStarterKit/js/promise.js */, function(global, require, module, exports) {
 function warn(error){

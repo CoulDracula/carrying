@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
 
-import { actions } from 'react-native-navigation-redux-helpers';
-import { Container, Header, Title, Content, Tabs, Button, Icon } from 'native-base';
+import {actions} from 'react-native-navigation-redux-helpers';
+import {Container, Header, Title, Content, Tabs, Button, Icon} from 'native-base';
 
 import {loadPublicMemos} from '../../actions/memoActions';
 import TabOne from './TabOne';
 import TabTwo from './TabTwo';
 import myTheme from '../../themes/base-theme';
-import { openDrawer } from '../../actions/drawer';
+import {openDrawer} from '../../actions/drawer';
 import styles from './styles';
 
 const {
@@ -30,23 +30,24 @@ class MemoPage extends Component {
     }),
   }
 
-  componentWillMount() {
+  componentWillMount () {
     // const {loadPublicMemos}=this.props.memoActions;
     // loadPrivateMemos();
-    if(this.props.publicMemos.length<=0) {
+    if (this.props.publicMemos.length <= 0) {
       this.props.loadPublicMemos();
     }
   }
 
-  popRoute() {
+  popRoute () {
     this.props.popRoute(this.props.navigation.key);
   }
-  editMemo(){
+
+  editMemo () {
     this.props.pushRoute({ key: 'memoEditPage', index: 1 }, this.props.navigation.key);
   }
 
-  render() {
-    const {publicMemos}=this.props;
+  render () {
+    const { publicMemos }=this.props;
     return (
         <Content >
           <Tabs tabTextColor="#AAAAAA">
@@ -58,10 +59,10 @@ class MemoPage extends Component {
   }
 }
 
-function bindAction(dispatch) {
+function bindAction (dispatch) {
   return {
     pushRoute: (route, key) => dispatch(pushRoute(route, key)),
-    loadPublicMemos:  () => dispatch(loadPublicMemos()),
+    loadPublicMemos: () => dispatch(loadPublicMemos()),
     openDrawer: () => dispatch(openDrawer()),
     popRoute: key => dispatch(popRoute(key)),
   };
@@ -72,7 +73,7 @@ const mapStateToProps = state => ({
   name: state.user.name,
   index: state.list.selectedIndex,
   list: state.list.list,
-  publicMemos:state.memo.publicMemos,
+  publicMemos: state.memo.publicMemos,
 
 });
 

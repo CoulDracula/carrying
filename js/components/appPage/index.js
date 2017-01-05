@@ -1,18 +1,17 @@
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import {actions} from 'react-native-navigation-redux-helpers';
+import {Container, Header, Title, Content, Text, Button, Icon, Card, CardItem, Thumbnail} from 'native-base';
+import {Col, Row, Grid} from 'react-native-easy-grid';
+import {Image} from 'react-native';
 
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { actions } from 'react-native-navigation-redux-helpers';
-import { Container, Header, Title, Content, Text, Button, Icon ,Card, CardItem,Thumbnail} from 'native-base';
-import { Col, Row, Grid } from 'react-native-easy-grid';
-import { Image } from 'react-native';
-
-import { openDrawer } from '../../actions/drawer';
+import {openDrawer} from '../../actions/drawer';
 import styles from './styles';
 
 const {
   popRoute,
-    reset,
-    pushRoute,
+  reset,
+  pushRoute,
 } = actions;
 
 class AppPage extends Component {
@@ -28,181 +27,38 @@ class AppPage extends Component {
     }),
   }
 
-  popRoute() {
+  popRoute () {
     this.props.popRoute(this.props.navigation.key);
   }
 
-  pushRoute (route, index) {
-    this.props.setIndex(index);
+  pushRoute (route) {
     this.props.pushRoute({ key: route, index: 1 }, this.props.navigation.key);
   }
 
-  render() {
+  render () {
 
     return (
         <Content padder>
-          <Row>
-            <Col>
-              <Card style={styles.card}>
-                <CardItem>
-                  <Thumbnail />
-                  <Text>NativeBase</Text>
-                  <Text note>GeekyAnts</Text>
-                </CardItem>
-                <CardItem>
-                  <Row>
-                    <Col>
-                      <Button transparent>
-                        <Icon name="logo-github" />
-                        1,926
-                      </Button>
-                    </Col>
-                    <Col>
-                      <Button transparent>
-                        <Icon name="logo-github" />
-                        1,926
-                      </Button>
-                    </Col>
-                  </Row>
-                </CardItem>
-              </Card>
-            </Col>
-            <Col>
-              <Card style={styles.card}>
-                <CardItem>
-                  <Thumbnail />
-                  <Text>NativeBase</Text>
-                  <Text note>GeekyAnts</Text>
-                </CardItem>
-                <CardItem>
-                  <Row>
-                    <Col>
-                      <Button transparent>
-                        <Icon name="logo-github" />
-                        1,926
-                      </Button>
-                    </Col>
-                    <Col>
-                      <Button transparent>
-                        <Icon name="logo-github" />
-                        1,926
-                      </Button>
-                    </Col>
-                  </Row>
-                </CardItem>
-              </Card>
-            </Col>
-          </Row>
-          <Row>
-            <Col>
-              <Card style={styles.card}>
-                <CardItem>
-                  <Thumbnail />
-                  <Text>NativeBase</Text>
-                  <Text note>GeekyAnts</Text>
-                </CardItem>
-                <CardItem>
-                  <Row>
-                    <Col>
-                      <Button transparent>
-                        <Icon name="logo-github" />
-                        1,926
-                      </Button>
-                    </Col>
-                    <Col>
-                      <Button transparent>
-                        <Icon name="logo-github" />
-                        1,926
-                      </Button>
-                    </Col>
-                  </Row>
-                </CardItem>
-              </Card>
-            </Col>
-            <Col>
-              <Card style={styles.card}>
-                <CardItem>
-                  <Thumbnail />
-                  <Text>NativeBase</Text>
-                  <Text note>GeekyAnts</Text>
-                </CardItem>
-                <CardItem>
-                  <Row>
-                    <Col>
-                      <Button transparent>
-                        <Icon name="logo-github" />
-                        1,926
-                      </Button>
-                    </Col>
-                    <Col>
-                      <Button transparent>
-                        <Icon name="logo-github" />
-                        1,926
-                      </Button>
-                    </Col>
-                  </Row>
-                </CardItem>
-              </Card>
-            </Col>
-          </Row>
-          <Row>
-            <Col>
-              <Card style={styles.card}>
-                <CardItem>
-                  <Thumbnail />
-                  <Text>NativeBase</Text>
-                  <Text note>GeekyAnts</Text>
-                </CardItem>
-                <CardItem>
-                  <Row>
-                    <Col>
-                      <Button transparent>
-                        <Icon name="logo-github" />
-                        1,926
-                      </Button>
-                    </Col>
-                    <Col>
-                      <Button transparent>
-                        <Icon name="logo-github" />
-                        1,926
-                      </Button>
-                    </Col>
-                  </Row>
-                </CardItem>
-              </Card>
-            </Col>
-            <Col>
-              <Card style={styles.card}>
-                <CardItem>
-                  <Thumbnail />
-                  <Text>NativeBase</Text>
-                  <Text note>GeekyAnts</Text>
-                </CardItem>
-                <CardItem>
-                  <Row>
-                    <Col>
-                      <Button transparent>
-                        <Icon name="logo-github" />
-                        1,926
-                      </Button>
-                    </Col>
-                    <Col>
-                      <Button transparent>
-                        <Icon name="logo-github" />
-                        1,926
-                      </Button>
-                    </Col>
-                  </Row>
-                </CardItem>
-              </Card>
-            </Col>
-          </Row>
+          <Card style={styles.card}>
+            <CardItem onPress={() => this.pushRoute('timeTable')}>
+              <Thumbnail />
+              <Text>TimeTable</Text>
+              <Text note>when and where</Text>
+            </CardItem>
+          </Card>
+          <Card style={styles.card}>
+            <CardItem>
+              <Thumbnail />
+              <Text>NativeBase</Text>
+              <Text note>GeekyAnts</Text>
+            </CardItem>
+          </Card>
         </Content>
     );
   }
 }
 
-function bindAction(dispatch) {
+function bindAction (dispatch) {
   return {
     openDrawer: () => dispatch(openDrawer()),
     popRoute: key => dispatch(popRoute(key)),

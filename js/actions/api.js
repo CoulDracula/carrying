@@ -5,9 +5,9 @@ import {SERVER_URL, Authorization} from "../constants/config";
 class api {
   static  headers () {
     return {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json',
-      'Authorization': Authorization,
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+      // 'Authorization': Authorization,
     }
   }
 
@@ -32,8 +32,7 @@ class api {
   }
 
   static fetchFunc (route, params, verb) {
-    const host = `${SERVER_URL}`;
-    const url = `${host}/api/${route}`;
+    const url = `${SERVER_URL}/api/${route}`;
     let options = Object.assign({ method: verb }, params ? { body: JSON.stringify(params) } : null);
     options.header = api.headers();
     return fetch(url, options)
@@ -43,7 +42,7 @@ class api {
         return json;
       })
       .catch(error => {
-        dispatch(ajaxCallError());
+        // dispatch(ajaxCallError());
         throw(error);
       });
   }

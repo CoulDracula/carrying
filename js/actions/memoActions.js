@@ -89,6 +89,7 @@ export const updatePublicMemo = (memo, memoId) => {
         .then(checkHttpStatus)
         .then(parseJSON)
         .then((json) => {
+        console.log(json);
           dispatch(updatePublicMemoSuccess(json));
         })
         .catch(error => {
