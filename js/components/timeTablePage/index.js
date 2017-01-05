@@ -1,20 +1,21 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import {actions} from 'react-native-navigation-redux-helpers';
-import {Container, Header, Title, Content, Text, Button, Icon, Card, CardItem, Thumbnail} from 'native-base';
-import {Col, Row, Grid} from 'react-native-easy-grid';
-import {Image} from 'react-native';
 
-import {openDrawer} from '../../actions/drawer';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { actions } from 'react-native-navigation-redux-helpers';
+import { Container, Header, Title, Content, Text, Button, Icon ,Card, CardItem,Thumbnail} from 'native-base';
+import { Col, Row, Grid } from 'react-native-easy-grid';
+import { Image } from 'react-native';
+
+import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
 
 const {
   popRoute,
-  reset,
-  pushRoute,
+    reset,
+    pushRoute,
 } = actions;
 
-class AppPage extends Component {
+class TimeTablePage extends Component {
   static propTypes = {
     name: React.PropTypes.string,
     index: React.PropTypes.number,
@@ -27,52 +28,42 @@ class AppPage extends Component {
     }),
   }
 
-  popRoute () {
+  componentWillMount(){
+
+  }
+  popRoute() {
     this.props.popRoute(this.props.navigation.key);
   }
 
-  pushRoute (route) {
+  pushRoute (route, index) {
+    this.props.setIndex(index);
     this.props.pushRoute({ key: route, index: 1 }, this.props.navigation.key);
   }
 
-  render () {
+  render() {
 
     return (
       <Container style={styles.container}>
         <Header>
           <Button transparent onPress={() => this.popRoute()}>
-            <Icon name="ios-arrow-back"/>
+            <Icon name="ios-arrow-back" />
           </Button>
 
-          <Title>App Center</Title>
+          <Title>Time Table</Title>
 
           <Button transparent onPress={this.props.openDrawer}>
-            <Icon name="ios-menu"/>
+            <Icon name="ios-menu" />
           </Button>
         </Header>
-
         <Content padder>
-          <Card style={styles.card}>
-            <CardItem onPress={() => this.pushRoute('timeTable')}>
-              <Thumbnail />
-              <Text>TimeTable</Text>
-              <Text note>when and where</Text>
-            </CardItem>
-          </Card>
-          <Card style={styles.card}>
-            <CardItem>
-              <Thumbnail />
-              <Text>NativeBase</Text>
-              <Text note>GeekyAnts</Text>
-            </CardItem>
-          </Card>
+
         </Content>
       </Container>
     );
   }
 }
 
-function bindAction (dispatch) {
+function bindAction(dispatch) {
   return {
     openDrawer: () => dispatch(openDrawer()),
     popRoute: key => dispatch(popRoute(key)),
@@ -88,4 +79,4 @@ const mapStateToProps = state => ({
 });
 
 
-export default connect(mapStateToProps, bindAction)(AppPage);
+export default connect(mapStateToProps, bindAction)(TimeTablePage);
