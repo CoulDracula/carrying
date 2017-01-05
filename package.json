@@ -25,7 +25,8 @@
     "redux-persist": "^3.2.2",
     "redux-thunk": "^2.1.0",
     "remote-redux-devtools": "^0.3.3",
-    "remote-redux-devtools-on-debugger": "^0.4.6"
+    "remote-redux-devtools-on-debugger": "^0.4.6",
+    "tcomb-form-native": "^0.6.3"
   },
   "devDependencies": {
     "babel-eslint": "^6.1.2",

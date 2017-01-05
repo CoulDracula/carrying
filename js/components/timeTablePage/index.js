@@ -48,12 +48,7 @@ class TimeTablePage extends Component {
           <Button transparent onPress={() => this.popRoute()}>
             <Icon name="ios-arrow-back" />
           </Button>
-
           <Title>Time Table</Title>
-
-          <Button transparent onPress={this.props.openDrawer}>
-            <Icon name="ios-menu" />
-          </Button>
         </Header>
         <Content padder>
 

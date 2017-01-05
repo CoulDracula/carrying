@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
 
-import { actions } from 'react-native-navigation-redux-helpers';
-import { Container, Header, Title, Content, Tabs, Button, Icon } from 'native-base';
+import {actions} from 'react-native-navigation-redux-helpers';
+import {Container, Header, Title, Content, Tabs, Button, Icon} from 'native-base';
 
 import {loadPublicMemos} from '../../actions/memoActions';
 import TabOne from './TabOne';
 import TabTwo from './TabTwo';
 import myTheme from '../../themes/base-theme';
-import { openDrawer } from '../../actions/drawer';
+import {openDrawer} from '../../actions/drawer';
 import styles from './styles';
 
 const {
@@ -30,38 +30,41 @@ class MemoPage extends Component {
     }),
   }
 
-  componentWillMount() {
+  componentWillMount () {
     // const {loadPublicMemos}=this.props.memoActions;
     // loadPrivateMemos();
-    this.props.loadPublicMemos();
+    if (this.props.publicMemos.length <= 0) {
+      this.props.loadPublicMemos();
+    }
   }
 
-  popRoute() {
+  popRoute () {
     this.props.popRoute(this.props.navigation.key);
   }
-  editMemo(){
+
+  editMemo () {
     this.props.pushRoute({ key: 'memoEditPage', index: 1 }, this.props.navigation.key);
   }
 
-  render() {
-    const {publicMemos}=this.props;
+  render () {
+    const { publicMemos }=this.props;
     return (
       <Container style={styles.container}>
         <Header>
           <Button transparent onPress={() => this.popRoute()}>
-            <Icon name="ios-arrow-back" />
+            <Icon name="ios-arrow-back"/>
           </Button>
 
           <Title>Memo</Title>
 
           <Button transparent onPress={() => this.editMemo()}>
-            <Icon name="ios-add" />
+            <Icon name="ios-add"/>
           </Button>
         </Header>
         <Content >
           <Tabs tabTextColor="#AAAAAA">
-            <TabOne tabLabel='public' tabTextColor="#AAAAAA" publicMemos={publicMemos} />
-            <TabTwo tabLabel='private' />
+            <TabOne tabLabel='public' tabTextColor="#AAAAAA" publicMemos={publicMemos}/>
+            <TabTwo tabLabel='private'/>
           </Tabs>
         </Content>
       </Container>
@@ -69,10 +72,10 @@ class MemoPage extends Component {
   }
 }
 
-function bindAction(dispatch) {
+function bindAction (dispatch) {
   return {
     pushRoute: (route, key) => dispatch(pushRoute(route, key)),
-    loadPublicMemos:  () => dispatch(loadPublicMemos()),
+    loadPublicMemos: () => dispatch(loadPublicMemos()),
     openDrawer: () => dispatch(openDrawer()),
     popRoute: key => dispatch(popRoute(key)),
   };
@@ -83,7 +86,7 @@ const mapStateToProps = state => ({
   name: state.user.name,
   index: state.list.selectedIndex,
   list: state.list.list,
-  publicMemos:state.memo.publicMemos,
+  publicMemos: state.memo.publicMemos,
 
 });
 

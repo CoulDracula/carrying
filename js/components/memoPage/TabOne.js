@@ -17,7 +17,7 @@ const TabOne = ({ publicMemos }) => {
         {publicMemos.map(
           publicMemo => {
             return (
-            <Card style={styles.card}>
+            <Card style={styles.card} key={publicMemo._id}>
               <CardItem >
                   <Thumbnail source={require('./img/logo.png')} />
                   <Text>{publicMemo.title}</Text>
