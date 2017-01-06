@@ -4,6 +4,15 @@ import { Provider } from 'react-redux';
 
 import App from './App';
 import configureStore from './configureStore';
+import Storage from 'react-native-storage';
+
+var storage = new Storage({
+  size: 1000,
+  defaultExpires: null,
+  enableCache: true,
+});
+global.storage = storage;
+
 
 function setup():React.Component {
   class Root extends Component {

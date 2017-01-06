@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {actions} from 'react-native-navigation-redux-helpers';
-import {Container, Header,Button, Title, Content, Text, Icon, Card, CardItem, Thumbnail} from 'native-base';
+import {Container, Header, Button, Title, Content, Text, Icon, Card, CardItem, Thumbnail} from 'native-base';
 import {Col, Row, Grid} from 'react-native-easy-grid';
 import {Image} from 'react-native';
 
-import {deletePublicMemo } from '../../actions/memoActions';
+import {deletePublicMemo} from '../../actions/memoActions';
 import {openDrawer} from '../../actions/drawer';
 import styles from './styles';
 
@@ -17,16 +17,17 @@ const {
 
 class MemoDetailPage extends Component {
   constructor (props) {
-  super(props);
-  // this.state = {
-  //   selectedItem: undefined,
-  //   selected1: 'key0',
-  //   results: {
-  //     items: [],
-  //   },
-  // };
-  this.handleDelete=this.handleDelete.bind(this);
-}
+    super(props);
+    // this.state = {
+    //   selectedItem: undefined,
+    //   selected1: 'key0',
+    //   results: {
+    //     items: [],
+    //   },
+    // };
+    this.handleDelete = this.handleDelete.bind(this);
+  }
+
   static propTypes = {
     name: React.PropTypes.string,
     index: React.PropTypes.number,
@@ -51,15 +52,18 @@ class MemoDetailPage extends Component {
     this.props.setIndex(index);
     this.props.pushRoute({ key: route, index: 1 }, this.props.navigation.key);
   }
-  handleDelete(_id){
-    this.props.deletePublicMemo(_id);
-    this.props.popRoute(this.props.navigation.key);
+
+  handleDelete (_id) {
+    this.props.deletePublicMemo(_id).then(
+      () => {
+        this.popRoute();
+      }
+    );
   }
 
   render () {
 
     const { memo }=this.props;
-    console.log(memo);
     return (
       <Container style={styles.container}>
         <Header>
@@ -100,7 +104,7 @@ function bindAction (dispatch) {
   return {
     openDrawer: () => dispatch(openDrawer()),
     popRoute: key => dispatch(popRoute(key)),
-    deletePublicMemo :(_id) =>dispatch(deletePublicMemo(_id)),
+    deletePublicMemo: (_id) => dispatch(deletePublicMemo(_id)),
     pushRoute: (route, key) => dispatch(pushRoute(route, key)),
   };
 }

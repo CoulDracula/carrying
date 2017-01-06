@@ -1,22 +1,22 @@
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import {actions} from 'react-native-navigation-redux-helpers';
+import {Container, Content, List, ListItem, Text, Icon, Badge} from 'native-base';
 
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { actions } from 'react-native-navigation-redux-helpers';
-import { Container, Content, List, ListItem, Text, Icon, Badge } from 'native-base';
-
-import { openDrawer } from '../../actions/drawer';
+import {openDrawer} from '../../actions/drawer';
 import styles from './styles';
 
 const {
   popRoute,
-    reset,
-    pushRoute,
+  reset,
+  pushRoute,
 } = actions;
 
 class UserPage extends Component {
 
   static propTypes = {
-    name: React.PropTypes.string,
+    username: React.PropTypes.string,
+    personName: React.PropTypes.string,
     index: React.PropTypes.number,
     list: React.PropTypes.arrayOf(React.PropTypes.string),
     openDrawer: React.PropTypes.func,
@@ -27,7 +27,7 @@ class UserPage extends Component {
     }),
   }
 
-  popRoute() {
+  popRoute () {
     this.props.popRoute(this.props.navigation.key);
   }
 
@@ -36,34 +36,36 @@ class UserPage extends Component {
     this.props.pushRoute({ key: route, index: 1 }, this.props.navigation.key);
   }
 
-  render() {
-
+  render () {
+    const { username ,personName}=this.props;
     return (
 
-        <Content padder>
-          <List>
-            <ListItem iconLeft>
-              <Icon name="ios-plane" style={styles.icon} />
-              <Text>Airplane Mode</Text>
-              <Text note>Off</Text>
-            </ListItem>
-            <ListItem iconLeft>
-              <Icon name="ios-settings-outline" style={styles.icon} />
-              <Text>Software Update</Text>
-              <Badge style={{ backgroundColor: '#8C97B5' }}>2</Badge>
-            </ListItem>
-            <ListItem iconLeft>
-              <Icon name="ios-mail-outline" style={styles.icon} />
-              <Text>Mail Center</Text>
-              <Badge>12</Badge>
-            </ListItem>
-          </List>
-        </Content>
+      <Content padder>
+        <List>
+          <Text>{personName}</Text>
+          <Text>{username}</Text>
+          <ListItem iconLeft>
+            <Icon name="ios-plane" style={styles.icon}/>
+            <Text>Airplane Mode</Text>
+            <Text note>Off</Text>
+          </ListItem>
+          <ListItem iconLeft>
+            <Icon name="ios-settings-outline" style={styles.icon}/>
+            <Text>Software Update</Text>
+            <Badge style={{ backgroundColor: '#8C97B5' }}>2</Badge>
+          </ListItem>
+          <ListItem iconLeft>
+            <Icon name="ios-mail-outline" style={styles.icon}/>
+            <Text>Mail Center</Text>
+            <Badge>12</Badge>
+          </ListItem>
+        </List>
+      </Content>
     );
   }
 }
 
-function bindAction(dispatch) {
+function bindAction (dispatch) {
   return {
     openDrawer: () => dispatch(openDrawer()),
     popRoute: key => dispatch(popRoute(key)),
@@ -71,12 +73,16 @@ function bindAction(dispatch) {
   };
 }
 
-const mapStateToProps = state => ({
-  navigation: state.cardNavigation,
-  name: state.user.name,
-  index: state.list.selectedIndex,
-  list: state.list.list,
-});
+const mapStateToProps = (state) => {
+  const personName = state.auth.person.name ? state.auth.person.name : 'not found';
+  return {
+    navigation: state.cardNavigation,
+    username: state.auth.username,
+    personName,
+    index: state.list.selectedIndex,
+    list: state.list.list,
+  }
+};
 
 
 export default connect(mapStateToProps, bindAction)(UserPage);

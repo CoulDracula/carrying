@@ -55,7 +55,7 @@ class MemoPage extends Component {
   }
   pushRoute (route, index) {
     this.props.loadPublicMemo(index);
-    this.props.pushRoute({ key: 'memoDetail', index: 1 }, this.props.navigation.key);
+    this.props.pushRoute({ key: route, index: 1 }, this.props.navigation.key);
   }
 
 

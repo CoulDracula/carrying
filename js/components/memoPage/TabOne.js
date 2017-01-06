@@ -18,7 +18,7 @@ const TabOne = ({ publicMemos ,pushRoute}) => {
           publicMemo => {
             return (
             <List key={publicMemo._id} >
-              <ListItem onPress={() => pushRoute('memoEdit',publicMemo)}>
+              <ListItem onPress={() => pushRoute('memoDetail', publicMemo)}>
                 <Thumbnail square  source={require('./img/logo.png')}  />
                 <Text>{publicMemo.title}</Text>
                 <Text note>{publicMemo.grade}</Text>

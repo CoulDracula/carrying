@@ -17,7 +17,7 @@ import AppPage from './components/appPage';
 import TimeTablePage from './components/timeTablePage';
 import MemoEditPage from './components/memoPage/MemoEditPage';
 import StrongBoxPage from './components/strongBoxPage';
-import MapPage from './components/map';
+import MapPage from './components/map/Map';
 import MemoDetailPage from './components/memoPage/MemoDetailPage';
 import {statusBarColor} from './themes/base-theme';
 

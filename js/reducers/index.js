@@ -7,6 +7,7 @@ import user from './user';
 import list from './list';
 import memo from './memo';
 import title from './title';
+import auth from './auth'
 
 export default combineReducers({
   drawer,
@@ -15,4 +16,5 @@ export default combineReducers({
   cardNavigation,
   memo,
   title,
+  auth,
 });

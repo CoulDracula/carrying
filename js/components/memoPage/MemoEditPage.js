@@ -58,12 +58,19 @@ class MemoEditPage extends Component {
   pushValue (form) {
     console.log(form);
     if(form.private!=true){
-      this.props.updatePublicMemo(form);
+      this.props.updatePublicMemo(form).then(
+        ()=>{
+          this.popRoute();
+        }
+      );
     }
     if(form.private==true){
-      this.props.updatePrivateMemo(form);
+      this.props.updatePrivateMemo(form).then(
+        ()=>{
+          this.popRoute();
+        }
+      );
     }
-    this.popRoute();
   }
 
   render () {
