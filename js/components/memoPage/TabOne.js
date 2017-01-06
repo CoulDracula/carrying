@@ -4,7 +4,7 @@ import {actions} from 'react-native-navigation-redux-helpers';
 import { Container, Content, Card, CardItem, Text, Spinner,  List, ListItem, Thumbnail, Icon } from 'native-base';
 
 import styles from './styles';
-const TabOne = ({ publicMemos }) => {
+const TabOne = ({ publicMemos ,pushRoute}) => {
 
 
   return (
@@ -17,9 +17,9 @@ const TabOne = ({ publicMemos }) => {
         {publicMemos.map(
           publicMemo => {
             return (
-            <List>
-              <ListItem>
-                <Thumbnail square  source={require('./img/logo.png')} />
+            <List key={publicMemo._id} >
+              <ListItem onPress={() => pushRoute('memoEdit',publicMemo)}>
+                <Thumbnail square  source={require('./img/logo.png')}  />
                 <Text>{publicMemo.title}</Text>
                 <Text note>{publicMemo.grade}</Text>
               </ListItem>

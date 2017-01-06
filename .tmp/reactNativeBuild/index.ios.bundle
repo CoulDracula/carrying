@@ -115321,6 +115321,7 @@ var _timeTablePage=require(898 /* ./components/timeTablePage */);var _timeTableP
 var _MemoEditPage=require(900 /* ./components/memoPage/MemoEditPage */);var _MemoEditPage2=_interopRequireDefault(_MemoEditPage);
 var _strongBoxPage=require(972 /* ./components/strongBoxPage */);var _strongBoxPage2=_interopRequireDefault(_strongBoxPage);
 var _map=require(974 /* ./components/map */);var _map2=_interopRequireDefault(_map);
+var _MemoDetailPage=require(1040 /* ./components/memoPage/MemoDetailPage */);var _MemoDetailPage2=_interopRequireDefault(_MemoDetailPage);
 var _baseTheme=require(876 /* ./themes/base-theme */);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={AppNavigator:{displayName:'AppNavigator'}};var _node_modulesReactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/js/AppNavigator.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _node_modulesReactTransformHmrLibIndexJs2(Component,id);};}var
 
 
@@ -115404,6 +115405,8 @@ case'strongBox':
 return _react3.default.createElement(_strongBoxPage2.default,null);
 case'map':
 return _react3.default.createElement(_map2.default,null);
+case'memoDetail':
+return _react3.default.createElement(_MemoDetailPage2.default,null);
 default:
 return _react3.default.createElement(_splashscreen2.default,null);}
 
@@ -116030,6 +116033,7 @@ var LOAD_PRIVATE_MEMOS_SUCCESS=exports.LOAD_PRIVATE_MEMOS_SUCCESS='LOAD_PRIVATE_
 var LOAD_PRIVATE_MEMO_SUCCESS=exports.LOAD_PRIVATE_MEMO_SUCCESS='LOAD_PRIVATE_MEMO_SUCCESS';
 
 var UPDATE_PUBLIC_MEMO_SUCCESS=exports.UPDATE_PUBLIC_MEMO_SUCCESS='UPDATE_PUBLIC_MEMO_SUCCESS';
+var DELETE_PUBLIC_MEMO_SUCCESS=exports.DELETE_PUBLIC_MEMO_SUCCESS='DELETE_PUBLIC_MEMO_SUCCESS';
 
 var SET_USER=exports.SET_USER='SET_USER';
 var SET_TITLE=exports.SET_TITLE='SET_TITLE';
@@ -133778,9 +133782,21 @@ var _styles=require(886 /* ./styles */);var _styles2=_interopRequireDefault(_sty
 
 
 _pushRoute=_reactNativeNavigationReduxHelpers.actions.pushRoute,
-_popRoute=_reactNativeNavigationReduxHelpers.actions.popRoute;var MemoPage=_wrapComponent('MemoPage')((_temp=_class=function(_Component){_inherits(MemoPage,_Component);function MemoPage(){_classCallCheck(this,MemoPage);return _possibleConstructorReturn(this,(MemoPage.__proto__||Object.getPrototypeOf(MemoPage)).apply(this,arguments));}_createClass(MemoPage,[{key:'componentWillMount',value:function componentWillMount()
+_popRoute=_reactNativeNavigationReduxHelpers.actions.popRoute;var MemoPage=_wrapComponent('MemoPage')((_temp=_class=function(_Component){_inherits(MemoPage,_Component);
 
 
+
+function MemoPage(props){_classCallCheck(this,MemoPage);var _this=_possibleConstructorReturn(this,(MemoPage.__proto__||Object.getPrototypeOf(MemoPage)).call(this,
+props));
+
+
+
+
+
+
+
+_this.pushRoute=_this.pushRoute.bind(_this);return _this;
+}_createClass(MemoPage,[{key:'componentWillMount',value:function componentWillMount()
 
 
 
@@ -133805,26 +133821,32 @@ this.props.loadPublicMemos();
 
 {
 this.props.popRoute(this.props.navigation.key);
+}},{key:'pushRoute',value:function pushRoute(
+route,index){
+this.props.loadPublicMemo(index);
+this.props.pushRoute({key:'memoDetail',index:1},this.props.navigation.key);
 }},{key:'render',value:function render()
+
 
 {var
 publicMemos=this.props.publicMemos;
 return(
 _react3.default.createElement(_nativeBase.Content,null,
 _react3.default.createElement(_nativeBase.Tabs,{tabTextColor:'#AAAAAA'},
-_react3.default.createElement(_TabOne2.default,{tabLabel:'public',tabTextColor:'#AAAAAA',publicMemos:publicMemos}),
+_react3.default.createElement(_TabOne2.default,{tabLabel:'public',tabTextColor:'#AAAAAA',publicMemos:publicMemos,pushRoute:this.pushRoute}),
 _react3.default.createElement(_TabTwo2.default,{tabLabel:'private'}))));
 
 
 
-}}]);return MemoPage;}(_react2.Component),_class.propTypes={name:_react3.default.PropTypes.string,index:_react3.default.PropTypes.number,list:_react3.default.PropTypes.arrayOf(_react3.default.PropTypes.string),openDrawer:_react3.default.PropTypes.func,loadPublicMemos:_react3.default.PropTypes.func,popRoute:_react3.default.PropTypes.func,navigation:_react3.default.PropTypes.shape({key:_react3.default.PropTypes.string})},_temp));
+}}]);return MemoPage;}(_react2.Component),_class.propTypes={name:_react3.default.PropTypes.string,index:_react3.default.PropTypes.number,list:_react3.default.PropTypes.arrayOf(_react3.default.PropTypes.string),openDrawer:_react3.default.PropTypes.func,loadPublicMemo:_react3.default.PropTypes.func,loadPublicMemos:_react3.default.PropTypes.func,pushRoute:_react3.default.PropTypes.func,popRoute:_react3.default.PropTypes.func,navigation:_react3.default.PropTypes.shape({key:_react3.default.PropTypes.string})},_temp));
 
 
 function bindAction(dispatch){
 return{
-pushRoute:function pushRoute(route,key){return dispatch(_pushRoute(route,key));},
+loadPublicMemo:function loadPublicMemo(index){return dispatch((0,_memoActions.loadPublicMemo)(index));},
 loadPublicMemos:function loadPublicMemos(){return dispatch((0,_memoActions.loadPublicMemos)());},
 openDrawer:function openDrawer(){return dispatch((0,_drawer.openDrawer)());},
+pushRoute:function pushRoute(route,key){return dispatch(_pushRoute(route,key));},
 popRoute:function popRoute(key){return dispatch(_popRoute(key));}};
 
 }
@@ -133841,7 +133863,7 @@ publicMemos:state.memo.publicMemos};};exports.default=
 
 (0,_reactRedux.connect)(mapStateToProps,bindAction)(MemoPage);
 }, "NativeStarterKit/js/components/memoPage/index.js");
-__d(879 /* NativeStarterKit/js/actions/memoActions.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});exports.deletePublicMemo=exports.deletePrivateMemo=exports.updatePublicMemo=exports.updatePrivateMemo=exports.loadPublicMemo=exports.loadPublicMemos=exports.updatePublicMemoSuccess=exports.loadPublicMemoSuccess=exports.loadPublicMemosSuccess=undefined;var _actionTypes=require(880 /* ../constants/actionTypes */);var types=_interopRequireWildcard(_actionTypes);
+__d(879 /* NativeStarterKit/js/actions/memoActions.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});exports.deletePublicMemo=exports.deletePrivateMemo=exports.updatePublicMemo=exports.updatePrivateMemo=exports.loadPublicMemo=exports.loadPublicMemos=exports.deletePublicMemoSuccess=exports.updatePublicMemoSuccess=exports.loadPublicMemoSuccess=exports.loadPublicMemosSuccess=undefined;var _actionTypes=require(880 /* ../constants/actionTypes */);var types=_interopRequireWildcard(_actionTypes);
 var _api=require(881 /* ./api */);var _api2=_interopRequireDefault(_api);
 var _utils=require(882 /* ../businessLogic/utils */);
 var _ajaxStatusActions=require(883 /* ./ajaxStatusActions */);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _interopRequireWildcard(obj){if(obj&&obj.__esModule){return obj;}else{var newObj={};if(obj!=null){for(var key in obj){if(Object.prototype.hasOwnProperty.call(obj,key))newObj[key]=obj[key];}}newObj.default=obj;return newObj;}}
@@ -133857,6 +133879,9 @@ return{type:types.LOAD_PUBLIC_MEMO_SUCCESS,publicMemo:publicMemo};
 var updatePublicMemoSuccess=exports.updatePublicMemoSuccess=function updatePublicMemoSuccess(publicMemo){
 return{type:types.UPDATE_PUBLIC_MEMO_SUCCESS,publicMemo:publicMemo};
 };
+var deletePublicMemoSuccess=exports.deletePublicMemoSuccess=function deletePublicMemoSuccess(_id){
+return{type:types.DELETE_PUBLIC_MEMO_SUCCESS,_id:_id};
+};
 
 var loadPublicMemos=exports.loadPublicMemos=function loadPublicMemos(){
 console.log('load public');
@@ -133869,13 +133894,9 @@ dispatch(loadPublicMemosSuccess(json));
 };
 };
 
-var loadPublicMemo=exports.loadPublicMemo=function loadPublicMemo(memoId){
+var loadPublicMemo=exports.loadPublicMemo=function loadPublicMemo(publicMemo){
 return function(dispatch){
-return _api2.default.get("memos/public/"+memoId+"/").then(
-function(json){
-dispatch(loadPublicMemoSuccess(json));
-});
-
+dispatch(loadPublicMemoSuccess(publicMemo));
 };
 };
 
@@ -133965,8 +133986,7 @@ var deletePublicMemo=exports.deletePublicMemo=function deletePublicMemo(memoId){
 return function(dispatch){
 return _api2.default.delete("memos/private/"+memoId+"/").then(
 function(json){
-
-
+dispatch(deletePublicMemoSuccess(_id));
 });
 
 };
@@ -134070,7 +134090,7 @@ var _reactNativeNavigationReduxHelpers=require(861 /* react-native-navigation-re
 var _nativeBase=require(690 /* native-base */);
 
 var _styles=require(886 /* ./styles */);var _styles2=_interopRequireDefault(_styles);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}
-var TabOne=function TabOne(_ref){var publicMemos=_ref.publicMemos;
+var TabOne=function TabOne(_ref){var publicMemos=_ref.publicMemos,pushRoute=_ref.pushRoute;
 
 
 return(
@@ -134083,8 +134103,8 @@ _react2.default.createElement(_nativeBase.Spinner,null),
 publicMemos.map(
 function(publicMemo){
 return(
-_react2.default.createElement(_nativeBase.List,null,
-_react2.default.createElement(_nativeBase.ListItem,null,
+_react2.default.createElement(_nativeBase.List,{key:publicMemo._id},
+_react2.default.createElement(_nativeBase.ListItem,{onPress:function onPress(){return pushRoute('memoEdit',publicMemo);}},
 _react2.default.createElement(_nativeBase.Thumbnail,{square:true,source:require(887 /* ./img/logo.png */)}),
 _react2.default.createElement(_nativeBase.Text,null,publicMemo.title),
 _react2.default.createElement(_nativeBase.Text,{note:true},publicMemo.grade))));
@@ -134391,7 +134411,7 @@ this.props.popRoute(this.props.navigation.key);
 }},{key:'render',value:function render()
 
 {var _this2=this;var _props=
-this.props,title=_props.title,index=_props.index,list=_props.list;
+this.props,title=_props.title,children=_props.children;
 return(
 _react3.default.createElement(_nativeBase.Container,{style:_styles2.default.container},
 _react3.default.createElement(_nativeBase.Header,null,
@@ -134405,11 +134425,8 @@ _react3.default.createElement(_nativeBase.Button,{transparent:true,onPress:this.
 _react3.default.createElement(_nativeBase.Icon,{name:'ios-menu'}))),
 
 
-
-_react3.default.createElement(_nativeBase.Content,{padder:true},
-_react3.default.createElement(_nativeBase.Text,null,
-!isNaN(index)?list[index]:'Create Something Awesome . . .'))));
-
+_react3.default.createElement(_nativeBase.Content,null,
+children)));
 
 
 
@@ -138766,6 +138783,124 @@ backgroundColor:'#FBFAFA'},
 card:{
 margin:8}});
 }, "NativeStarterKit/js/components/map/styles.js");
+__d(1040 /* NativeStarterKit/js/components/memoPage/MemoDetailPage.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _react2=require(16 /* react */);var _react3=_interopRequireDefault(_react2);var _index=require(46 /* ./../../../node_modules/react-transform-hmr/lib/index.js */);var _index2=_interopRequireDefault(_index);var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _class,_temp;
+var _reactRedux=require(660 /* react-redux */);
+var _reactNativeNavigationReduxHelpers=require(861 /* react-native-navigation-redux-helpers */);
+var _nativeBase=require(690 /* native-base */);
+var _reactNativeEasyGrid=require(868 /* react-native-easy-grid */);
+var _reactNative=require(12 /* react-native */);
+
+var _memoActions=require(879 /* ../../actions/memoActions */);
+var _drawer=require(862 /* ../../actions/drawer */);
+var _styles=require(886 /* ./styles */);var _styles2=_interopRequireDefault(_styles);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={MemoDetailPage:{displayName:'MemoDetailPage'}};var _node_modulesReactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/js/components/memoPage/MemoDetailPage.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _node_modulesReactTransformHmrLibIndexJs2(Component,id);};}var
+
+
+_popRoute=_reactNativeNavigationReduxHelpers.actions.popRoute,
+reset=_reactNativeNavigationReduxHelpers.actions.reset,
+_pushRoute=_reactNativeNavigationReduxHelpers.actions.pushRoute;var MemoDetailPage=_wrapComponent('MemoDetailPage')((_temp=_class=function(_Component){_inherits(MemoDetailPage,_Component);
+
+
+
+function MemoDetailPage(props){_classCallCheck(this,MemoDetailPage);var _this=_possibleConstructorReturn(this,(MemoDetailPage.__proto__||Object.getPrototypeOf(MemoDetailPage)).call(this,
+props));
+
+
+
+
+
+
+
+_this.handleDelete=_this.handleDelete.bind(_this);return _this;
+}_createClass(MemoDetailPage,[{key:'componentWillMount',value:function componentWillMount()
+
+
+
+
+
+
+
+
+
+
+
+
+{
+
+}},{key:'popRoute',value:function popRoute()
+
+{
+this.props.popRoute(this.props.navigation.key);
+}},{key:'pushRoute',value:function pushRoute(
+
+route,index){
+this.props.setIndex(index);
+this.props.pushRoute({key:route,index:1},this.props.navigation.key);
+}},{key:'handleDelete',value:function handleDelete(
+_id){
+this.props.deletePublicMemo(_id);
+this.props.popRoute(this.props.navigation.key);
+}},{key:'render',value:function render()
+
+{var _this2=this;var
+
+memo=this.props.memo;
+console.log(memo);
+return(
+_react3.default.createElement(_nativeBase.Container,{style:_styles2.default.container},
+_react3.default.createElement(_nativeBase.Header,null,
+_react3.default.createElement(_nativeBase.Button,{transparent:true,onPress:function onPress(){return _this2.popRoute();}},
+_react3.default.createElement(_nativeBase.Icon,{name:'ios-arrow-back'})),
+
+_react3.default.createElement(_nativeBase.Title,null,'Memo Detial')),
+
+_react3.default.createElement(_nativeBase.Content,null,
+_react3.default.createElement(_nativeBase.Card,{style:_styles2.default.card},
+_react3.default.createElement(_nativeBase.CardItem,{header:true},
+_react3.default.createElement(_nativeBase.Text,null,memo.title)),
+
+_react3.default.createElement(_nativeBase.CardItem,null,
+_react3.default.createElement(_nativeBase.Text,null,memo.content)),
+
+_react3.default.createElement(_nativeBase.CardItem,null,
+_react3.default.createElement(_nativeBase.Text,null,memo.author)),
+
+_react3.default.createElement(_nativeBase.CardItem,null,
+_react3.default.createElement(_nativeBase.Text,null,memo.date)),
+
+_react3.default.createElement(_nativeBase.CardItem,null,
+_react3.default.createElement(_nativeBase.Text,null,memo.grade)),
+
+_react3.default.createElement(_nativeBase.CardItem,null,
+_react3.default.createElement(_nativeBase.Text,null,memo.modified))),
+
+
+_react3.default.createElement(_nativeBase.Button,{danger:true,onPress:function onPress(){_this2.handleDelete(memo._id);}},' delete '))));
+
+
+
+}}]);return MemoDetailPage;}(_react2.Component),_class.propTypes={name:_react3.default.PropTypes.string,index:_react3.default.PropTypes.number,list:_react3.default.PropTypes.arrayOf(_react3.default.PropTypes.string),openDrawer:_react3.default.PropTypes.func,popRoute:_react3.default.PropTypes.func,pushRoute:_react3.default.PropTypes.func,navigation:_react3.default.PropTypes.shape({key:_react3.default.PropTypes.string})},_temp));
+
+
+function bindAction(dispatch){
+return{
+openDrawer:function openDrawer(){return dispatch((0,_drawer.openDrawer)());},
+popRoute:function popRoute(key){return dispatch(_popRoute(key));},
+deletePublicMemo:function deletePublicMemo(_id){return dispatch((0,_memoActions.deletePublicMemo)(_id));},
+pushRoute:function pushRoute(route,key){return dispatch(_pushRoute(route,key));}};
+
+}
+
+var mapStateToProps=function mapStateToProps(state){return{
+navigation:state.cardNavigation,
+name:state.user.name,
+index:state.list.selectedIndex,
+list:state.list.list,
+memo:state.memo.memo};};exports.default=
+
+
+
+(0,_reactRedux.connect)(mapStateToProps,bindAction)(MemoDetailPage);
+}, "NativeStarterKit/js/components/memoPage/MemoDetailPage.js");
 __d(976 /* NativeStarterKit/js/components/loaders/ProgressBar.ios.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();
 
 var _react=require(16 /* react */);var _react2=_interopRequireDefault(_react);
@@ -144351,12 +144486,13 @@ __d(1037 /* NativeStarterKit/js/reducers/memo.js */, function(global, require, m
 
 
 
+
 function(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments[1];
 switch(action.type){
 case types.LOAD_PUBLIC_MEMOS_SUCCESS:
 return _extends({},state,{publicMemos:action.publicMemos.results});
 case types.LOAD_PUBLIC_MEMO_SUCCESS:
-return _extends({},state,{publicMemo:action.publicMemo});
+return _extends({},state,{memo:action.publicMemo});
 case types.LOAD_PRIVATE_MEMOS_SUCCESS:
 return _extends({},state,{privateMemo:action.privateMemos});
 case types.LOAD_PRIVATE_MEMO_SUCCESS:
@@ -144368,10 +144504,16 @@ state.publicMemos.filter(function(publicMemo){return publicMemo._id!==action.pub
 action.publicMemo])});
 
 
+case types.DELETE_PUBLIC_MEMO_SUCCESS:
+return _extends({},state,{
+publicMemos:[].concat(_toConsumableArray(
+state.publicMemos.filter(function(publicMemo){return publicMemo._id!==action._id;})))});
+
+
 default:
 return state;}
 
-};var _actionTypes=require(880 /* ../constants/actionTypes */);var types=_interopRequireWildcard(_actionTypes);function _interopRequireWildcard(obj){if(obj&&obj.__esModule){return obj;}else{var newObj={};if(obj!=null){for(var key in obj){if(Object.prototype.hasOwnProperty.call(obj,key))newObj[key]=obj[key];}}newObj.default=obj;return newObj;}}function _toConsumableArray(arr){if(Array.isArray(arr)){for(var i=0,arr2=Array(arr.length);i<arr.length;i++){arr2[i]=arr[i];}return arr2;}else{return Array.from(arr);}}var initialState={memo:null,publicMemos:[],privateMemos:[]};
+};var _actionTypes=require(880 /* ../constants/actionTypes */);var types=_interopRequireWildcard(_actionTypes);function _interopRequireWildcard(obj){if(obj&&obj.__esModule){return obj;}else{var newObj={};if(obj!=null){for(var key in obj){if(Object.prototype.hasOwnProperty.call(obj,key))newObj[key]=obj[key];}}newObj.default=obj;return newObj;}}function _toConsumableArray(arr){if(Array.isArray(arr)){for(var i=0,arr2=Array(arr.length);i<arr.length;i++){arr2[i]=arr[i];}return arr2;}else{return Array.from(arr);}}var initialState={memo:null,publicMemo:null,publicMemos:[],privateMemos:[]};
 }, "NativeStarterKit/js/reducers/memo.js");
 __d(1039 /* NativeStarterKit/js/reducers/title.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});exports.default=
 

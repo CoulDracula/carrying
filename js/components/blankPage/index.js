@@ -28,7 +28,7 @@ class BlankPage extends Component {
   }
 
   render () {
-    const { props: { title, index, list } } = this;
+    const { props: { title ,children} } = this;
     return (
       <Container style={styles.container}>
         <Header>
@@ -42,11 +42,8 @@ class BlankPage extends Component {
             <Icon name="ios-menu"/>
           </Button>
         </Header>
-
-        <Content padder>
-          <Text>
-            {(!isNaN(index)) ? list[index] : 'Create Something Awesome . . .'}
-          </Text>
+        <Content>
+        {children}
         </Content>
       </Container>
     );

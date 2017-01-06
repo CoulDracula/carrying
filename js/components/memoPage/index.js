@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import {actions} from 'react-native-navigation-redux-helpers';
 import {Container, Header, Title, Content, Tabs, Button, Icon} from 'native-base';
 
-import {loadPublicMemos} from '../../actions/memoActions';
+import {loadPublicMemos,loadPublicMemo} from '../../actions/memoActions';
 import TabOne from './TabOne';
 import TabTwo from './TabTwo';
 import myTheme from '../../themes/base-theme';
@@ -17,13 +17,25 @@ const {
 } = actions;
 
 class MemoPage extends Component {
-
+  constructor (props) {
+    super(props);
+    // this.state = {
+    //   selectedItem: undefined,
+    //   selected1: 'key0',
+    //   results: {
+    //     items: [],
+    //   },
+    // };
+    this.pushRoute=this.pushRoute.bind(this);
+  }
   static propTypes = {
     name: React.PropTypes.string,
     index: React.PropTypes.number,
     list: React.PropTypes.arrayOf(React.PropTypes.string),
     openDrawer: React.PropTypes.func,
+    loadPublicMemo: React.PropTypes.func,
     loadPublicMemos: React.PropTypes.func,
+    pushRoute: React.PropTypes.func,
     popRoute: React.PropTypes.func,
     navigation: React.PropTypes.shape({
       key: React.PropTypes.string,
@@ -41,13 +53,18 @@ class MemoPage extends Component {
   popRoute () {
     this.props.popRoute(this.props.navigation.key);
   }
+  pushRoute (route, index) {
+    this.props.loadPublicMemo(index);
+    this.props.pushRoute({ key: 'memoDetail', index: 1 }, this.props.navigation.key);
+  }
+
 
   render () {
     const { publicMemos }=this.props;
     return (
         <Content >
           <Tabs tabTextColor="#AAAAAA">
-            <TabOne tabLabel='public' tabTextColor="#AAAAAA" publicMemos={publicMemos} />
+            <TabOne tabLabel='public' tabTextColor="#AAAAAA" publicMemos={publicMemos} pushRoute={this.pushRoute}/>
             <TabTwo tabLabel='private' />
           </Tabs>
         </Content>
@@ -57,9 +74,10 @@ class MemoPage extends Component {
 
 function bindAction (dispatch) {
   return {
-    pushRoute: (route, key) => dispatch(pushRoute(route, key)),
+    loadPublicMemo: (index) => dispatch(loadPublicMemo(index)),
     loadPublicMemos: () => dispatch(loadPublicMemos()),
     openDrawer: () => dispatch(openDrawer()),
+    pushRoute: (route, key) => dispatch(pushRoute(route, key)),
     popRoute: key => dispatch(popRoute(key)),
   };
 }

@@ -14,6 +14,9 @@ export const loadPublicMemoSuccess = (publicMemo) => {
 export const updatePublicMemoSuccess = (publicMemo) => {
   return { type: types.UPDATE_PUBLIC_MEMO_SUCCESS, publicMemo }
 }
+export const deletePublicMemoSuccess = (_id) =>{
+  return {type:types.DELETE_PUBLIC_MEMO_SUCCESS,_id}
+}
 
 export const loadPublicMemos = () => {
   console.log('load public');
@@ -26,13 +29,9 @@ export const loadPublicMemos = () => {
   }
 };
 
-export const loadPublicMemo = (memoId) => {
+export const loadPublicMemo = (publicMemo) => {
   return dispatch => {
-    return api.get(`memos/public/${memoId}/`).then(
-      json => {
-        dispatch(loadPublicMemoSuccess(json));
-      }
-    );
+        dispatch(loadPublicMemoSuccess(publicMemo));
   }
 };
 
@@ -118,12 +117,11 @@ export const deletePrivateMemo = (userId, memoId) => {
     );
   }
 };
-export const deletePublicMemo = (memoId) => {
+export const deletePublicMemo = (_id) => {
   return dispatch => {
-    return api.delete(`memos/private/${memoId}/`).then(
+    return api.delete(`memos/private/${_id}/`).then(
       json => {
-        // dispatch(loadMemos());
-        //路由跳转
+        dispatch(deletePublicMemoSuccess(_id));
       }
     );
   }

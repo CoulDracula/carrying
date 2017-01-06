@@ -18,6 +18,7 @@ import TimeTablePage from './components/timeTablePage';
 import MemoEditPage from './components/memoPage/MemoEditPage';
 import StrongBoxPage from './components/strongBoxPage';
 import MapPage from './components/map';
+import MemoDetailPage from './components/memoPage/MemoDetailPage';
 import {statusBarColor} from './themes/base-theme';
 
 const {
@@ -101,6 +102,8 @@ class AppNavigator extends Component {
         return <StrongBoxPage/>;
       case 'map':
         return <MapPage/>;
+      case 'memoDetail':
+        return <MemoDetailPage/>;
       default :
         return <SplashPage />;
     }
