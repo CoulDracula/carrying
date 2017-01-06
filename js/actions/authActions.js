@@ -14,7 +14,7 @@ export const fetchPersonInfoSuccess = (person) => {
 
 export function authLoginUserSuccess (token) {
   saveAuthToken(token).then(
-    (token) => {
+    () => {
       console.log('本地token');
       console.log(token);
       return {

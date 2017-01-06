@@ -6,7 +6,7 @@ import App from './App';
 import configureStore from './configureStore';
 import Storage from 'react-native-storage';
 
-var storage = new Storage({
+const storage = new Storage({
   size: 1000,
   defaultExpires: null,
   enableCache: true,

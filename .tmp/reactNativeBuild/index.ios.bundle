@@ -82115,7 +82115,16 @@ __d(659 /* NativeStarterKit/js/setup.js */, function(global, require, module, ex
 var _reactRedux=require(660 /* react-redux */);
 
 var _App=require(681 /* ./App */);var _App2=_interopRequireDefault(_App);
-var _configureStore=require(978 /* ./configureStore */);var _configureStore2=_interopRequireDefault(_configureStore);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={Root:{displayName:'Root',isInFunction:true}};var _node_modulesReactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/js/setup.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _node_modulesReactTransformHmrLibIndexJs2(Component,id);};}
+var _configureStore=require(978 /* ./configureStore */);var _configureStore2=_interopRequireDefault(_configureStore);
+var _reactNativeStorage=require(1050 /* react-native-storage */);var _reactNativeStorage2=_interopRequireDefault(_reactNativeStorage);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={Root:{displayName:'Root',isInFunction:true}};var _node_modulesReactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/js/setup.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _node_modulesReactTransformHmrLibIndexJs2(Component,id);};}
+
+var storage=new _reactNativeStorage2.default({
+size:1000,
+defaultExpires:null,
+enableCache:true});
+
+global.storage=storage;
+
 
 function setup(){var Root=_wrapComponent('Root')(function(_Component){_inherits(Root,_Component);
 
@@ -116035,50 +116044,7 @@ __d(1043 /* NativeStarterKit/js/actions/authActions.js */, function(global, requ
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 authLoginUserSuccess=authLoginUserSuccess;exports.
-
-
-
 
 
 
@@ -116102,6 +116068,11 @@ authLoginUserRequest=authLoginUserRequest;exports.
 
 
 
+authLogoutSuccess=authLogoutSuccess;exports.
+
+
+
+
 authLogout=authLogout;exports.
 
 
@@ -116109,19 +116080,36 @@ authLogout=authLogout;exports.
 
 
 
-authLogoutAndRedirect=authLogoutAndRedirect;exports.
 
 
 
 
 
 
-authLoginUser=authLoginUser;var _jwtDecode=require(1044 /* jwt-decode */);var _jwtDecode2=_interopRequireDefault(_jwtDecode);var _config=require(884 /* ../constants/config */);var _utils=require(882 /* ../businessLogic/utils */);var _ajaxStatusActions=require(883 /* ./ajaxStatusActions */);var _actionTypes=require(865 /* ../constants/actionTypes */);var _strings=require(1047 /* ../constants/strings */);var strings=_interopRequireWildcard(_strings);function _interopRequireWildcard(obj){if(obj&&obj.__esModule){return obj;}else{var newObj={};if(obj!=null){for(var key in obj){if(Object.prototype.hasOwnProperty.call(obj,key))newObj[key]=obj[key];}}newObj.default=obj;return newObj;}}function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var fetchPersonInfoSuccess=exports.fetchPersonInfoSuccess=function fetchPersonInfoSuccess(person){return{type:_actionTypes.LOAD_PERSON_INFO,payload:{person:person}};};var fetchPersonInfo=exports.fetchPersonInfo=function fetchPersonInfo(username,token){console.log('get persons message');return function(dispatch){dispatch((0,_ajaxStatusActions.beginAjaxCall)());return fetch('http://10.0.105.68:8000/api/v1/persons/'+username+'/',{method:'GET',headers:{'Accept':'application/json','Content-Type':'application/json',Authorization:'JWT '+token}}).then(_utils.checkHttpStatus).then(_utils.parseJSON).then(function(response){console.log('user information');console.log(response);dispatch(fetchPersonInfoSuccess(response));}).catch(function(error){dispatch((0,_ajaxStatusActions.ajaxCallError)());throw error;});};};function authLoginUserSuccess(token){return{type:_actionTypes.AUTH_LOGIN_USER_SUCCESS,payload:{token:token}};}function authLoginUserFailure(error){return{type:_actionTypes.AUTH_LOGIN_USER_FAILURE,payload:{status:error.response.status,statusText:error.response.statusText}};}function authLoginUserRequest(){return{type:_actionTypes.AUTH_LOGIN_USER_REQUEST};}function authLogout(){return{type:_actionTypes.AUTH_LOGOUT_USER};}function authLogoutAndRedirect(){return function(dispatch){dispatch(authLogout());return Promise.resolve();};}function authLoginUser(username,password){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+authLoginUser=authLoginUser;var _jwtDecode=require(1044 /* jwt-decode */);var _jwtDecode2=_interopRequireDefault(_jwtDecode);var _config=require(884 /* ../constants/config */);var _utils=require(882 /* ../businessLogic/utils */);var _ajaxStatusActions=require(883 /* ./ajaxStatusActions */);var _actionTypes=require(865 /* ../constants/actionTypes */);var types=_interopRequireWildcard(_actionTypes);var _authStorage=require(1049 /* ../asyncStorage/authStorage */);var _strings=require(1047 /* ../constants/strings */);var strings=_interopRequireWildcard(_strings);function _interopRequireWildcard(obj){if(obj&&obj.__esModule){return obj;}else{var newObj={};if(obj!=null){for(var key in obj){if(Object.prototype.hasOwnProperty.call(obj,key))newObj[key]=obj[key];}}newObj.default=obj;return newObj;}}function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var fetchPersonInfoSuccess=exports.fetchPersonInfoSuccess=function fetchPersonInfoSuccess(person){return{type:types.LOAD_PERSON_INFO,payload:{person:person}};};function authLoginUserSuccess(token){(0,_authStorage.saveAuthToken)(token);return{type:types.AUTH_LOGIN_USER_SUCCESS,payload:{token:token}};}function authLoginUserFailure(error){return{type:types.AUTH_LOGIN_USER_FAILURE,payload:{status:error.response.status,statusText:error.response.statusText}};}function authLoginUserRequest(){return{type:types.AUTH_LOGIN_USER_REQUEST};}function authLogoutSuccess(){return{type:types.AUTH_LOGOUT_USER};}function authLogout(){return function(dispatch){dispatch(authLogoutSuccess());return Promise.resolve();};}var fetchPersonInfo=exports.fetchPersonInfo=function fetchPersonInfo(username,token){console.log('get persons message');return function(dispatch){dispatch((0,_ajaxStatusActions.beginAjaxCall)());return fetch('http://10.0.105.68:8000/api/v1/persons/'+username+'/',{method:'GET',headers:{'Accept':'application/json','Content-Type':'application/json',Authorization:'JWT '+token}}).then(_utils.checkHttpStatus).then(_utils.parseJSON).then(function(response){console.log('user information');console.log(response);dispatch(fetchPersonInfoSuccess(response));}).catch(function(error){dispatch((0,_ajaxStatusActions.ajaxCallError)());throw error;});};};function authLoginUser(username,password){
 return function(dispatch){
 dispatch(authLoginUserRequest());
-console.log(JSON.stringify({
-username:username,password:password}));
-
 return fetch('http://10.0.105.68:8000/api/v1/accounts/login/',{
 method:'POST',
 headers:{
@@ -116134,7 +116122,6 @@ then(_utils.checkHttpStatus).
 then(_utils.parseJSON).
 then(function(response){
 try{
-console.log(response);
 console.log((0,_jwtDecode2.default)(response.token));
 dispatch(authLoginUserSuccess(response.token));
 dispatch(fetchPersonInfo(username,response.token));
@@ -116308,6 +116295,424 @@ var SET_TITLE=exports.SET_TITLE='SET_TITLE';
 var BEGIN_AJAX_CALL=exports.BEGIN_AJAX_CALL='BEGIN_AJAX_CALL';
 var AJAX_CALL_ERROR=exports.AJAX_CALL_ERROR='AJAX_CALL_ERROR';
 }, "NativeStarterKit/js/constants/actionTypes.js");
+__d(1049 /* NativeStarterKit/js/asyncStorage/authStorage.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});exports.getAuthToken=exports.saveAuthToken=undefined;var _actionTypes=require(865 /* ../constants/actionTypes */);var types=_interopRequireWildcard(_actionTypes);
+var _reactNativeStorage=require(1050 /* react-native-storage */);var _reactNativeStorage2=_interopRequireDefault(_reactNativeStorage);
+var _reactNative=require(12 /* react-native */);
+var _jwtDecode=require(1044 /* jwt-decode */);var _jwtDecode2=_interopRequireDefault(_jwtDecode);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _interopRequireWildcard(obj){if(obj&&obj.__esModule){return obj;}else{var newObj={};if(obj!=null){for(var key in obj){if(Object.prototype.hasOwnProperty.call(obj,key))newObj[key]=obj[key];}}newObj.default=obj;return newObj;}}
+
+
+var storage=new _reactNativeStorage2.default({
+size:1000,
+storageBackend:_reactNative.AsyncStorage,
+defaultExpires:1000*3600*24,
+enableCache:true});
+
+
+
+var saveAuthToken=exports.saveAuthToken=function saveAuthToken(token){
+console.log('will save');
+storage.save({
+key:'token',
+rawData:{
+token:token},
+
+expires:null});
+
+console.log(' save succ');
+};
+
+var getAuthToken=exports.getAuthToken=function getAuthToken(){
+storage.load({
+key:'token',
+autoSync:true,
+syncInBackground:true}).
+
+then(function(ret){
+console.log(ret.token);
+return ret.token;
+}).
+catch(function(err){
+console.warn(err.message);
+switch(err.name){
+case'NotFoundError':
+
+break;
+case'ExpiredError':
+
+break;}
+
+});
+};
+}, "NativeStarterKit/js/asyncStorage/authStorage.js");
+__d(1050 /* react-native-storage/storage.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++){var source=arguments[i];for(var key in source){if(Object.prototype.hasOwnProperty.call(source,key)){target[key]=source[key];}}}return target;};var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();
+
+
+
+
+var _error=require(1051 /* ./error */);function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}var
+
+Storage=function(){
+function Storage(){var options=arguments.length>0&&arguments[0]!==undefined?arguments[0]:{};_classCallCheck(this,Storage);
+var me=this;
+
+me._SIZE=options.size||1000;
+me.sync=options.sync||{};
+me.defaultExpires=options.defaultExpires!==undefined?
+options.defaultExpires:1000*3600*24;
+me.enableCache=options.enableCache!==false;
+me._s=options.storageBackend||null;
+me._innerVersion=11;
+me.cache={};
+
+if(me._s&&me._s.setItem){
+try{
+var promiseTest=me._s.setItem('__react_native_storage_test','test');
+me.isPromise=promiseTest&&promiseTest.then?true:false;
+}
+catch(e){
+console.warn(e);
+delete me._s;
+throw e;
+}
+}else{
+console.warn('Data would be lost after reload cause there is no storageBackend specified!\n      \nEither use localStorage(for web) or AsyncStorage(for React Native) as a storageBackend.');
+
+}
+
+me._mapPromise=me.getItem('map').then(function(map){
+me._m=me._checkMap(map&&JSON.parse(map)||{});
+
+});
+}_createClass(Storage,[{key:'getItem',value:function getItem(
+key){
+return this._s?
+
+this.isPromise?this._s.getItem(key):Promise.resolve(this._s.getItem(key)):
+
+Promise.resolve();
+}},{key:'setItem',value:function setItem(
+key,value){
+return this._s?
+
+this.isPromise?this._s.setItem(key,value):Promise.resolve(this._s.setItem(key,value)):
+
+Promise.resolve();
+}},{key:'removeItem',value:function removeItem(
+key){
+return this._s?
+this.isPromise?this._s.removeItem(key):Promise.resolve(this._s.removeItem(key)):
+
+Promise.resolve();
+}},{key:'_checkMap',value:function _checkMap(
+map){
+var me=this;
+if(map&&map.innerVersion&&map.innerVersion===me._innerVersion){
+return map;
+}else
+{
+return{
+innerVersion:me._innerVersion,
+index:0,
+__keys__:{}};
+
+}
+}},{key:'_getId',value:function _getId(
+key,id){
+return key+'_'+id;
+}},{key:'_saveToMap',value:function _saveToMap(
+params){var
+key=params.key,id=params.id,data=params.data,
+newId=this._getId(key,id),
+m=this._m;
+if(m[newId]!==undefined){
+
+if(this.enableCache)this.cache[newId]=JSON.parse(data);
+return this.setItem('map_'+m[newId],data);
+}
+if(m[m.index]!==undefined){
+
+var oldId=m[m.index];
+var splitOldId=oldId.split('_');
+delete m[oldId];
+this._removeIdInKey(splitOldId[0],splitOldId[1]);
+if(this.enableCache){
+delete this.cache[oldId];
+}
+}
+m[newId]=m.index;
+m[m.index]=newId;
+
+m.__keys__[key]=m.__keys__[key]||[];
+m.__keys__[key].push(id);
+
+if(this.enableCache){
+var cacheData=JSON.parse(data);
+this.cache[newId]=cacheData;
+}
+var currentIndex=m.index;
+if(++m.index===this._SIZE){
+m.index=0;
+}
+this.setItem('map_'+currentIndex,data);
+this.setItem('map',JSON.stringify(m));
+}},{key:'save',value:function save(
+params){
+var me=this;var
+key=params.key,id=params.id,rawData=params.rawData,expires=params.expires;
+if(key.toString().indexOf('_')!==-1){
+console.error('Please do not use "_" in key!');
+}
+var data={
+rawData:rawData};
+
+var now=new Date().getTime();
+if(expires===undefined){
+expires=me.defaultExpires;
+}
+if(expires!==null){
+data.expires=now+expires;
+}
+data=JSON.stringify(data);
+if(id===undefined){
+if(me.enableCache){
+var cacheData=JSON.parse(data);
+me.cache[key]=cacheData;
+}
+return me.setItem(key,data);
+}else
+{
+if(id.toString().indexOf('_')!==-1){
+console.error('Please do not use "_" in id!');
+}
+return this._mapPromise.then(function(){return me._saveToMap({
+key:key,
+id:id,
+data:data});});
+
+}
+}},{key:'getBatchData',value:function getBatchData(
+querys){
+var me=this;
+var tasks=[];
+for(var i=0,query;query=querys[i];i++){
+tasks[i]=me.load(query);
+}
+return Promise.all(tasks);
+}},{key:'getBatchDataWithIds',value:function getBatchDataWithIds(
+params){
+var me=this;var
+key=params.key,ids=params.ids,syncInBackground=params.syncInBackground;
+
+return Promise.all(
+ids.map(function(id){return me.load({key:key,id:id,syncInBackground:syncInBackground,autoSync:false,batched:true});})).
+then(function(results){
+return new Promise(function(resolve,reject){
+var ids=results.filter(function(value){return value.syncId!==undefined;});
+if(!ids.length){
+return resolve();
+}
+return me.sync[key]({
+id:ids.map(function(value){return value.syncId;}),
+resolve:resolve,
+reject:reject});
+
+}).then(function(data){
+return results.map(function(value){
+return value.syncId?data.shift():value;
+});
+});
+});
+}},{key:'_lookupGlobalItem',value:function _lookupGlobalItem(
+params){
+var me=this,
+ret=void 0;var
+key=params.key;
+if(me.enableCache&&me.cache[key]!==undefined){
+ret=me.cache[key];
+return me._loadGlobalItem(_extends({ret:ret},params));
+}
+return me.getItem(key).then(function(ret){return me._loadGlobalItem(_extends({ret:ret},params));});
+}},{key:'_loadGlobalItem',value:function _loadGlobalItem(
+params){
+var me=this;var
+key=params.key,ret=params.ret,autoSync=params.autoSync,syncInBackground=params.syncInBackground;
+if(ret===null||ret===undefined){
+if(autoSync&&me.sync[key]){
+return new Promise(function(resolve,reject){return me.sync[key]({resolve:resolve,reject:reject});});
+}
+return Promise.reject(new _error.NotFoundError(JSON.stringify(params)));
+}
+if(typeof ret==='string'){
+ret=JSON.parse(ret);
+if(this.enableCache){
+this.cache[key]=ret;
+}
+}
+var now=new Date().getTime();
+if(ret.expires<now){
+if(autoSync&&me.sync[key]){
+if(syncInBackground){
+me.sync[key]({});
+return Promise.resolve(ret.rawData);
+}
+return new Promise(function(resolve,reject){return me.sync[key]({resolve:resolve,reject:reject});});
+}
+return Promise.reject(new _error.ExpiredError(JSON.stringify(params)));
+}
+return Promise.resolve(ret.rawData);
+}},{key:'_noItemFound',value:function _noItemFound(
+params){
+var me=this;var
+key=params.key,id=params.id,autoSync=params.autoSync;
+if(me.sync[key]){
+if(autoSync){
+return new Promise(function(resolve,reject){return me.sync[key]({id:id,resolve:resolve,reject:reject});});
+}
+return Promise.resolve({syncId:id});
+}
+return Promise.reject(new _error.NotFoundError(JSON.stringify(params)));
+}},{key:'_loadMapItem',value:function _loadMapItem(
+params){
+var me=this;var
+ret=params.ret,key=params.key,id=params.id,autoSync=params.autoSync,batched=params.batched,syncInBackground=params.syncInBackground;
+if(ret===null||ret===undefined){
+return me._noItemFound(params);
+}
+if(typeof ret==='string'){
+ret=JSON.parse(ret);var
+_key=params.key,_id=params.id;
+var newId=me._getId(_key,_id);
+if(this.enableCache){
+this.cache[newId]=ret;
+}
+}
+var now=new Date().getTime();
+if(ret.expires<now){
+if(autoSync&&me.sync[key]){
+if(syncInBackground){
+me.sync[key]({id:id});
+return Promise.resolve(ret.rawData);
+}
+return new Promise(function(resolve,reject){return me.sync[key]({id:id,resolve:resolve,reject:reject});});
+}
+if(batched){
+return Promise.resolve({syncId:id});
+}
+return Promise.reject(new _error.ExpiredError(JSON.stringify(params)));
+}
+return Promise.resolve(ret.rawData);
+}},{key:'_lookUpInMap',value:function _lookUpInMap(
+params){
+var me=this,
+m=me._m,
+ret=void 0;var
+key=params.key,id=params.id;
+var newId=me._getId(key,id);
+if(me.enableCache&&me.cache[newId]){
+ret=me.cache[newId];
+return me._loadMapItem(_extends({ret:ret},params));
+}
+if(m[newId]!==undefined){
+return me.getItem('map_'+m[newId]).then(function(ret){return me._loadMapItem(_extends({ret:ret},params));});
+}
+return me._noItemFound(_extends({ret:ret},params));
+}},{key:'remove',value:function remove(
+params){var _this=this;
+return this._mapPromise.then(function(){
+var me=_this,
+m=me._m;var
+key=params.key,id=params.id;
+
+if(id===undefined){
+if(me.enableCache&&me.cache[key]){
+delete me.cache[key];
+}
+return me.removeItem(key);
+}
+var newId=me._getId(key,id);
+
+
+if(m[newId]!==undefined){
+if(me.enableCache&&me.cache[newId]){
+delete me.cache[newId];
+}
+me._removeIdInKey(key,id);
+var idTobeDeleted=m[newId];
+delete m[newId];
+me.setItem('map',JSON.stringify(m));
+return me.removeItem('map_'+idTobeDeleted);
+}
+});
+}},{key:'_removeIdInKey',value:function _removeIdInKey(
+key,id){
+var indexTobeRemoved=this._m.__keys__[key].indexOf(id);
+if(indexTobeRemoved!==-1){
+this._m.__keys__[key].splice(indexTobeRemoved,1);
+}
+}},{key:'load',value:function load(
+params){
+var me=this;var
+key=params.key,id=params.id,autoSync=params.autoSync,syncInBackground=params.syncInBackground;
+if(autoSync===undefined){
+autoSync=true;
+}
+if(syncInBackground===undefined){
+syncInBackground=true;
+}
+return me._mapPromise.then(function(){return new Promise(function(resolve,reject){
+if(id===undefined){
+return resolve(me._lookupGlobalItem({key:key,resolve:resolve,reject:reject,autoSync:autoSync,syncInBackground:syncInBackground}));
+}
+return resolve(me._lookUpInMap({key:key,id:id,resolve:resolve,reject:reject,autoSync:autoSync,syncInBackground:syncInBackground}));
+});});
+}},{key:'clearMap',value:function clearMap()
+{
+var me=this;
+me.removeItem('map');
+me._m={
+innerVersion:me._innerVersion,
+index:0};
+
+}},{key:'clearMapForKey',value:function clearMapForKey(
+key){var _this2=this;
+return this._mapPromise.then(function(){
+var tasks=_this2._m.__keys__[key].map(function(id){return _this2.remove({key:key,id:id});});
+return Promise.all(tasks);
+});
+}},{key:'getIdsForKey',value:function getIdsForKey(
+key){var _this3=this;
+return this._mapPromise.then(function(){
+return _this3._m.__keys__[key]||[];
+});
+}},{key:'getAllDataForKey',value:function getAllDataForKey(
+key,options){var _this4=this;
+options=_extends({syncInBackground:true},options);
+return this.getIdsForKey(key).then(function(ids){
+var querys=ids.map(function(id){return{key:key,id:id,syncInBackground:options.syncInBackground};});
+return _this4.getBatchData(querys);
+});
+}}]);return Storage;}();exports.default=Storage;
+}, "react-native-storage/storage.js");
+__d(1051 /* react-native-storage/error.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}var
+
+
+
+NotFoundError=exports.NotFoundError=
+function NotFoundError(message){_classCallCheck(this,NotFoundError);
+this.name='NotFoundError';
+this.message='Not Found! Params: '+message;
+this.stack=new Error().stack;
+};var
+
+
+
+ExpiredError=exports.ExpiredError=
+function ExpiredError(message){_classCallCheck(this,ExpiredError);
+this.name='ExpiredError';
+this.message='Expired! Params: '+message;
+this.stack=new Error().stack;
+};
+}, "react-native-storage/error.js");
 __d(1047 /* NativeStarterKit/js/constants/strings.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var LOGIN_PAGE_TITLE=exports.LOGIN_PAGE_TITLE='登  录';
 var LOGIN_PAGE_SUBTITLE=exports.LOGIN_PAGE_SUBTITLE='欢迎访问洛阳师范学院网络学习空间';
 
@@ -134546,6 +134951,7 @@ _pushRoute=_reactNativeNavigationReduxHelpers.actions.pushRoute;var UserPage=_wr
 
 
 
+
 {
 this.props.popRoute(this.props.navigation.key);
 }},{key:'pushRoute',value:function pushRoute(
@@ -134555,12 +134961,13 @@ this.props.setIndex(index);
 this.props.pushRoute({key:route,index:1},this.props.navigation.key);
 }},{key:'render',value:function render()
 
-{var
-username=this.props.username;
+{var _props=
+this.props,username=_props.username,personName=_props.personName;
 return(
 
 _react3.default.createElement(_nativeBase.Content,{padder:true},
 _react3.default.createElement(_nativeBase.List,null,
+_react3.default.createElement(_nativeBase.Text,null,personName),
 _react3.default.createElement(_nativeBase.Text,null,username),
 _react3.default.createElement(_nativeBase.ListItem,{iconLeft:true},
 _react3.default.createElement(_nativeBase.Icon,{name:'ios-plane',style:_styles2.default.icon}),
@@ -134580,7 +134987,7 @@ _react3.default.createElement(_nativeBase.Badge,null,'12')))));
 
 
 
-}}]);return UserPage;}(_react2.Component),_class.propTypes={username:_react3.default.PropTypes.string,index:_react3.default.PropTypes.number,list:_react3.default.PropTypes.arrayOf(_react3.default.PropTypes.string),openDrawer:_react3.default.PropTypes.func,popRoute:_react3.default.PropTypes.func,pushRoute:_react3.default.PropTypes.func,navigation:_react3.default.PropTypes.shape({key:_react3.default.PropTypes.string})},_temp));
+}}]);return UserPage;}(_react2.Component),_class.propTypes={username:_react3.default.PropTypes.string,personName:_react3.default.PropTypes.string,index:_react3.default.PropTypes.number,list:_react3.default.PropTypes.arrayOf(_react3.default.PropTypes.string),openDrawer:_react3.default.PropTypes.func,popRoute:_react3.default.PropTypes.func,pushRoute:_react3.default.PropTypes.func,navigation:_react3.default.PropTypes.shape({key:_react3.default.PropTypes.string})},_temp));
 
 
 function bindAction(dispatch){
