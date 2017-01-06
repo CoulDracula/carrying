@@ -119,7 +119,7 @@ export const deletePrivateMemo = (userId, memoId) => {
 };
 export const deletePublicMemo = (_id) => {
   return dispatch => {
-    return api.delete(`memos/private/${_id}/`).then(
+    return api.delete(`memos/public/${_id}/`).then(
       json => {
         dispatch(deletePublicMemoSuccess(_id));
       }

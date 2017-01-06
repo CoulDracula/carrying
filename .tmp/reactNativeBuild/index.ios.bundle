@@ -82115,7 +82115,7 @@ __d(659 /* NativeStarterKit/js/setup.js */, function(global, require, module, ex
 var _reactRedux=require(660 /* react-redux */);
 
 var _App=require(681 /* ./App */);var _App2=_interopRequireDefault(_App);
-var _configureStore=require(977 /* ./configureStore */);var _configureStore2=_interopRequireDefault(_configureStore);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={Root:{displayName:'Root',isInFunction:true}};var _node_modulesReactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/js/setup.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _node_modulesReactTransformHmrLibIndexJs2(Component,id);};}
+var _configureStore=require(978 /* ./configureStore */);var _configureStore2=_interopRequireDefault(_configureStore);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={Root:{displayName:'Root',isInFunction:true}};var _node_modulesReactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/js/setup.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _node_modulesReactTransformHmrLibIndexJs2(Component,id);};}
 
 function setup(){var Root=_wrapComponent('Root')(function(_Component){_inherits(Root,_Component);
 
@@ -83577,9 +83577,9 @@ var _nativeBase=require(690 /* native-base */);
 var _reactNativeModalbox=require(859 /* react-native-modalbox */);var _reactNativeModalbox2=_interopRequireDefault(_reactNativeModalbox);
 
 var _AppNavigator=require(860 /* ./AppNavigator */);var _AppNavigator2=_interopRequireDefault(_AppNavigator);
-var _ProgressBar=require(976 /* ./components/loaders/ProgressBar */);var _ProgressBar2=_interopRequireDefault(_ProgressBar);
+var _ProgressBar=require(977 /* ./components/loaders/ProgressBar */);var _ProgressBar2=_interopRequireDefault(_ProgressBar);
 
-var _baseTheme=require(876 /* ./themes/base-theme */);var _baseTheme2=_interopRequireDefault(_baseTheme);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={App:{displayName:'App'}};var _node_modulesReactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/js/App.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _node_modulesReactTransformHmrLibIndexJs2(Component,id);};}
+var _baseTheme=require(877 /* ./themes/base-theme */);var _baseTheme2=_interopRequireDefault(_baseTheme);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={App:{displayName:'App'}};var _node_modulesReactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/js/App.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _node_modulesReactTransformHmrLibIndexJs2(Component,id);};}
 
 var styles=_reactNative.StyleSheet.create({
 container:{
@@ -115310,19 +115310,19 @@ var _reactNativeNavigationReduxHelpers=require(861 /* react-native-navigation-re
 var _drawer=require(862 /* ./actions/drawer */);
 
 var _login=require(863 /* ./components/login/ */);var _login2=_interopRequireDefault(_login);
-var _home=require(867 /* ./components/home/ */);var _home2=_interopRequireDefault(_home);
+var _home=require(868 /* ./components/home/ */);var _home2=_interopRequireDefault(_home);
 var _blankPage=require(893 /* ./components/blankPage */);var _blankPage2=_interopRequireDefault(_blankPage);
 var _splashscreen=require(895 /* ./components/splashscreen/ */);var _splashscreen2=_interopRequireDefault(_splashscreen);
 var _sideBar=require(896 /* ./components/sideBar */);var _sideBar2=_interopRequireDefault(_sideBar);
 var _userPage=require(891 /* ./components/userPage */);var _userPage2=_interopRequireDefault(_userPage);
-var _memoPage=require(878 /* ./components/memoPage */);var _memoPage2=_interopRequireDefault(_memoPage);
+var _memoPage=require(879 /* ./components/memoPage */);var _memoPage2=_interopRequireDefault(_memoPage);
 var _appPage=require(889 /* ./components/appPage */);var _appPage2=_interopRequireDefault(_appPage);
 var _timeTablePage=require(898 /* ./components/timeTablePage */);var _timeTablePage2=_interopRequireDefault(_timeTablePage);
 var _MemoEditPage=require(900 /* ./components/memoPage/MemoEditPage */);var _MemoEditPage2=_interopRequireDefault(_MemoEditPage);
 var _strongBoxPage=require(972 /* ./components/strongBoxPage */);var _strongBoxPage2=_interopRequireDefault(_strongBoxPage);
 var _map=require(974 /* ./components/map */);var _map2=_interopRequireDefault(_map);
-var _MemoDetailPage=require(1040 /* ./components/memoPage/MemoDetailPage */);var _MemoDetailPage2=_interopRequireDefault(_MemoDetailPage);
-var _baseTheme=require(876 /* ./themes/base-theme */);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={AppNavigator:{displayName:'AppNavigator'}};var _node_modulesReactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/js/AppNavigator.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _node_modulesReactTransformHmrLibIndexJs2(Component,id);};}var
+var _MemoDetailPage=require(976 /* ./components/memoPage/MemoDetailPage */);var _MemoDetailPage2=_interopRequireDefault(_MemoDetailPage);
+var _baseTheme=require(877 /* ./themes/base-theme */);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={AppNavigator:{displayName:'AppNavigator'}};var _node_modulesReactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/js/AppNavigator.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _node_modulesReactTransformHmrLibIndexJs2(Component,id);};}var
 
 
 _popRoute=_reactNativeNavigationReduxHelpers.actions.popRoute;var
@@ -115928,13 +115928,13 @@ var _reactNativeNavigationReduxHelpers=require(861 /* react-native-navigation-re
 var _nativeBase=require(690 /* native-base */);
 
 var _user=require(864 /* ../../actions/user */);
-var _styles=require(865 /* ./styles */);var _styles2=_interopRequireDefault(_styles);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={Login:{displayName:'Login'}};var _node_modulesReactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/js/components/login/index.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _node_modulesReactTransformHmrLibIndexJs2(Component,id);};}var
+var _styles=require(866 /* ./styles */);var _styles2=_interopRequireDefault(_styles);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={Login:{displayName:'Login'}};var _node_modulesReactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/js/components/login/index.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _node_modulesReactTransformHmrLibIndexJs2(Component,id);};}var
 
 
 _replaceAt=_reactNativeNavigationReduxHelpers.actions.replaceAt;
 
 
-var background=require(866 /* ../../../images/shadow.png */);var Login=_wrapComponent('Login')((_temp=_class=function(_Component){_inherits(Login,_Component);
+var background=require(867 /* ../../../images/shadow.png */);var Login=_wrapComponent('Login')((_temp=_class=function(_Component){_inherits(Login,_Component);
 
 
 
@@ -116008,7 +116008,7 @@ navigation:state.cardNavigation};};exports.default=
 __d(864 /* NativeStarterKit/js/actions/user.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});exports.setTitle=undefined;exports.
 
 
-setUser=setUser;var _actionTypes=require(880 /* ../constants/actionTypes */);var types=_interopRequireWildcard(_actionTypes);function _interopRequireWildcard(obj){if(obj&&obj.__esModule){return obj;}else{var newObj={};if(obj!=null){for(var key in obj){if(Object.prototype.hasOwnProperty.call(obj,key))newObj[key]=obj[key];}}newObj.default=obj;return newObj;}}function setUser(user){
+setUser=setUser;var _actionTypes=require(865 /* ../constants/actionTypes */);var types=_interopRequireWildcard(_actionTypes);function _interopRequireWildcard(obj){if(obj&&obj.__esModule){return obj;}else{var newObj={};if(obj!=null){for(var key in obj){if(Object.prototype.hasOwnProperty.call(obj,key))newObj[key]=obj[key];}}newObj.default=obj;return newObj;}}function setUser(user){
 return{
 type:types.SET_USER,
 payload:user};
@@ -116018,7 +116018,7 @@ var setTitle=exports.setTitle=function setTitle(title){
 return{type:types.SET_TITLE,title:title};
 };
 }, "NativeStarterKit/js/actions/user.js");
-__d(880 /* NativeStarterKit/js/constants/actionTypes.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var AUTH_LOGIN_USER_REQUEST=exports.AUTH_LOGIN_USER_REQUEST='AUTH_LOGIN_USER_REQUEST';
+__d(865 /* NativeStarterKit/js/constants/actionTypes.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var AUTH_LOGIN_USER_REQUEST=exports.AUTH_LOGIN_USER_REQUEST='AUTH_LOGIN_USER_REQUEST';
 var AUTH_LOGIN_USER_FAILURE=exports.AUTH_LOGIN_USER_FAILURE='AUTH_LOGIN_USER_FAILURE';
 var AUTH_LOGIN_USER_SUCCESS=exports.AUTH_LOGIN_USER_SUCCESS='AUTH_LOGIN_USER_SUCCESS';
 var AUTH_LOGOUT_USER=exports.AUTH_LOGOUT_USER='AUTH_LOGOUT_USER';
@@ -116041,7 +116041,7 @@ var SET_TITLE=exports.SET_TITLE='SET_TITLE';
 var BEGIN_AJAX_CALL=exports.BEGIN_AJAX_CALL='BEGIN_AJAX_CALL';
 var AJAX_CALL_ERROR=exports.AJAX_CALL_ERROR='AJAX_CALL_ERROR';
 }, "NativeStarterKit/js/constants/actionTypes.js");
-__d(865 /* NativeStarterKit/js/components/login/styles.js */, function(global, require, module, exports) {
+__d(866 /* NativeStarterKit/js/components/login/styles.js */, function(global, require, module, exports) {
 var React=require(12 /* react-native */);var
 
 StyleSheet=React.StyleSheet,Dimensions=React.Dimensions;
@@ -116078,22 +116078,22 @@ btn:{
 marginTop:20,
 alignSelf:'center'}});
 }, "NativeStarterKit/js/components/login/styles.js");
-__d(866 /* NativeStarterKit/images/shadow.png */, function(global, require, module, exports) {module.exports = require(323 /* react-native/Libraries/Image/AssetRegistry */).registerAsset({"__packager_asset":true,"httpServerLocation":"/assets/images","width":406,"height":720,"scales":[1],"hash":"267f6920c66b72f43e330aa377d4fe03","name":"shadow","type":"png"});
+__d(867 /* NativeStarterKit/images/shadow.png */, function(global, require, module, exports) {module.exports = require(323 /* react-native/Libraries/Image/AssetRegistry */).registerAsset({"__packager_asset":true,"httpServerLocation":"/assets/images","width":406,"height":720,"scales":[1],"hash":"267f6920c66b72f43e330aa377d4fe03","name":"shadow","type":"png"});
 }, "NativeStarterKit/images/shadow.png");
-__d(867 /* NativeStarterKit/js/components/home/index.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _react2=require(16 /* react */);var _react3=_interopRequireDefault(_react2);var _index=require(46 /* ./../../../node_modules/react-transform-hmr/lib/index.js */);var _index2=_interopRequireDefault(_index);var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _class,_temp;
+__d(868 /* NativeStarterKit/js/components/home/index.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _react2=require(16 /* react */);var _react3=_interopRequireDefault(_react2);var _index=require(46 /* ./../../../node_modules/react-transform-hmr/lib/index.js */);var _index2=_interopRequireDefault(_index);var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _class,_temp;
 var _reactNative=require(12 /* react-native */);
 var _reactRedux=require(660 /* react-redux */);
 var _reactNativeNavigationReduxHelpers=require(861 /* react-native-navigation-redux-helpers */);
 var _nativeBase=require(690 /* native-base */);
-var _reactNativeEasyGrid=require(868 /* react-native-easy-grid */);
+var _reactNativeEasyGrid=require(869 /* react-native-easy-grid */);
 
 var _drawer=require(862 /* ../../actions/drawer */);
-var _list=require(874 /* ../../actions/list */);
+var _list=require(875 /* ../../actions/list */);
 var _user=require(864 /* ../../actions/user */);
-var _sideBarNav=require(875 /* ../../actions/sideBarNav */);var _sideBarNav2=_interopRequireDefault(_sideBarNav);
-var _baseTheme=require(876 /* ../../themes/base-theme */);var _baseTheme2=_interopRequireDefault(_baseTheme);
-var _styles=require(877 /* ./styles */);var _styles2=_interopRequireDefault(_styles);
-var _memoPage=require(878 /* ../memoPage */);var _memoPage2=_interopRequireDefault(_memoPage);
+var _sideBarNav=require(876 /* ../../actions/sideBarNav */);var _sideBarNav2=_interopRequireDefault(_sideBarNav);
+var _baseTheme=require(877 /* ../../themes/base-theme */);var _baseTheme2=_interopRequireDefault(_baseTheme);
+var _styles=require(878 /* ./styles */);var _styles2=_interopRequireDefault(_styles);
+var _memoPage=require(879 /* ../memoPage */);var _memoPage2=_interopRequireDefault(_memoPage);
 var _appPage=require(889 /* ../appPage */);var _appPage2=_interopRequireDefault(_appPage);
 var _userPage=require(891 /* ../userPage */);var _userPage2=_interopRequireDefault(_userPage);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={Home:{displayName:'Home'}};var _node_modulesReactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/js/components/home/index.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _node_modulesReactTransformHmrLibIndexJs2(Component,id);};}var
 
@@ -116241,12 +116241,12 @@ navigation:state.cardNavigation};};exports.default=
 
 (0,_reactRedux.connect)(mapStateToProps,bindAction)(Home);
 }, "NativeStarterKit/js/components/home/index.js");
-__d(868 /* react-native-easy-grid/index.js */, function(global, require, module, exports) {
+__d(869 /* react-native-easy-grid/index.js */, function(global, require, module, exports) {
 'use strict';
 
-var _Row=require(869 /* ./Components/Row */);var _Row2=_interopRequireDefault(_Row);
-var _Grid=require(872 /* ./Components/Grid */);var _Grid2=_interopRequireDefault(_Grid);
-var _Col=require(873 /* ./Components/Col */);var _Col2=_interopRequireDefault(_Col);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}
+var _Row=require(870 /* ./Components/Row */);var _Row2=_interopRequireDefault(_Row);
+var _Grid=require(873 /* ./Components/Grid */);var _Grid2=_interopRequireDefault(_Grid);
+var _Col=require(874 /* ./Components/Col */);var _Col2=_interopRequireDefault(_Col);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}
 
 
 module.exports={
@@ -116254,14 +116254,14 @@ Row:_Row2.default,
 Col:_Col2.default,
 Grid:_Grid2.default};
 }, "react-native-easy-grid/index.js");
-__d(869 /* react-native-easy-grid/Components/Row.js */, function(global, require, module, exports) {
+__d(870 /* react-native-easy-grid/Components/Row.js */, function(global, require, module, exports) {
 'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _react2=require(16 /* react */);var _react3=_interopRequireDefault(_react2);var _index=require(46 /* ./../../react-transform-hmr/lib/index.js */);var _index2=_interopRequireDefault(_index);var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();
 
 
 var _reactNative=require(12 /* react-native */);
 
-var _computeProps=require(870 /* ../Utils/computeProps */);var _computeProps2=_interopRequireDefault(_computeProps);
-var _lodash=require(871 /* lodash */);var _lodash2=_interopRequireDefault(_lodash);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={RowNB:{displayName:'RowNB'}};var _reactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/node_modules/react-native-easy-grid/Components/Row.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _reactTransformHmrLibIndexJs2(Component,id);};}var RowNB=_wrapComponent('RowNB')(function(_Component){_inherits(RowNB,_Component);function RowNB(){_classCallCheck(this,RowNB);return _possibleConstructorReturn(this,(RowNB.__proto__||Object.getPrototypeOf(RowNB)).apply(this,arguments));}_createClass(RowNB,[{key:'prepareRootProps',value:function prepareRootProps()
+var _computeProps=require(871 /* ../Utils/computeProps */);var _computeProps2=_interopRequireDefault(_computeProps);
+var _lodash=require(872 /* lodash */);var _lodash2=_interopRequireDefault(_lodash);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={RowNB:{displayName:'RowNB'}};var _reactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/node_modules/react-native-easy-grid/Components/Row.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _reactTransformHmrLibIndexJs2(Component,id);};}var RowNB=_wrapComponent('RowNB')(function(_Component){_inherits(RowNB,_Component);function RowNB(){_classCallCheck(this,RowNB);return _possibleConstructorReturn(this,(RowNB.__proto__||Object.getPrototypeOf(RowNB)).apply(this,arguments));}_createClass(RowNB,[{key:'prepareRootProps',value:function prepareRootProps()
 
 
 
@@ -116284,11 +116284,11 @@ _react3.default.createElement(_reactNative.View,this.prepareRootProps(),this.pro
 
 }}]);return RowNB;}(_react2.Component));exports.default=RowNB;
 }, "react-native-easy-grid/Components/Row.js");
-__d(870 /* react-native-easy-grid/Utils/computeProps.js */, function(global, require, module, exports) {var React=require(16 /* react */);
+__d(871 /* react-native-easy-grid/Utils/computeProps.js */, function(global, require, module, exports) {var React=require(16 /* react */);
 
 var ReactNativePropRegistry=require(204 /* react/lib/ReactNativePropRegistry */);
 
-var _=require(871 /* lodash */);
+var _=require(872 /* lodash */);
 
 module.exports=function(incomingProps,defaultProps){
 
@@ -116327,7 +116327,7 @@ return computedProps;
 
 };
 }, "react-native-easy-grid/Utils/computeProps.js");
-__d(871 /* lodash/lodash.js */, function(global, require, module, exports) {/**
+__d(872 /* lodash/lodash.js */, function(global, require, module, exports) {/**
  * @license
  * Lodash <https://lodash.com/>
  * Copyright JS Foundation and other contributors <https://js.foundation/>
@@ -133412,15 +133412,15 @@ root._=_;
 }
 }).call(this);
 }, "lodash/lodash.js");
-__d(872 /* react-native-easy-grid/Components/Grid.js */, function(global, require, module, exports) {
+__d(873 /* react-native-easy-grid/Components/Grid.js */, function(global, require, module, exports) {
 'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _react2=require(16 /* react */);var _react3=_interopRequireDefault(_react2);var _index=require(46 /* ./../../react-transform-hmr/lib/index.js */);var _index2=_interopRequireDefault(_index);var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();
 
 
 var _reactNative=require(12 /* react-native */);
-var _computeProps=require(870 /* ../Utils/computeProps */);var _computeProps2=_interopRequireDefault(_computeProps);
-var _lodash=require(871 /* lodash */);var _lodash2=_interopRequireDefault(_lodash);
-var _Col=require(873 /* ./Col */);var _Col2=_interopRequireDefault(_Col);
-var _Row=require(869 /* ./Row */);var _Row2=_interopRequireDefault(_Row);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={GridNB:{displayName:'GridNB'}};var _reactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/node_modules/react-native-easy-grid/Components/Grid.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _reactTransformHmrLibIndexJs2(Component,id);};}var GridNB=_wrapComponent('GridNB')(function(_Component){_inherits(GridNB,_Component);function GridNB(){_classCallCheck(this,GridNB);return _possibleConstructorReturn(this,(GridNB.__proto__||Object.getPrototypeOf(GridNB)).apply(this,arguments));}_createClass(GridNB,[{key:'prepareRootProps',value:function prepareRootProps()
+var _computeProps=require(871 /* ../Utils/computeProps */);var _computeProps2=_interopRequireDefault(_computeProps);
+var _lodash=require(872 /* lodash */);var _lodash2=_interopRequireDefault(_lodash);
+var _Col=require(874 /* ./Col */);var _Col2=_interopRequireDefault(_Col);
+var _Row=require(870 /* ./Row */);var _Row2=_interopRequireDefault(_Row);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={GridNB:{displayName:'GridNB'}};var _reactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/node_modules/react-native-easy-grid/Components/Grid.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _reactTransformHmrLibIndexJs2(Component,id);};}var GridNB=_wrapComponent('GridNB')(function(_Component){_inherits(GridNB,_Component);function GridNB(){_classCallCheck(this,GridNB);return _possibleConstructorReturn(this,(GridNB.__proto__||Object.getPrototypeOf(GridNB)).apply(this,arguments));}_createClass(GridNB,[{key:'prepareRootProps',value:function prepareRootProps()
 
 
 
@@ -133452,13 +133452,13 @@ _react3.default.createElement(_reactNative.View,this.prepareRootProps(),this.pro
 
 }}]);return GridNB;}(_react2.Component));exports.default=GridNB;
 }, "react-native-easy-grid/Components/Grid.js");
-__d(873 /* react-native-easy-grid/Components/Col.js */, function(global, require, module, exports) {
+__d(874 /* react-native-easy-grid/Components/Col.js */, function(global, require, module, exports) {
 'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _react2=require(16 /* react */);var _react3=_interopRequireDefault(_react2);var _index=require(46 /* ./../../react-transform-hmr/lib/index.js */);var _index2=_interopRequireDefault(_index);var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();
 
 
 var _reactNative=require(12 /* react-native */);
-var _computeProps=require(870 /* ../Utils/computeProps */);var _computeProps2=_interopRequireDefault(_computeProps);
-var _lodash=require(871 /* lodash */);var _lodash2=_interopRequireDefault(_lodash);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={ColunmNB:{displayName:'ColunmNB'}};var _reactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/node_modules/react-native-easy-grid/Components/Col.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _reactTransformHmrLibIndexJs2(Component,id);};}var ColunmNB=_wrapComponent('ColunmNB')(function(_Component){_inherits(ColunmNB,_Component);function ColunmNB(){_classCallCheck(this,ColunmNB);return _possibleConstructorReturn(this,(ColunmNB.__proto__||Object.getPrototypeOf(ColunmNB)).apply(this,arguments));}_createClass(ColunmNB,[{key:'prepareRootProps',value:function prepareRootProps()
+var _computeProps=require(871 /* ../Utils/computeProps */);var _computeProps2=_interopRequireDefault(_computeProps);
+var _lodash=require(872 /* lodash */);var _lodash2=_interopRequireDefault(_lodash);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={ColunmNB:{displayName:'ColunmNB'}};var _reactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/node_modules/react-native-easy-grid/Components/Col.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _reactTransformHmrLibIndexJs2(Component,id);};}var ColunmNB=_wrapComponent('ColunmNB')(function(_Component){_inherits(ColunmNB,_Component);function ColunmNB(){_classCallCheck(this,ColunmNB);return _possibleConstructorReturn(this,(ColunmNB.__proto__||Object.getPrototypeOf(ColunmNB)).apply(this,arguments));}_createClass(ColunmNB,[{key:'prepareRootProps',value:function prepareRootProps()
 
 
 
@@ -133481,7 +133481,7 @@ _react3.default.createElement(_reactNative.View,this.prepareRootProps(),this.pro
 
 }}]);return ColunmNB;}(_react2.Component));exports.default=ColunmNB;
 }, "react-native-easy-grid/Components/Col.js");
-__d(874 /* NativeStarterKit/js/actions/list.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});exports.
+__d(875 /* NativeStarterKit/js/actions/list.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});exports.
 
 
 
@@ -133493,7 +133493,7 @@ payload:index};
 
 }
 }, "NativeStarterKit/js/actions/list.js");
-__d(875 /* NativeStarterKit/js/actions/sideBarNav.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});exports.default=
+__d(876 /* NativeStarterKit/js/actions/sideBarNav.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});exports.default=
 
 
 
@@ -133520,7 +133520,7 @@ dispatch(pushRoute({key:route,index:1},navigation.key));
 };
 }
 }, "NativeStarterKit/js/actions/sideBarNav.js");
-__d(876 /* NativeStarterKit/js/themes/base-theme.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _color=require(697 /* color */);var _color2=_interopRequireDefault(_color);
+__d(877 /* NativeStarterKit/js/themes/base-theme.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _color=require(697 /* color */);var _color2=_interopRequireDefault(_color);
 
 var _reactNative=require(12 /* react-native */);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}exports.default=
 
@@ -133746,7 +133746,7 @@ inputLineHeight:24,
 jumbotronBg:'#C9C9CE',
 jumbotronPadding:30};
 }, "NativeStarterKit/js/themes/base-theme.js");
-__d(877 /* NativeStarterKit/js/components/home/styles.js */, function(global, require, module, exports) {
+__d(878 /* NativeStarterKit/js/components/home/styles.js */, function(global, require, module, exports) {
 var React=require(12 /* react-native */);var
 
 StyleSheet=React.StyleSheet;
@@ -133767,16 +133767,16 @@ alignItems:'center'},
 mt:{
 marginTop:18}});
 }, "NativeStarterKit/js/components/home/styles.js");
-__d(878 /* NativeStarterKit/js/components/memoPage/index.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _react2=require(16 /* react */);var _react3=_interopRequireDefault(_react2);var _index=require(46 /* ./../../../node_modules/react-transform-hmr/lib/index.js */);var _index2=_interopRequireDefault(_index);var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _class,_temp;
+__d(879 /* NativeStarterKit/js/components/memoPage/index.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _react2=require(16 /* react */);var _react3=_interopRequireDefault(_react2);var _index=require(46 /* ./../../../node_modules/react-transform-hmr/lib/index.js */);var _index2=_interopRequireDefault(_index);var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _class,_temp;
 var _reactRedux=require(660 /* react-redux */);
 
 var _reactNativeNavigationReduxHelpers=require(861 /* react-native-navigation-redux-helpers */);
 var _nativeBase=require(690 /* native-base */);
 
-var _memoActions=require(879 /* ../../actions/memoActions */);
+var _memoActions=require(880 /* ../../actions/memoActions */);
 var _TabOne=require(885 /* ./TabOne */);var _TabOne2=_interopRequireDefault(_TabOne);
 var _TabTwo=require(888 /* ./TabTwo */);var _TabTwo2=_interopRequireDefault(_TabTwo);
-var _baseTheme=require(876 /* ../../themes/base-theme */);var _baseTheme2=_interopRequireDefault(_baseTheme);
+var _baseTheme=require(877 /* ../../themes/base-theme */);var _baseTheme2=_interopRequireDefault(_baseTheme);
 var _drawer=require(862 /* ../../actions/drawer */);
 var _styles=require(886 /* ./styles */);var _styles2=_interopRequireDefault(_styles);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={MemoPage:{displayName:'MemoPage'}};var _node_modulesReactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/js/components/memoPage/index.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _node_modulesReactTransformHmrLibIndexJs2(Component,id);};}var
 
@@ -133863,7 +133863,7 @@ publicMemos:state.memo.publicMemos};};exports.default=
 
 (0,_reactRedux.connect)(mapStateToProps,bindAction)(MemoPage);
 }, "NativeStarterKit/js/components/memoPage/index.js");
-__d(879 /* NativeStarterKit/js/actions/memoActions.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});exports.deletePublicMemo=exports.deletePrivateMemo=exports.updatePublicMemo=exports.updatePrivateMemo=exports.loadPublicMemo=exports.loadPublicMemos=exports.deletePublicMemoSuccess=exports.updatePublicMemoSuccess=exports.loadPublicMemoSuccess=exports.loadPublicMemosSuccess=undefined;var _actionTypes=require(880 /* ../constants/actionTypes */);var types=_interopRequireWildcard(_actionTypes);
+__d(880 /* NativeStarterKit/js/actions/memoActions.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});exports.deletePublicMemo=exports.deletePrivateMemo=exports.updatePublicMemo=exports.updatePrivateMemo=exports.loadPublicMemo=exports.loadPublicMemos=exports.deletePublicMemoSuccess=exports.updatePublicMemoSuccess=exports.loadPublicMemoSuccess=exports.loadPublicMemosSuccess=undefined;var _actionTypes=require(865 /* ../constants/actionTypes */);var types=_interopRequireWildcard(_actionTypes);
 var _api=require(881 /* ./api */);var _api2=_interopRequireDefault(_api);
 var _utils=require(882 /* ../businessLogic/utils */);
 var _ajaxStatusActions=require(883 /* ./ajaxStatusActions */);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _interopRequireWildcard(obj){if(obj&&obj.__esModule){return obj;}else{var newObj={};if(obj!=null){for(var key in obj){if(Object.prototype.hasOwnProperty.call(obj,key))newObj[key]=obj[key];}}newObj.default=obj;return newObj;}}
@@ -133982,9 +133982,9 @@ function(json){
 
 };
 };
-var deletePublicMemo=exports.deletePublicMemo=function deletePublicMemo(memoId){
+var deletePublicMemo=exports.deletePublicMemo=function deletePublicMemo(_id){
 return function(dispatch){
-return _api2.default.delete("memos/private/"+memoId+"/").then(
+return _api2.default.delete("memos/public/"+_id+"/").then(
 function(json){
 dispatch(deletePublicMemoSuccess(_id));
 });
@@ -134071,7 +134071,7 @@ totalPageNumbers=totalPageNumbers;function createReducer(initialState,reducerMap
 return Math.ceil(response.count/response.results.length);
 }
 }, "NativeStarterKit/js/businessLogic/utils.js");
-__d(883 /* NativeStarterKit/js/actions/ajaxStatusActions.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});exports.ajaxCallError=exports.beginAjaxCall=undefined;var _actionTypes=require(880 /* ../constants/actionTypes */);var types=_interopRequireWildcard(_actionTypes);function _interopRequireWildcard(obj){if(obj&&obj.__esModule){return obj;}else{var newObj={};if(obj!=null){for(var key in obj){if(Object.prototype.hasOwnProperty.call(obj,key))newObj[key]=obj[key];}}newObj.default=obj;return newObj;}}
+__d(883 /* NativeStarterKit/js/actions/ajaxStatusActions.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});exports.ajaxCallError=exports.beginAjaxCall=undefined;var _actionTypes=require(865 /* ../constants/actionTypes */);var types=_interopRequireWildcard(_actionTypes);function _interopRequireWildcard(obj){if(obj&&obj.__esModule){return obj;}else{var newObj={};if(obj!=null){for(var key in obj){if(Object.prototype.hasOwnProperty.call(obj,key))newObj[key]=obj[key];}}newObj.default=obj;return newObj;}}
 
 var beginAjaxCall=exports.beginAjaxCall=function beginAjaxCall(){
 return{type:types.BEGIN_AJAX_CALL};
@@ -134181,7 +134181,7 @@ __d(889 /* NativeStarterKit/js/components/appPage/index.js */, function(global, 
 var _reactRedux=require(660 /* react-redux */);
 var _reactNativeNavigationReduxHelpers=require(861 /* react-native-navigation-redux-helpers */);
 var _nativeBase=require(690 /* native-base */);
-var _reactNativeEasyGrid=require(868 /* react-native-easy-grid */);
+var _reactNativeEasyGrid=require(869 /* react-native-easy-grid */);
 var _reactNative=require(12 /* react-native */);
 
 var _drawer=require(862 /* ../../actions/drawer */);
@@ -134464,7 +134464,7 @@ __d(895 /* NativeStarterKit/js/components/splashscreen/index.js */, function(glo
 
 var _reactNative=require(12 /* react-native */);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={SplashPage:{displayName:'SplashPage'}};var _node_modulesReactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/js/components/splashscreen/index.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _node_modulesReactTransformHmrLibIndexJs2(Component,id);};}
 
-var launchscreen=require(866 /* ../../../images/shadow.png */);var SplashPage=_wrapComponent('SplashPage')((_temp=_class=function(_Component){_inherits(SplashPage,_Component);function SplashPage(){_classCallCheck(this,SplashPage);return _possibleConstructorReturn(this,(SplashPage.__proto__||Object.getPrototypeOf(SplashPage)).apply(this,arguments));}_createClass(SplashPage,[{key:'componentWillMount',value:function componentWillMount()
+var launchscreen=require(867 /* ../../../images/shadow.png */);var SplashPage=_wrapComponent('SplashPage')((_temp=_class=function(_Component){_inherits(SplashPage,_Component);function SplashPage(){_classCallCheck(this,SplashPage);return _possibleConstructorReturn(this,(SplashPage.__proto__||Object.getPrototypeOf(SplashPage)).apply(this,arguments));}_createClass(SplashPage,[{key:'componentWillMount',value:function componentWillMount()
 
 
 
@@ -134492,9 +134492,9 @@ __d(896 /* NativeStarterKit/js/components/sideBar/index.js */, function(global, 
 var _reactRedux=require(660 /* react-redux */);
 var _nativeBase=require(690 /* native-base */);
 
-var _list=require(874 /* ../../actions/list */);
-var _sideBarNav=require(875 /* ../../actions/sideBarNav */);var _sideBarNav2=_interopRequireDefault(_sideBarNav);
-var _baseTheme=require(876 /* ../../themes/base-theme */);var _baseTheme2=_interopRequireDefault(_baseTheme);
+var _list=require(875 /* ../../actions/list */);
+var _sideBarNav=require(876 /* ../../actions/sideBarNav */);var _sideBarNav2=_interopRequireDefault(_sideBarNav);
+var _baseTheme=require(877 /* ../../themes/base-theme */);var _baseTheme2=_interopRequireDefault(_baseTheme);
 
 var _style=require(897 /* ./style */);var _style2=_interopRequireDefault(_style);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={SideBar:{displayName:'SideBar'}};var _node_modulesReactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/js/components/sideBar/index.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _node_modulesReactTransformHmrLibIndexJs2(Component,id);};}var SideBar=_wrapComponent('SideBar')((_temp=_class=function(_Component){_inherits(SideBar,_Component);function SideBar(){_classCallCheck(this,SideBar);return _possibleConstructorReturn(this,(SideBar.__proto__||Object.getPrototypeOf(SideBar)).apply(this,arguments));}_createClass(SideBar,[{key:'navigateTo',value:function navigateTo(
 
@@ -134556,7 +134556,7 @@ __d(898 /* NativeStarterKit/js/components/timeTablePage/index.js */, function(gl
 var _reactRedux=require(660 /* react-redux */);
 var _reactNativeNavigationReduxHelpers=require(861 /* react-native-navigation-redux-helpers */);
 var _nativeBase=require(690 /* native-base */);
-var _reactNativeEasyGrid=require(868 /* react-native-easy-grid */);
+var _reactNativeEasyGrid=require(869 /* react-native-easy-grid */);
 var _reactNative=require(12 /* react-native */);
 
 var _drawer=require(862 /* ../../actions/drawer */);
@@ -134660,7 +134660,7 @@ var _nativeBase=require(690 /* native-base */);
 
 var _drawer=require(862 /* ../../actions/drawer */);
 
-var _memoActions=require(879 /* ../../actions/memoActions */);
+var _memoActions=require(880 /* ../../actions/memoActions */);
 var _MemoEditForm=require(901 /* ./MemoEditForm */);var _MemoEditForm2=_interopRequireDefault(_MemoEditForm);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={MemoEditPage:{displayName:'MemoEditPage'}};var _node_modulesReactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/js/components/memoPage/MemoEditPage.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _node_modulesReactTransformHmrLibIndexJs2(Component,id);};}var
 
 
@@ -138608,7 +138608,7 @@ __d(972 /* NativeStarterKit/js/components/strongBoxPage/index.js */, function(gl
 var _reactRedux=require(660 /* react-redux */);
 var _reactNativeNavigationReduxHelpers=require(861 /* react-native-navigation-redux-helpers */);
 var _nativeBase=require(690 /* native-base */);
-var _reactNativeEasyGrid=require(868 /* react-native-easy-grid */);
+var _reactNativeEasyGrid=require(869 /* react-native-easy-grid */);
 var _reactNative=require(12 /* react-native */);
 
 var _drawer=require(862 /* ../../actions/drawer */);
@@ -138698,7 +138698,7 @@ __d(974 /* NativeStarterKit/js/components/map/index.js */, function(global, requ
 var _reactRedux=require(660 /* react-redux */);
 var _reactNativeNavigationReduxHelpers=require(861 /* react-native-navigation-redux-helpers */);
 var _nativeBase=require(690 /* native-base */);
-var _reactNativeEasyGrid=require(868 /* react-native-easy-grid */);
+var _reactNativeEasyGrid=require(869 /* react-native-easy-grid */);
 var _reactNative=require(12 /* react-native */);
 
 var _drawer=require(862 /* ../../actions/drawer */);
@@ -138783,14 +138783,14 @@ backgroundColor:'#FBFAFA'},
 card:{
 margin:8}});
 }, "NativeStarterKit/js/components/map/styles.js");
-__d(1040 /* NativeStarterKit/js/components/memoPage/MemoDetailPage.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _react2=require(16 /* react */);var _react3=_interopRequireDefault(_react2);var _index=require(46 /* ./../../../node_modules/react-transform-hmr/lib/index.js */);var _index2=_interopRequireDefault(_index);var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _class,_temp;
+__d(976 /* NativeStarterKit/js/components/memoPage/MemoDetailPage.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _react2=require(16 /* react */);var _react3=_interopRequireDefault(_react2);var _index=require(46 /* ./../../../node_modules/react-transform-hmr/lib/index.js */);var _index2=_interopRequireDefault(_index);var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _class,_temp;
 var _reactRedux=require(660 /* react-redux */);
 var _reactNativeNavigationReduxHelpers=require(861 /* react-native-navigation-redux-helpers */);
 var _nativeBase=require(690 /* native-base */);
-var _reactNativeEasyGrid=require(868 /* react-native-easy-grid */);
+var _reactNativeEasyGrid=require(869 /* react-native-easy-grid */);
 var _reactNative=require(12 /* react-native */);
 
-var _memoActions=require(879 /* ../../actions/memoActions */);
+var _memoActions=require(880 /* ../../actions/memoActions */);
 var _drawer=require(862 /* ../../actions/drawer */);
 var _styles=require(886 /* ./styles */);var _styles2=_interopRequireDefault(_styles);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={MemoDetailPage:{displayName:'MemoDetailPage'}};var _node_modulesReactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/js/components/memoPage/MemoDetailPage.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _node_modulesReactTransformHmrLibIndexJs2(Component,id);};}var
 
@@ -138901,7 +138901,7 @@ memo:state.memo.memo};};exports.default=
 
 (0,_reactRedux.connect)(mapStateToProps,bindAction)(MemoDetailPage);
 }, "NativeStarterKit/js/components/memoPage/MemoDetailPage.js");
-__d(976 /* NativeStarterKit/js/components/loaders/ProgressBar.ios.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();
+__d(977 /* NativeStarterKit/js/components/loaders/ProgressBar.ios.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();
 
 var _react=require(16 /* react */);var _react2=_interopRequireDefault(_react);
 var _reactNative=require(12 /* react-native */);
@@ -138929,7 +138929,7 @@ progressTintColor:getColor()}));
 
 }}]);return ProgressBarNB;}(_NativeBaseComponent3.default);exports.default=ProgressBarNB;
 }, "NativeStarterKit/js/components/loaders/ProgressBar.ios.js");
-__d(977 /* NativeStarterKit/js/configureStore.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});exports.default=
+__d(978 /* NativeStarterKit/js/configureStore.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});exports.default=
 
 
 
@@ -138938,7 +138938,7 @@ __d(977 /* NativeStarterKit/js/configureStore.js */, function(global, require, m
 
 
 
-configureStore;var _reactNative=require(12 /* react-native */);var _remoteReduxDevtools=require(978 /* remote-redux-devtools */);var _remoteReduxDevtools2=_interopRequireDefault(_remoteReduxDevtools);var _redux=require(667 /* redux */);var _reduxThunk=require(1013 /* redux-thunk */);var _reduxThunk2=_interopRequireDefault(_reduxThunk);var _reduxPersist=require(1014 /* redux-persist */);var _reducers=require(1032 /* ./reducers */);var _reducers2=_interopRequireDefault(_reducers);var _promise=require(1038 /* ./promise */);var _promise2=_interopRequireDefault(_promise);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function configureStore(onCompletion){
+configureStore;var _reactNative=require(12 /* react-native */);var _remoteReduxDevtools=require(979 /* remote-redux-devtools */);var _remoteReduxDevtools2=_interopRequireDefault(_remoteReduxDevtools);var _redux=require(667 /* redux */);var _reduxThunk=require(1014 /* redux-thunk */);var _reduxThunk2=_interopRequireDefault(_reduxThunk);var _reduxPersist=require(1015 /* redux-persist */);var _reducers=require(1033 /* ./reducers */);var _reducers2=_interopRequireDefault(_reducers);var _promise=require(1040 /* ./promise */);var _promise2=_interopRequireDefault(_promise);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function configureStore(onCompletion){
 var enhancer=(0,_redux.compose)(
 (0,_redux.applyMiddleware)(_reduxThunk2.default,_promise2.default),
 (0,_remoteReduxDevtools2.default)({
@@ -138952,11 +138952,11 @@ var store=(0,_redux.createStore)(_reducers2.default,enhancer);
 return store;
 }
 }, "NativeStarterKit/js/configureStore.js");
-__d(978 /* remote-redux-devtools/lib/index.js */, function(global, require, module, exports) {'use strict';
+__d(979 /* remote-redux-devtools/lib/index.js */, function(global, require, module, exports) {'use strict';
 
-module.exports=require(979 /* ./devTools */).default;
+module.exports=require(980 /* ./devTools */).default;
 }, "remote-redux-devtools/lib/index.js");
-__d(979 /* remote-redux-devtools/lib/devTools.js */, function(global, require, module, exports) {'use strict';
+__d(980 /* remote-redux-devtools/lib/devTools.js */, function(global, require, module, exports) {'use strict';
 
 exports.__esModule=true;
 
@@ -138966,19 +138966,19 @@ var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++)
 
 exports.default=devTools;
 
-var _jsan=require(980 /* jsan */);
+var _jsan=require(981 /* jsan */);
 
-var _socketclusterClient=require(985 /* socketcluster-client */);
+var _socketclusterClient=require(986 /* socketcluster-client */);
 
 var _socketclusterClient2=_interopRequireDefault(_socketclusterClient);
 
-var _configureStore=require(1005 /* ./configureStore */);
+var _configureStore=require(1006 /* ./configureStore */);
 
 var _configureStore2=_interopRequireDefault(_configureStore);
 
-var _constants=require(1011 /* ./constants */);
+var _constants=require(1012 /* ./constants */);
 
-var _reactNative=require(1012 /* ./utils/reactNative */);
+var _reactNative=require(1013 /* ./utils/reactNative */);
 
 function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}
 
@@ -139258,9 +139258,9 @@ return store;
 };
 }
 }, "remote-redux-devtools/lib/devTools.js");
-__d(980 /* jsan/index.js */, function(global, require, module, exports) {module.exports=require(981 /* ./lib */);
+__d(981 /* jsan/index.js */, function(global, require, module, exports) {module.exports=require(982 /* ./lib */);
 }, "jsan/index.js");
-__d(981 /* jsan/lib/index.js */, function(global, require, module, exports) {var cycle=require(982 /* ./cycle */);
+__d(982 /* jsan/lib/index.js */, function(global, require, module, exports) {var cycle=require(983 /* ./cycle */);
 
 exports.stringify=function stringify(value,replacer,space,_options){
 
@@ -139309,8 +139309,8 @@ parsed=cycle.retrocycle(parsed);
 return parsed;
 };
 }, "jsan/lib/index.js");
-__d(982 /* jsan/lib/cycle.js */, function(global, require, module, exports) {var pathGetter=require(983 /* ./path-getter */);
-var utils=require(984 /* ./utils */);
+__d(983 /* jsan/lib/cycle.js */, function(global, require, module, exports) {var pathGetter=require(984 /* ./path-getter */);
+var utils=require(985 /* ./utils */);
 
 var Map=typeof WeakMap!=='undefined'?
 WeakMap:
@@ -139479,7 +139479,7 @@ rez(item);
 return $;
 };
 }, "jsan/lib/cycle.js");
-__d(983 /* jsan/lib/path-getter.js */, function(global, require, module, exports) {module.exports=pathGetter;
+__d(984 /* jsan/lib/path-getter.js */, function(global, require, module, exports) {module.exports=pathGetter;
 
 function pathGetter(obj,path){
 if(path!=='$'){
@@ -139502,7 +139502,7 @@ matches.push(match[1]||match[2]||match[3]);
 return matches;
 }
 }, "jsan/lib/path-getter.js");
-__d(984 /* jsan/lib/utils.js */, function(global, require, module, exports) {var pathGetter=require(983 /* ./path-getter */);
+__d(985 /* jsan/lib/utils.js */, function(global, require, module, exports) {var pathGetter=require(984 /* ./path-getter */);
 
 exports.getRegexFlags=function getRegexFlags(regex){
 var flags='';
@@ -139554,13 +139554,13 @@ return obj;}
 
 };
 }, "jsan/lib/utils.js");
-__d(985 /* socketcluster-client/index.js */, function(global, require, module, exports) {var SCSocket=require(986 /* ./lib/scsocket */);
-var SCSocketCreator=require(1004 /* ./lib/scsocketcreator */);
+__d(986 /* socketcluster-client/index.js */, function(global, require, module, exports) {var SCSocket=require(987 /* ./lib/scsocket */);
+var SCSocketCreator=require(1005 /* ./lib/scsocketcreator */);
 
 module.exports.SCSocketCreator=SCSocketCreator;
 module.exports.SCSocket=SCSocket;
 
-module.exports.SCEmitter=require(987 /* sc-emitter */).SCEmitter;
+module.exports.SCEmitter=require(988 /* sc-emitter */).SCEmitter;
 
 module.exports.connect=function(options){
 return SCSocketCreator.connect(options);
@@ -139572,16 +139572,16 @@ return SCSocketCreator.destroy(options);
 
 module.exports.version='4.3.19';
 }, "socketcluster-client/index.js");
-__d(986 /* socketcluster-client/lib/scsocket.js */, function(global, require, module, exports) {var SCEmitter=require(987 /* sc-emitter */).SCEmitter;
-var SCChannel=require(990 /* sc-channel */).SCChannel;
-var Response=require(991 /* ./response */).Response;
-var AuthEngine=require(994 /* ./auth */).AuthEngine;
-var SCTransport=require(995 /* ./sctransport */).SCTransport;
-var querystring=require(997 /* querystring */);
-var LinkedList=require(1001 /* linked-list */);
-var base64=require(1003 /* base-64 */);
+__d(987 /* socketcluster-client/lib/scsocket.js */, function(global, require, module, exports) {var SCEmitter=require(988 /* sc-emitter */).SCEmitter;
+var SCChannel=require(991 /* sc-channel */).SCChannel;
+var Response=require(992 /* ./response */).Response;
+var AuthEngine=require(995 /* ./auth */).AuthEngine;
+var SCTransport=require(996 /* ./sctransport */).SCTransport;
+var querystring=require(998 /* querystring */);
+var LinkedList=require(1002 /* linked-list */);
+var base64=require(1004 /* base-64 */);
 
-var scErrors=require(992 /* sc-errors */);
+var scErrors=require(993 /* sc-errors */);
 var InvalidArgumentsError=scErrors.InvalidArgumentsError;
 var InvalidMessageError=scErrors.InvalidMessageError;
 var SocketProtocolError=scErrors.SocketProtocolError;
@@ -140505,10 +140505,10 @@ return this._channelEmitter.listeners(channelName);
 
 module.exports=SCSocket;
 }, "socketcluster-client/lib/scsocket.js");
-__d(987 /* sc-emitter/index.js */, function(global, require, module, exports) {var Emitter=require(988 /* component-emitter */);
+__d(988 /* sc-emitter/index.js */, function(global, require, module, exports) {var Emitter=require(989 /* component-emitter */);
 
 if(!Object.create){
-Object.create=require(989 /* ./objectcreate */);
+Object.create=require(990 /* ./objectcreate */);
 }
 
 var SCEmitter=function SCEmitter(){
@@ -140537,7 +140537,7 @@ Emitter.prototype.emit.apply(this,arguments);
 
 module.exports.SCEmitter=SCEmitter;
 }, "sc-emitter/index.js");
-__d(988 /* component-emitter/index.js */, function(global, require, module, exports) {
+__d(989 /* component-emitter/index.js */, function(global, require, module, exports) {
 
 
 
@@ -140699,7 +140699,7 @@ Emitter.prototype.hasListeners=function(event){
 return!!this.listeners(event).length;
 };
 }, "component-emitter/index.js");
-__d(989 /* sc-emitter/objectcreate.js */, function(global, require, module, exports) {module.exports.create=function(){
+__d(990 /* sc-emitter/objectcreate.js */, function(global, require, module, exports) {module.exports.create=function(){
 function F(){};
 
 return function(o){
@@ -140711,7 +140711,7 @@ return new F();
 };
 }();
 }, "sc-emitter/objectcreate.js");
-__d(990 /* sc-channel/index.js */, function(global, require, module, exports) {var SCEmitter=require(987 /* sc-emitter */).SCEmitter;
+__d(991 /* sc-channel/index.js */, function(global, require, module, exports) {var SCEmitter=require(988 /* sc-emitter */).SCEmitter;
 
 var SCChannel=function SCChannel(name,client,options){
 var self=this;
@@ -140780,7 +140780,7 @@ this.client.destroyChannel(this.name);
 
 module.exports.SCChannel=SCChannel;
 }, "sc-channel/index.js");
-__d(991 /* socketcluster-client/lib/response.js */, function(global, require, module, exports) {var scErrors=require(992 /* sc-errors */);
+__d(992 /* socketcluster-client/lib/response.js */, function(global, require, module, exports) {var scErrors=require(993 /* sc-errors */);
 var InvalidActionError=scErrors.InvalidActionError;
 
 var Response=function Response(socket,id){
@@ -140836,7 +140836,7 @@ this.end(data);
 
 module.exports.Response=Response;
 }, "socketcluster-client/lib/response.js");
-__d(992 /* sc-errors/index.js */, function(global, require, module, exports) {var cycle=require(993 /* cycle */);
+__d(993 /* sc-errors/index.js */, function(global, require, module, exports) {var cycle=require(994 /* cycle */);
 
 var isStrict=function(){return!this;}();
 
@@ -141111,7 +141111,7 @@ hydratedError[i]=error[i];
 return hydratedError;
 };
 }, "sc-errors/index.js");
-__d(993 /* cycle/cycle.js */, function(global, require, module, exports) {
+__d(994 /* cycle/cycle.js */, function(global, require, module, exports) {
 
 
 
@@ -141282,7 +141282,7 @@ rez(item);
 return $;
 };
 }, "cycle/cycle.js");
-__d(994 /* socketcluster-client/lib/auth.js */, function(global, require, module, exports) {var AuthEngine=function AuthEngine(){
+__d(995 /* socketcluster-client/lib/auth.js */, function(global, require, module, exports) {var AuthEngine=function AuthEngine(){
 this._internalStorage={};
 };
 
@@ -141339,13 +141339,13 @@ callback(null,token);
 
 module.exports.AuthEngine=AuthEngine;
 }, "socketcluster-client/lib/auth.js");
-__d(995 /* socketcluster-client/lib/sctransport.js */, function(global, require, module, exports) {var SCEmitter=require(987 /* sc-emitter */).SCEmitter;
-var formatter=require(996 /* sc-formatter */);
-var Response=require(991 /* ./response */).Response;
-var querystring=require(997 /* querystring */);
-var WebSocket=require(1000 /* sc-ws */);
+__d(996 /* socketcluster-client/lib/sctransport.js */, function(global, require, module, exports) {var SCEmitter=require(988 /* sc-emitter */).SCEmitter;
+var formatter=require(997 /* sc-formatter */);
+var Response=require(992 /* ./response */).Response;
+var querystring=require(998 /* querystring */);
+var WebSocket=require(1001 /* sc-ws */);
 
-var scErrors=require(992 /* sc-errors */);
+var scErrors=require(993 /* sc-errors */);
 var TimeoutError=scErrors.TimeoutError;
 
 
@@ -141677,7 +141677,7 @@ this.send(str);
 
 module.exports.SCTransport=SCTransport;
 }, "socketcluster-client/lib/sctransport.js");
-__d(996 /* sc-formatter/index.js */, function(global, require, module, exports) {var base64Chars="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+__d(997 /* sc-formatter/index.js */, function(global, require, module, exports) {var base64Chars="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 
 module.exports.parse=function(input){
 if(input==null){
@@ -141756,12 +141756,12 @@ var base64Object=convertBuffersToBase64(object);
 return JSON.stringify(base64Object);
 };
 }, "sc-formatter/index.js");
-__d(997 /* querystring/index.js */, function(global, require, module, exports) {'use strict';
+__d(998 /* querystring/index.js */, function(global, require, module, exports) {'use strict';
 
-exports.decode=exports.parse=require(998 /* ./decode */);
-exports.encode=exports.stringify=require(999 /* ./encode */);
+exports.decode=exports.parse=require(999 /* ./decode */);
+exports.encode=exports.stringify=require(1000 /* ./encode */);
 }, "querystring/index.js");
-__d(998 /* querystring/decode.js */, function(global, require, module, exports) {
+__d(999 /* querystring/decode.js */, function(global, require, module, exports) {
 
 
 
@@ -141842,7 +141842,7 @@ obj[k]=[obj[k],v];
 return obj;
 };
 }, "querystring/decode.js");
-__d(999 /* querystring/encode.js */, function(global, require, module, exports) {
+__d(1000 /* querystring/encode.js */, function(global, require, module, exports) {
 
 
 
@@ -141907,7 +141907,7 @@ return encodeURIComponent(stringifyPrimitive(name))+eq+
 encodeURIComponent(stringifyPrimitive(obj));
 };
 }, "querystring/encode.js");
-__d(1000 /* sc-ws/lib/browser.js */, function(global, require, module, exports) {
+__d(1001 /* sc-ws/lib/browser.js */, function(global, require, module, exports) {
 
 
 
@@ -141951,11 +141951,11 @@ return instance;
 
 if(WebSocket)ws.prototype=WebSocket.prototype;
 }, "sc-ws/lib/browser.js");
-__d(1001 /* linked-list/index.js */, function(global, require, module, exports) {'use strict';
+__d(1002 /* linked-list/index.js */, function(global, require, module, exports) {'use strict';
 
-module.exports=require(1002 /* ./_source/linked-list.js */);
+module.exports=require(1003 /* ./_source/linked-list.js */);
 }, "linked-list/index.js");
-__d(1002 /* linked-list/_source/linked-list.js */, function(global, require, module, exports) {'use strict';
+__d(1003 /* linked-list/_source/linked-list.js */, function(global, require, module, exports) {'use strict';
 
 
 
@@ -142342,7 +142342,7 @@ return item;
 
 module.exports=List;
 }, "linked-list/_source/linked-list.js");
-__d(1003 /* base-64/base64.js */, function(global, require, module, exports) {
+__d(1004 /* base-64/base64.js */, function(global, require, module, exports) {
 ;(function(root){
 
 
@@ -142508,7 +142508,7 @@ root.base64=base64;
 
 })(this);
 }, "base-64/base64.js");
-__d(1004 /* socketcluster-client/lib/scsocketcreator.js */, function(global, require, module, exports) {var SCSocket=require(986 /* ./scsocket */);
+__d(1005 /* socketcluster-client/lib/scsocketcreator.js */, function(global, require, module, exports) {var SCSocket=require(987 /* ./scsocket */);
 
 var _connections={};
 
@@ -142607,12 +142607,12 @@ module.exports={
 connect:connect,
 destroy:destroy};
 }, "socketcluster-client/lib/scsocketcreator.js");
-__d(1005 /* remote-redux-devtools/lib/configureStore.js */, function(global, require, module, exports) {'use strict';
+__d(1006 /* remote-redux-devtools/lib/configureStore.js */, function(global, require, module, exports) {'use strict';
 
 exports.__esModule=true;
 exports.default=configureStore;
 
-var _reduxDevtoolsInstrument=require(1006 /* redux-devtools-instrument */);
+var _reduxDevtoolsInstrument=require(1007 /* redux-devtools-instrument */);
 
 var _reduxDevtoolsInstrument2=_interopRequireDefault(_reduxDevtoolsInstrument);
 
@@ -142622,7 +142622,7 @@ function configureStore(next,subscriber,options){
 return(0,_reduxDevtoolsInstrument2.default)(subscriber,options)(next);
 }
 }, "remote-redux-devtools/lib/configureStore.js");
-__d(1006 /* redux-devtools-instrument/lib/instrument.js */, function(global, require, module, exports) {'use strict';
+__d(1007 /* redux-devtools-instrument/lib/instrument.js */, function(global, require, module, exports) {'use strict';
 
 exports.__esModule=true;
 exports.INIT_ACTION=exports.ActionCreators=exports.ActionTypes=undefined;
@@ -142641,7 +142641,7 @@ var _difference=require(186 /* lodash/difference */);
 
 var _difference2=_interopRequireDefault(_difference);
 
-var _union=require(1007 /* lodash/union */);
+var _union=require(1008 /* lodash/union */);
 
 var _union2=_interopRequireDefault(_union);
 
@@ -143289,9 +143289,9 @@ return unliftStore(liftedStore,liftReducer);
 };
 }
 }, "redux-devtools-instrument/lib/instrument.js");
-__d(1007 /* lodash/union.js */, function(global, require, module, exports) {var baseFlatten=require(193 /* ./_baseFlatten */),
+__d(1008 /* lodash/union.js */, function(global, require, module, exports) {var baseFlatten=require(193 /* ./_baseFlatten */),
 baseRest=require(178 /* ./_baseRest */),
-baseUniq=require(1008 /* ./_baseUniq */),
+baseUniq=require(1009 /* ./_baseUniq */),
 isArrayLikeObject=require(195 /* ./isArrayLikeObject */);
 
 
@@ -143316,11 +143316,11 @@ return baseUniq(baseFlatten(arrays,1,isArrayLikeObject,true));
 
 module.exports=union;
 }, "lodash/union.js");
-__d(1008 /* lodash/_baseUniq.js */, function(global, require, module, exports) {var SetCache=require(102 /* ./_SetCache */),
+__d(1009 /* lodash/_baseUniq.js */, function(global, require, module, exports) {var SetCache=require(102 /* ./_SetCache */),
 arrayIncludes=require(188 /* ./_arrayIncludes */),
 arrayIncludesWith=require(192 /* ./_arrayIncludesWith */),
 cacheHas=require(106 /* ./_cacheHas */),
-createSet=require(1009 /* ./_createSet */),
+createSet=require(1010 /* ./_createSet */),
 setToArray=require(110 /* ./_setToArray */);
 
 
@@ -143389,8 +143389,8 @@ return result;
 
 module.exports=baseUniq;
 }, "lodash/_baseUniq.js");
-__d(1009 /* lodash/_createSet.js */, function(global, require, module, exports) {var Set=require(141 /* ./_Set */),
-noop=require(1010 /* ./noop */),
+__d(1010 /* lodash/_createSet.js */, function(global, require, module, exports) {var Set=require(141 /* ./_Set */),
+noop=require(1011 /* ./noop */),
 setToArray=require(110 /* ./_setToArray */);
 
 
@@ -143409,7 +143409,7 @@ return new Set(values);
 
 module.exports=createSet;
 }, "lodash/_createSet.js");
-__d(1010 /* lodash/noop.js */, function(global, require, module, exports) {
+__d(1011 /* lodash/noop.js */, function(global, require, module, exports) {
 
 
 
@@ -143427,7 +143427,7 @@ function noop(){
 
 module.exports=noop;
 }, "lodash/noop.js");
-__d(1011 /* remote-redux-devtools/lib/constants.js */, function(global, require, module, exports) {'use strict';
+__d(1012 /* remote-redux-devtools/lib/constants.js */, function(global, require, module, exports) {'use strict';
 
 exports.__esModule=true;
 var defaultSocketOptions=exports.defaultSocketOptions={
@@ -143438,7 +143438,7 @@ autoReconnect:true,
 autoReconnectOptions:{
 randomness:60000}};
 }, "remote-redux-devtools/lib/constants.js");
-__d(1012 /* remote-redux-devtools/lib/utils/reactNative.js */, function(global, require, module, exports) {'use strict';
+__d(1013 /* remote-redux-devtools/lib/utils/reactNative.js */, function(global, require, module, exports) {'use strict';
 
 exports.__esModule=true;
 exports.getHostForRN=getHostForRN;
@@ -143457,7 +143457,7 @@ return ServerHost.split(':')[0];
 return hostname;
 }
 }, "remote-redux-devtools/lib/utils/reactNative.js");
-__d(1013 /* redux-thunk/lib/index.js */, function(global, require, module, exports) {'use strict';
+__d(1014 /* redux-thunk/lib/index.js */, function(global, require, module, exports) {'use strict';
 
 exports.__esModule=true;
 function createThunkMiddleware(extraArgument){
@@ -143481,34 +143481,34 @@ thunk.withExtraArgument=createThunkMiddleware;
 
 exports['default']=thunk;
 }, "redux-thunk/lib/index.js");
-__d(1014 /* redux-persist/lib/index.js */, function(global, require, module, exports) {'use strict';
+__d(1015 /* redux-persist/lib/index.js */, function(global, require, module, exports) {'use strict';
 
 Object.defineProperty(exports,"__esModule",{
 value:true});
 
 exports.storages=exports.persistStore=exports.getStoredState=exports.createTransform=exports.createPersistor=exports.autoRehydrate=undefined;
 
-var _autoRehydrate=require(1015 /* ./autoRehydrate */);
+var _autoRehydrate=require(1016 /* ./autoRehydrate */);
 
 var _autoRehydrate2=_interopRequireDefault(_autoRehydrate);
 
-var _createPersistor=require(1018 /* ./createPersistor */);
+var _createPersistor=require(1019 /* ./createPersistor */);
 
 var _createPersistor2=_interopRequireDefault(_createPersistor);
 
-var _createTransform=require(1029 /* ./createTransform */);
+var _createTransform=require(1030 /* ./createTransform */);
 
 var _createTransform2=_interopRequireDefault(_createTransform);
 
-var _getStoredState=require(1030 /* ./getStoredState */);
+var _getStoredState=require(1031 /* ./getStoredState */);
 
 var _getStoredState2=_interopRequireDefault(_getStoredState);
 
-var _persistStore=require(1031 /* ./persistStore */);
+var _persistStore=require(1032 /* ./persistStore */);
 
 var _persistStore2=_interopRequireDefault(_persistStore);
 
-var _asyncLocalStorage=require(1027 /* ./defaults/asyncLocalStorage */);
+var _asyncLocalStorage=require(1028 /* ./defaults/asyncLocalStorage */);
 
 var _asyncLocalStorage2=_interopRequireDefault(_asyncLocalStorage);
 
@@ -143526,7 +143526,7 @@ exports.getStoredState=_getStoredState2.default;
 exports.persistStore=_persistStore2.default;
 exports.storages=storages;
 }, "redux-persist/lib/index.js");
-__d(1015 /* redux-persist/lib/autoRehydrate.js */, function(global, require, module, exports) {'use strict';
+__d(1016 /* redux-persist/lib/autoRehydrate.js */, function(global, require, module, exports) {'use strict';
 
 Object.defineProperty(exports,"__esModule",{
 value:true});
@@ -143538,9 +143538,9 @@ var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++)
 
 exports.default=autoRehydrate;
 
-var _constants=require(1016 /* ./constants */);
+var _constants=require(1017 /* ./constants */);
 
-var _isStatePlainEnough=require(1017 /* ./utils/isStatePlainEnough */);
+var _isStatePlainEnough=require(1018 /* ./utils/isStatePlainEnough */);
 
 var _isStatePlainEnough2=_interopRequireDefault(_isStatePlainEnough);
 
@@ -143611,7 +143611,7 @@ console.log('\n      redux-persist/autoRehydrate: %d actions were fired before r
 }
 }
 }, "redux-persist/lib/autoRehydrate.js");
-__d(1016 /* redux-persist/lib/constants.js */, function(global, require, module, exports) {'use strict';
+__d(1017 /* redux-persist/lib/constants.js */, function(global, require, module, exports) {'use strict';
 
 Object.defineProperty(exports,"__esModule",{
 value:true});
@@ -143620,7 +143620,7 @@ var KEY_PREFIX=exports.KEY_PREFIX='reduxPersist:';
 var REHYDRATE=exports.REHYDRATE='persist/REHYDRATE';
 var REHYDRATE_ERROR=exports.REHYDRATE_ERROR='persist/REHYDRATE_ERROR';
 }, "redux-persist/lib/constants.js");
-__d(1017 /* redux-persist/lib/utils/isStatePlainEnough.js */, function(global, require, module, exports) {'use strict';
+__d(1018 /* redux-persist/lib/utils/isStatePlainEnough.js */, function(global, require, module, exports) {'use strict';
 
 Object.defineProperty(exports,"__esModule",{
 value:true});
@@ -143645,13 +143645,13 @@ if(!(0,_isPlainObject3.default)(a))return false;
 return true;
 }
 }, "redux-persist/lib/utils/isStatePlainEnough.js");
-__d(1018 /* redux-persist/lib/createPersistor.js */, function(global, require, module, exports) {'use strict';
+__d(1019 /* redux-persist/lib/createPersistor.js */, function(global, require, module, exports) {'use strict';
 
 Object.defineProperty(exports,"__esModule",{
 value:true});
 
 
-var _forEach2=require(1019 /* lodash/forEach */);
+var _forEach2=require(1020 /* lodash/forEach */);
 
 var _forEach3=_interopRequireDefault(_forEach2);
 
@@ -143659,17 +143659,17 @@ var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++)
 
 exports.default=createPersistor;
 
-var _constants=require(1016 /* ./constants */);
+var _constants=require(1017 /* ./constants */);
 
-var _asyncLocalStorage=require(1027 /* ./defaults/asyncLocalStorage */);
+var _asyncLocalStorage=require(1028 /* ./defaults/asyncLocalStorage */);
 
 var _asyncLocalStorage2=_interopRequireDefault(_asyncLocalStorage);
 
-var _isStatePlainEnough=require(1017 /* ./utils/isStatePlainEnough */);
+var _isStatePlainEnough=require(1018 /* ./utils/isStatePlainEnough */);
 
 var _isStatePlainEnough2=_interopRequireDefault(_isStatePlainEnough);
 
-var _jsonStringifySafe=require(1028 /* json-stringify-safe */);
+var _jsonStringifySafe=require(1029 /* json-stringify-safe */);
 
 var _jsonStringifySafe2=_interopRequireDefault(_jsonStringifySafe);
 
@@ -143840,9 +143840,9 @@ payload:data};
 
 }
 }, "redux-persist/lib/createPersistor.js");
-__d(1019 /* lodash/forEach.js */, function(global, require, module, exports) {var arrayEach=require(1020 /* ./_arrayEach */),
-baseEach=require(1021 /* ./_baseEach */),
-castFunction=require(1026 /* ./_castFunction */),
+__d(1020 /* lodash/forEach.js */, function(global, require, module, exports) {var arrayEach=require(1021 /* ./_arrayEach */),
+baseEach=require(1022 /* ./_baseEach */),
+castFunction=require(1027 /* ./_castFunction */),
 isArray=require(115 /* ./isArray */);
 
 
@@ -143882,7 +143882,7 @@ return func(collection,castFunction(iteratee));
 
 module.exports=forEach;
 }, "lodash/forEach.js");
-__d(1020 /* lodash/_arrayEach.js */, function(global, require, module, exports) {
+__d(1021 /* lodash/_arrayEach.js */, function(global, require, module, exports) {
 
 
 
@@ -143905,8 +143905,8 @@ return array;
 
 module.exports=arrayEach;
 }, "lodash/_arrayEach.js");
-__d(1021 /* lodash/_baseEach.js */, function(global, require, module, exports) {var baseForOwn=require(1022 /* ./_baseForOwn */),
-createBaseEach=require(1025 /* ./_createBaseEach */);
+__d(1022 /* lodash/_baseEach.js */, function(global, require, module, exports) {var baseForOwn=require(1023 /* ./_baseForOwn */),
+createBaseEach=require(1026 /* ./_createBaseEach */);
 
 
 
@@ -143920,7 +143920,7 @@ var baseEach=createBaseEach(baseForOwn);
 
 module.exports=baseEach;
 }, "lodash/_baseEach.js");
-__d(1022 /* lodash/_baseForOwn.js */, function(global, require, module, exports) {var baseFor=require(1023 /* ./_baseFor */),
+__d(1023 /* lodash/_baseForOwn.js */, function(global, require, module, exports) {var baseFor=require(1024 /* ./_baseFor */),
 keys=require(119 /* ./keys */);
 
 
@@ -143937,7 +143937,7 @@ return object&&baseFor(object,iteratee,keys);
 
 module.exports=baseForOwn;
 }, "lodash/_baseForOwn.js");
-__d(1023 /* lodash/_baseFor.js */, function(global, require, module, exports) {var createBaseFor=require(1024 /* ./_createBaseFor */);
+__d(1024 /* lodash/_baseFor.js */, function(global, require, module, exports) {var createBaseFor=require(1025 /* ./_createBaseFor */);
 
 
 
@@ -143954,7 +143954,7 @@ var baseFor=createBaseFor();
 
 module.exports=baseFor;
 }, "lodash/_baseFor.js");
-__d(1024 /* lodash/_createBaseFor.js */, function(global, require, module, exports) {
+__d(1025 /* lodash/_createBaseFor.js */, function(global, require, module, exports) {
 
 
 
@@ -143980,7 +143980,7 @@ return object;
 
 module.exports=createBaseFor;
 }, "lodash/_createBaseFor.js");
-__d(1025 /* lodash/_createBaseEach.js */, function(global, require, module, exports) {var isArrayLike=require(137 /* ./isArrayLike */);
+__d(1026 /* lodash/_createBaseEach.js */, function(global, require, module, exports) {var isArrayLike=require(137 /* ./isArrayLike */);
 
 
 
@@ -144013,7 +144013,7 @@ return collection;
 
 module.exports=createBaseEach;
 }, "lodash/_createBaseEach.js");
-__d(1026 /* lodash/_castFunction.js */, function(global, require, module, exports) {var identity=require(162 /* ./identity */);
+__d(1027 /* lodash/_castFunction.js */, function(global, require, module, exports) {var identity=require(162 /* ./identity */);
 
 
 
@@ -144028,7 +144028,7 @@ return typeof value=='function'?value:identity;
 
 module.exports=castFunction;
 }, "lodash/_castFunction.js");
-__d(1027 /* redux-persist/lib/defaults/asyncLocalStorage.js */, function(global, require, module, exports) {'use strict';
+__d(1028 /* redux-persist/lib/defaults/asyncLocalStorage.js */, function(global, require, module, exports) {'use strict';
 
 Object.defineProperty(exports,"__esModule",{
 value:true});
@@ -144120,7 +144120,7 @@ return hasSessionStorage()?window.sessionStorage:{getItem:noStorage,setItem:noSt
 }
 }
 }, "redux-persist/lib/defaults/asyncLocalStorage.js");
-__d(1028 /* json-stringify-safe/stringify.js */, function(global, require, module, exports) {exports=module.exports=stringify;
+__d(1029 /* json-stringify-safe/stringify.js */, function(global, require, module, exports) {exports=module.exports=stringify;
 exports.getSerialize=serializer;
 
 function stringify(obj,replacer,spaces,cycleReplacer){
@@ -144148,7 +144148,7 @@ return replacer==null?value:replacer.call(this,key,value);
 };
 }
 }, "json-stringify-safe/stringify.js");
-__d(1029 /* redux-persist/lib/createTransform.js */, function(global, require, module, exports) {"use strict";
+__d(1030 /* redux-persist/lib/createTransform.js */, function(global, require, module, exports) {"use strict";
 
 Object.defineProperty(exports,"__esModule",{
 value:true});
@@ -144177,13 +144177,13 @@ return!whitelistBlacklistCheck(key)?outbound(state,key):state;
 
 exports.default=createTransform;
 }, "redux-persist/lib/createTransform.js");
-__d(1030 /* redux-persist/lib/getStoredState.js */, function(global, require, module, exports) {'use strict';
+__d(1031 /* redux-persist/lib/getStoredState.js */, function(global, require, module, exports) {'use strict';
 
 Object.defineProperty(exports,"__esModule",{
 value:true});
 
 
-var _forEach2=require(1019 /* lodash/forEach */);
+var _forEach2=require(1020 /* lodash/forEach */);
 
 var _forEach3=_interopRequireDefault(_forEach2);
 
@@ -144191,9 +144191,9 @@ var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++)
 
 exports.default=getStoredState;
 
-var _constants=require(1016 /* ./constants */);
+var _constants=require(1017 /* ./constants */);
 
-var _asyncLocalStorage=require(1027 /* ./defaults/asyncLocalStorage */);
+var _asyncLocalStorage=require(1028 /* ./defaults/asyncLocalStorage */);
 
 var _asyncLocalStorage2=_interopRequireDefault(_asyncLocalStorage);
 
@@ -144283,7 +144283,7 @@ function defaultDeserialize(serial){
 return JSON.parse(serial);
 }
 }, "redux-persist/lib/getStoredState.js");
-__d(1031 /* redux-persist/lib/persistStore.js */, function(global, require, module, exports) {'use strict';
+__d(1032 /* redux-persist/lib/persistStore.js */, function(global, require, module, exports) {'use strict';
 
 Object.defineProperty(exports,"__esModule",{
 value:true});
@@ -144293,13 +144293,13 @@ var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++)
 
 exports.default=persistStore;
 
-var _constants=require(1016 /* ./constants */);
+var _constants=require(1017 /* ./constants */);
 
-var _getStoredState=require(1030 /* ./getStoredState */);
+var _getStoredState=require(1031 /* ./getStoredState */);
 
 var _getStoredState2=_interopRequireDefault(_getStoredState);
 
-var _createPersistor=require(1018 /* ./createPersistor */);
+var _createPersistor=require(1019 /* ./createPersistor */);
 
 var _createPersistor2=_interopRequireDefault(_createPersistor);
 
@@ -144355,14 +144355,14 @@ payload:err};
 
 }
 }, "redux-persist/lib/persistStore.js");
-__d(1032 /* NativeStarterKit/js/reducers/index.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});
+__d(1033 /* NativeStarterKit/js/reducers/index.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});
 var _redux=require(667 /* redux */);
 
-var _drawer=require(1033 /* ./drawer */);var _drawer2=_interopRequireDefault(_drawer);
-var _cardNavigation=require(1034 /* ./cardNavigation */);var _cardNavigation2=_interopRequireDefault(_cardNavigation);
-var _user=require(1035 /* ./user */);var _user2=_interopRequireDefault(_user);
-var _list=require(1036 /* ./list */);var _list2=_interopRequireDefault(_list);
-var _memo=require(1037 /* ./memo */);var _memo2=_interopRequireDefault(_memo);
+var _drawer=require(1034 /* ./drawer */);var _drawer2=_interopRequireDefault(_drawer);
+var _cardNavigation=require(1035 /* ./cardNavigation */);var _cardNavigation2=_interopRequireDefault(_cardNavigation);
+var _user=require(1036 /* ./user */);var _user2=_interopRequireDefault(_user);
+var _list=require(1037 /* ./list */);var _list2=_interopRequireDefault(_list);
+var _memo=require(1038 /* ./memo */);var _memo2=_interopRequireDefault(_memo);
 var _title=require(1039 /* ./title */);var _title2=_interopRequireDefault(_title);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}exports.default=
 
 (0,_redux.combineReducers)({
@@ -144373,7 +144373,7 @@ cardNavigation:_cardNavigation2.default,
 memo:_memo2.default,
 title:_title2.default});
 }, "NativeStarterKit/js/reducers/index.js");
-__d(1033 /* NativeStarterKit/js/reducers/drawer.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++){var source=arguments[i];for(var key in source){if(Object.prototype.hasOwnProperty.call(source,key)){target[key]=source[key];}}}return target;};exports.default=
+__d(1034 /* NativeStarterKit/js/reducers/drawer.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++){var source=arguments[i];for(var key in source){if(Object.prototype.hasOwnProperty.call(source,key)){target[key]=source[key];}}}return target;};exports.default=
 
 
 
@@ -144405,7 +144405,7 @@ drawerState:'closed'});
 return state;
 };var _drawer=require(862 /* ../actions/drawer */);var initialState={drawerState:'closed',drawerDisabled:true};
 }, "NativeStarterKit/js/reducers/drawer.js");
-__d(1034 /* NativeStarterKit/js/reducers/cardNavigation.js */, function(global, require, module, exports) {
+__d(1035 /* NativeStarterKit/js/reducers/cardNavigation.js */, function(global, require, module, exports) {
 var _reactNativeNavigationReduxHelpers=require(861 /* react-native-navigation-redux-helpers */);
 
 var initialState={
@@ -144421,7 +144421,7 @@ index:0}]};
 
 module.exports=(0,_reactNativeNavigationReduxHelpers.cardStackReducer)(initialState);
 }, "NativeStarterKit/js/reducers/cardNavigation.js");
-__d(1035 /* NativeStarterKit/js/reducers/user.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++){var source=arguments[i];for(var key in source){if(Object.prototype.hasOwnProperty.call(source,key)){target[key]=source[key];}}}return target;};exports.default=
+__d(1036 /* NativeStarterKit/js/reducers/user.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++){var source=arguments[i];for(var key in source){if(Object.prototype.hasOwnProperty.call(source,key)){target[key]=source[key];}}}return target;};exports.default=
 
 
 
@@ -144443,7 +144443,7 @@ name:action.payload});
 return state;
 };var _user=require(864 /* ../actions/user */);var initialState={name:''};
 }, "NativeStarterKit/js/reducers/user.js");
-__d(1036 /* NativeStarterKit/js/reducers/list.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++){var source=arguments[i];for(var key in source){if(Object.prototype.hasOwnProperty.call(source,key)){target[key]=source[key];}}}return target;};exports.default=
+__d(1037 /* NativeStarterKit/js/reducers/list.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++){var source=arguments[i];for(var key in source){if(Object.prototype.hasOwnProperty.call(source,key)){target[key]=source[key];}}}return target;};exports.default=
 
 
 
@@ -144470,9 +144470,9 @@ selectedIndex:action.payload});
 
 }
 return state;
-};var _list=require(874 /* ../actions/list */);var initialState={list:['React Native Starter Kit','Navigation Experimental','NativeBase Easy Grid','NativeBase','CodePush','Redux'],selectedIndex:undefined};
+};var _list=require(875 /* ../actions/list */);var initialState={list:['React Native Starter Kit','Navigation Experimental','NativeBase Easy Grid','NativeBase','CodePush','Redux'],selectedIndex:undefined};
 }, "NativeStarterKit/js/reducers/list.js");
-__d(1037 /* NativeStarterKit/js/reducers/memo.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++){var source=arguments[i];for(var key in source){if(Object.prototype.hasOwnProperty.call(source,key)){target[key]=source[key];}}}return target;};exports.default=
+__d(1038 /* NativeStarterKit/js/reducers/memo.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++){var source=arguments[i];for(var key in source){if(Object.prototype.hasOwnProperty.call(source,key)){target[key]=source[key];}}}return target;};exports.default=
 
 
 
@@ -144513,7 +144513,7 @@ state.publicMemos.filter(function(publicMemo){return publicMemo._id!==action._id
 default:
 return state;}
 
-};var _actionTypes=require(880 /* ../constants/actionTypes */);var types=_interopRequireWildcard(_actionTypes);function _interopRequireWildcard(obj){if(obj&&obj.__esModule){return obj;}else{var newObj={};if(obj!=null){for(var key in obj){if(Object.prototype.hasOwnProperty.call(obj,key))newObj[key]=obj[key];}}newObj.default=obj;return newObj;}}function _toConsumableArray(arr){if(Array.isArray(arr)){for(var i=0,arr2=Array(arr.length);i<arr.length;i++){arr2[i]=arr[i];}return arr2;}else{return Array.from(arr);}}var initialState={memo:null,publicMemo:null,publicMemos:[],privateMemos:[]};
+};var _actionTypes=require(865 /* ../constants/actionTypes */);var types=_interopRequireWildcard(_actionTypes);function _interopRequireWildcard(obj){if(obj&&obj.__esModule){return obj;}else{var newObj={};if(obj!=null){for(var key in obj){if(Object.prototype.hasOwnProperty.call(obj,key))newObj[key]=obj[key];}}newObj.default=obj;return newObj;}}function _toConsumableArray(arr){if(Array.isArray(arr)){for(var i=0,arr2=Array(arr.length);i<arr.length;i++){arr2[i]=arr[i];}return arr2;}else{return Array.from(arr);}}var initialState={memo:null,publicMemo:null,publicMemos:[],privateMemos:[]};
 }, "NativeStarterKit/js/reducers/memo.js");
 __d(1039 /* NativeStarterKit/js/reducers/title.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});exports.default=
 
@@ -144532,9 +144532,9 @@ if(action.type===types.SET_TITLE){
 return action.title;
 }
 return state;
-};var _actionTypes=require(880 /* ../constants/actionTypes */);var types=_interopRequireWildcard(_actionTypes);function _interopRequireWildcard(obj){if(obj&&obj.__esModule){return obj;}else{var newObj={};if(obj!=null){for(var key in obj){if(Object.prototype.hasOwnProperty.call(obj,key))newObj[key]=obj[key];}}newObj.default=obj;return newObj;}}var initialState='';
+};var _actionTypes=require(865 /* ../constants/actionTypes */);var types=_interopRequireWildcard(_actionTypes);function _interopRequireWildcard(obj){if(obj&&obj.__esModule){return obj;}else{var newObj={};if(obj!=null){for(var key in obj){if(Object.prototype.hasOwnProperty.call(obj,key))newObj[key]=obj[key];}}newObj.default=obj;return newObj;}}var initialState='';
 }, "NativeStarterKit/js/reducers/title.js");
-__d(1038 /* NativeStarterKit/js/promise.js */, function(global, require, module, exports) {
+__d(1040 /* NativeStarterKit/js/promise.js */, function(global, require, module, exports) {
 function warn(error){
 throw error;
 }
