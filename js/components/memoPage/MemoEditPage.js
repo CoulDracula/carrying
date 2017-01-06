@@ -22,20 +22,18 @@ import MemoEditForm from './MemoEditForm';
 // const Item = Picker.Item;
 const {
   popRoute,
-  reset,
-  pushRoute,
 } = actions;
 
 class MemoEditPage extends Component {
   constructor (props) {
     super(props);
-    this.state = {
-      selectedItem: undefined,
-      selected1: 'key0',
-      results: {
-        items: [],
-      },
-    };
+    // this.state = {
+    //   selectedItem: undefined,
+    //   selected1: 'key0',
+    //   results: {
+    //     items: [],
+    //   },
+    // };
     this.pushValue=this.pushValue.bind(this);
   }
 
@@ -47,11 +45,7 @@ class MemoEditPage extends Component {
 
   static propTypes = {
     name: React.PropTypes.string,
-    index: React.PropTypes.number,
-    list: React.PropTypes.arrayOf(React.PropTypes.string),
-    openDrawer: React.PropTypes.func,
     popRoute: React.PropTypes.func,
-    pushRoute: React.PropTypes.func,
     navigation: React.PropTypes.shape({
       key: React.PropTypes.string,
     }),
@@ -59,11 +53,6 @@ class MemoEditPage extends Component {
 
   popRoute () {
     this.props.popRoute(this.props.navigation.key);
-  }
-
-  pushRoute (route, index) {
-    this.props.setIndex(index);
-    this.props.pushRoute({ key: route, index: 1 }, this.props.navigation.key);
   }
 
   pushValue (form) {
@@ -74,12 +63,7 @@ class MemoEditPage extends Component {
     if(form.private==true){
       this.props.updatePrivateMemo(form);
     }
-    this.props.popRoute(this.props.navigation.key);
-    // this.props.editPublicMemo(form).then(
-    //   ()=>{
-    //   this.props.popRoute(this.props.navigation.key);
-    //   }
-    // );
+    this.popRoute();
   }
 
   render () {
@@ -153,15 +137,12 @@ function bindAction (dispatch) {
     updatePublicMemo: form => dispatch(updatePublicMemo(form)),
     updatePrivateMemo: form => dispatch(updatePrivateMemo(form)),
     popRoute: key => dispatch(popRoute(key)),
-    pushRoute: (route, key) => dispatch(pushRoute(route, key)),
   };
 }
 
 const mapStateToProps = state => ({
   navigation: state.cardNavigation,
   name: state.user.name,
-  index: state.list.selectedIndex,
-  list: state.list.list,
 });
 
 

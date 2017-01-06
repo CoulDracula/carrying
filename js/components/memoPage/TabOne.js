@@ -18,7 +18,7 @@ const TabOne = ({ publicMemos }) => {
           publicMemo => {
             return (
             <List>
-              <ListItem  key={publicMemo._id}>
+              <ListItem>
                 <Thumbnail square  source={require('./img/logo.png')} />
                 <Text>{publicMemo.title}</Text>
                 <Text note>{publicMemo.grade}</Text>

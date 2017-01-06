@@ -7,6 +7,7 @@ import {Grid, Row} from 'react-native-easy-grid';
 
 import {openDrawer} from '../../actions/drawer';
 import {setIndex} from '../../actions/list';
+import {setTitle} from '../../actions/user';
 import navigateTo from '../../actions/sideBarNav';
 import myTheme from '../../themes/base-theme';
 import styles from './styles';
@@ -43,12 +44,14 @@ class Home extends Component {
   };
 
   pushRoute (route, index) {
-    this.props.setIndex(index);
+    // this.props.setIndex(index);
+    this.props.setTitle(index);
     this.props.pushRoute({ key: route, index: 1 }, this.props.navigation.key);
   }
-  popRoute() {
-  this.props.popRoute(this.props.navigation.key);
-}
+
+  popRoute () {
+    this.props.popRoute(this.props.navigation.key);
+  }
 
   navigateTo (route) {
     this.props.navigateTo(route, 'home');
@@ -59,78 +62,78 @@ class Home extends Component {
       <Container theme={myTheme} style={styles.container}>
 
         {/*<Image*/}
-          {/*style={styles.content}*/}
-          {/*source={require('./img/background.png')}>*/}
+        {/*style={styles.content}*/}
+        {/*source={require('./img/background.png')}>*/}
 
-          <Header>
-            {this.state.page != 'User Center' &&
-              <Button transparent >
-                <Icon name="ios-arrow-back" />
-              </Button>
-            }
-            {this.state.page == 'User Center' &&
-            <Button transparent onPress={() => this.props.reset(this.props.navigation.key)}>
-              <Icon name="ios-power"/>
+        <Header>
+          {this.state.page != 'User Center' &&
+          <Button transparent>
+            <Icon name="ios-arrow-back"/>
+          </Button>
+          }
+          {this.state.page == 'User Center' &&
+          <Button transparent onPress={() => this.props.reset(this.props.navigation.key)}>
+            <Icon name="ios-power"/>
+          </Button>
+          }
+          <Title>{this.state.page}</Title>
+          {this.state.page != 'Memo Page' &&
+          <Button transparent onPress={this.props.openDrawer}>
+            <Icon name="ios-menu"/>
+          </Button>
+          }
+          {this.state.page == 'Memo Page' &&
+          <Button transparent onPress={() => this.pushRoute('memoEditPage','Memo Edit')}>
+            <Icon name="ios-add"/>
+          </Button>
+          }
+        </Header>
+        <Content>
+          {this.state.page == 'Home' &&
+          <Grid style={styles.mt}>
+            {this.props.list.map((item, i) =>
+              <Row key={i}>
+                <TouchableOpacity
+                  style={styles.row}
+                  onPress={() => this.pushRoute('blankPage', i)}
+                >
+                  <Text style={styles.text}>{item}</Text>
+                </TouchableOpacity>
+              </Row>
+            )}
+          </Grid>
+          }
+          {this.state.page == 'Memo Page' &&
+          <MemoPage/>
+          }
+          {this.state.page == 'App Center' &&
+          <AppPage/>
+          }
+          {this.state.page == 'User Center' &&
+          <UserPage/>
+          }
+        </Content>
+        <Footer >
+          <FooterTab>
+            <Button //onPress={() => this.navigateTo('appPage')}
+              onPress={()=>this.setState({page:'App Center'})}>
+              Apps
+              <Icon name='ios-apps-outline'/>
             </Button>
-            }
-            <Title>{this.state.page}</Title>
-            {this.state.page != 'Memo Page' &&
-            <Button transparent onPress={this.props.openDrawer}>
-              <Icon name="ios-menu"/>
+            <Button onPress={() => this.setState({page:'Home'})}>
+              Home
+              <Icon name='ios-home-outline'/>
             </Button>
-            }
-            {this.state.page == 'Memo Page' &&
-            <Button transparent onPress={() => this.pushRoute('memoEditPage')}>
-              <Icon name="ios-add" />
+            <Button onPress={() => this.setState({page:'Memo Page'})}>
+              Memo
+              <Icon name='ios-compass'/>
             </Button>
-            }
-          </Header>
-          <Content>
-            {this.state.page == 'Home' &&
-            <Grid style={styles.mt}>
-              {this.props.list.map((item, i) =>
-                <Row key={i}>
-                  <TouchableOpacity
-                    style={styles.row}
-                    onPress={() => this.pushRoute('blankPage', i)}
-                  >
-                    <Text style={styles.text}>{item}</Text>
-                  </TouchableOpacity>
-                </Row>
-              )}
-            </Grid>
-            }
-            {this.state.page == 'Memo Page' &&
-            <MemoPage/>
-            }
-            {this.state.page == 'App Center' &&
-            <AppPage/>
-            }
-            {this.state.page == 'User Center' &&
-            <UserPage/>
-            }
-          </Content>
-          <Footer >
-            <FooterTab>
-              <Button //onPress={() => this.navigateTo('appPage')}
-                onPress={()=>this.setState({page:'App Center'})}>
-                Apps
-                <Icon name='ios-apps-outline'/>
-              </Button>
-              <Button onPress={() => this.setState({page:'Home'})}>
-                Home
-                <Icon name='ios-home-outline'/>
-              </Button>
-              <Button onPress={() => this.setState({page:'Memo Page'})}>
-                Memo
-                <Icon name='ios-compass'/>
-              </Button>
-              <Button onPress={() => this.setState({page:'User Center'})}>
-                User
-                <Icon name='ios-contact-outline'/>
-              </Button>
-            </FooterTab>
-          </Footer>
+            <Button onPress={() => this.setState({page:'User Center'})}>
+              User
+              <Icon name='ios-contact-outline'/>
+            </Button>
+          </FooterTab>
+        </Footer>
       </Container>
     );
   }
@@ -141,6 +144,7 @@ function bindAction (dispatch) {
     setIndex: index => dispatch(setIndex(index)),
     openDrawer: () => dispatch(openDrawer()),
     popRoute: key => dispatch(popRoute(key)),
+    setTitle: (title) => dispatch(setTitle(title)),
     pushRoute: (route, key) => dispatch(pushRoute(route, key)),
     reset: key => dispatch(reset([{ key: 'login' }], key, 0)),
     navigateTo: (route, homeRoute) => dispatch(navigateTo(route, homeRoute)),

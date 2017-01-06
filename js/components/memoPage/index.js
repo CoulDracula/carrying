@@ -42,10 +42,6 @@ class MemoPage extends Component {
     this.props.popRoute(this.props.navigation.key);
   }
 
-  editMemo () {
-    this.props.pushRoute({ key: 'memoEditPage', index: 1 }, this.props.navigation.key);
-  }
-
   render () {
     const { publicMemos }=this.props;
     return (

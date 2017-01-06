@@ -1,11 +1,12 @@
+import * as types from "../constants/actionTypes";
+import type {Action} from './types';
 
-import type { Action } from './types';
-
-export const SET_USER = 'SET_USER';
-
-export function setUser(user:string):Action {
+export function setUser (user: string): Action {
   return {
-    type: SET_USER,
+    type: types.SET_USER,
     payload: user,
   };
 }
+export const setTitle = (title: String) => {
+  return { type: types.SET_TITLE, title }
+};
