@@ -1,14 +1,18 @@
 import {checkHttpStatus, parseJSON} from "../businessLogic/utils";
 import {ajaxCallError} from "./ajaxStatusActions";
 import {SERVER_URL, Authorization} from "../constants/config";
+import {getAuthToken} from '../asyncStorage/authStorage';
 
 class api {
   static  headers () {
-    return {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
-      // 'Authorization': Authorization,
-    }
+    const token = getAuthToken();
+    console.log('ttttt');
+    console.log(token);
+      return {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'x-access-token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIxMTEiLCJleHAiOjE0ODQwNDgwMDc3NzB9.Nc1DAoc7SHHaoxTkDJVPBt10XF-tQl2mOetZFPR1M4E'
+      }
   }
 
   static  get (route) {
@@ -34,7 +38,7 @@ class api {
   static fetchFunc (route, params, verb) {
     const url = `${SERVER_URL}/api/${route}`;
     let options = Object.assign({ method: verb }, params ? { body: JSON.stringify(params) } : null);
-    options.header = api.headers();
+    options.headers= api.headers();
     return fetch(url, options)
       .then(checkHttpStatus)
       .then(parseJSON)

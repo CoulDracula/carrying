@@ -18,13 +18,6 @@ const {
 class MemoDetailPage extends Component {
   constructor (props) {
     super(props);
-    // this.state = {
-    //   selectedItem: undefined,
-    //   selected1: 'key0',
-    //   results: {
-    //     items: [],
-    //   },
-    // };
     this.handleDelete = this.handleDelete.bind(this);
   }
 

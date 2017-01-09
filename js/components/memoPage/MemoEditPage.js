@@ -17,7 +17,7 @@ import {
 } from 'native-base';
 import {openDrawer} from '../../actions/drawer';
 
-import {updatePublicMemo,updatePrivateMemo} from '../../actions/memoActions';
+import {updatePublicMemo, updatePrivateMemo} from '../../actions/memoActions';
 import MemoEditForm from './MemoEditForm';
 // const Item = Picker.Item;
 const {
@@ -34,7 +34,7 @@ class MemoEditPage extends Component {
     //     items: [],
     //   },
     // };
-    this.pushValue=this.pushValue.bind(this);
+    this.pushValue = this.pushValue.bind(this);
   }
 
   // onValueChange (value: string) {
@@ -57,20 +57,19 @@ class MemoEditPage extends Component {
 
   pushValue (form) {
     console.log(form);
-    if(form.private!=true){
+    if (form.private != true) {
       this.props.updatePublicMemo(form).then(
-        ()=>{
+        () => {
           this.popRoute();
-        }
-      );
+        });
     }
-    if(form.private==true){
-      this.props.updatePrivateMemo(form).then(
-        ()=>{
-          this.popRoute();
-        }
-      );
-    }
+    // if (form.private == true) {
+    //   this.props.updatePrivateMemo(form).then(
+    //     this.props.popRoute(this.props.navigation.key)
+    //   ).catch((error)=>{
+    //     console.log(error);
+    //   });
+    // }
   }
 
   render () {

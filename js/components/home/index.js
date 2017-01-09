@@ -44,8 +44,7 @@ class Home extends Component {
   };
 
   pushRoute (route, index) {
-    // this.props.setIndex(index);
-    this.props.setTitle(index);
+    // this.props.setTitle(index);
     this.props.pushRoute({ key: route, index: 1 }, this.props.navigation.key);
   }
 
@@ -65,29 +64,29 @@ class Home extends Component {
         {/*style={styles.content}*/}
         {/*source={require('./img/background.png')}>*/}
 
-        {/*<Header>*/}
-          {/*{this.state.page != 'User Center' &&*/}
-          {/*<Button transparent>*/}
-            {/*<Icon name="ios-arrow-back"/>*/}
-          {/*</Button>*/}
-          {/*}*/}
-          {/*{this.state.page == 'User Center' &&*/}
-          {/*<Button transparent onPress={() => this.props.reset(this.props.navigation.key)}>*/}
-            {/*<Icon name="ios-power"/>*/}
-          {/*</Button>*/}
-          {/*}*/}
-          {/*<Title>{this.state.page}</Title>*/}
-          {/*{this.state.page != 'Memo Page' &&*/}
-          {/*<Button transparent onPress={this.props.openDrawer}>*/}
-            {/*<Icon name="ios-menu"/>*/}
-          {/*</Button>*/}
-          {/*}*/}
-          {/*{this.state.page == 'Memo Page' &&*/}
-          {/*<Button transparent onPress={() => this.pushRoute('memoEditPage','Memo Edit')}>*/}
-            {/*<Icon name="ios-add"/>*/}
-          {/*</Button>*/}
-          {/*}*/}
-        {/*</Header>*/}
+        <Header>
+          {this.state.page != 'User Center' &&
+          <Button transparent>
+            <Icon name="ios-arrow-back"/>
+          </Button>
+          }
+          {this.state.page == 'User Center' &&
+          <Button transparent onPress={() => this.props.reset(this.props.navigation.key)}>
+            <Icon name="ios-power"/>
+          </Button>
+          }
+          <Title>{this.state.page}</Title>
+          {this.state.page != 'Memo Page' &&
+          <Button transparent onPress={this.props.openDrawer}>
+            <Icon name="ios-menu"/>
+          </Button>
+          }
+          {this.state.page == 'Memo Page' &&
+          <Button transparent onPress={() => this.pushRoute('memoEditPage','Memo Edit')}>
+            <Icon name="ios-add"/>
+          </Button>
+          }
+        </Header>
         <Content>
           {this.state.page == 'Home' &&
           <Grid style={styles.mt}>

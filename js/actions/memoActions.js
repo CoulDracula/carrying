@@ -19,14 +19,13 @@ export const deletePublicMemoSuccess = (_id) =>{
 }
 
 export const loadPublicMemos = () => {
-  console.log('load public');
   return dispatch => {
     return api.get(`memos/public`).then(
       json => {
         dispatch(loadPublicMemosSuccess(json));
       }
     );
-  }
+  };
 };
 
 export const loadPublicMemo = (publicMemo) => {
@@ -75,34 +74,11 @@ export const updatePublicMemo = (memo, memoId) => {
       );
     }
     else {
-      const url = `http://192.168.0.118:8000/api/memos/public/`;
-      return fetch(url, {
-        method: "POST",
-        credentials: 'include',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-      })
-        .then(checkHttpStatus)
-        .then(parseJSON)
-        .then((json) => {
-        console.log(json);
-          dispatch(updatePublicMemoSuccess(json));
-        })
-        .catch(error => {
-          // dispatch(ajaxCallError());
-          throw(error);
-        });
-
-      // return api.post(`memos/public`, formData).then(
-      //   json => {
-      //     console.log(json);
-      //     // dispatch(updatePublicMemoSuccess(memo));
-      //     //路由跳转
-      //   }
-      // );
+        return api.post(`memos/public`,formData).then(
+          json => {
+            dispatch(updatePublicMemoSuccess(json));
+          }
+        );
     }
   }
 };

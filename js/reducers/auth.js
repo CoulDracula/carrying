@@ -35,7 +35,7 @@ export default function (state: State = initialState, action: Action): State {
         isAuthenticating: false,
         isAuthenticated: true,
         token: action.payload.token,
-        username: jwtDecode(action.payload.token).username,
+        // username: jwtDecode(action.payload.token).username,
         statusText: 'You have been successfully logged in.'
       });
     case types.AUTH_LOGIN_USER_REQUEST:
