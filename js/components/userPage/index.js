@@ -25,7 +25,7 @@ class UserPage extends Component {
     navigation: React.PropTypes.shape({
       key: React.PropTypes.string,
     }),
-  }
+  };
 
   popRoute () {
     this.props.popRoute(this.props.navigation.key);
@@ -37,7 +37,7 @@ class UserPage extends Component {
   }
 
   render () {
-    const { username ,personName}=this.props;
+    const { username, personName }=this.props;
     return (
 
       <Content padder>
@@ -74,11 +74,10 @@ function bindAction (dispatch) {
 }
 
 const mapStateToProps = (state) => {
-  const personName = state.auth.person.name ? state.auth.person.name : 'not found';
   return {
     navigation: state.cardNavigation,
     username: state.auth.username,
-    personName,
+    personName: state.auth.person.name ? state.auth.person.name : 'not found',
     index: state.list.selectedIndex,
     list: state.list.list,
   }

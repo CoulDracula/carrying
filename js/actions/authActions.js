@@ -5,7 +5,7 @@ import {checkHttpStatus, parseJSON} from '../businessLogic/utils';
 import {beginAjaxCall, ajaxCallError} from './ajaxStatusActions';
 
 import * as types  from '../constants/actionTypes';
-import {saveAuthToken,getAuthToken} from '../asyncStorage/authStorage';
+import {saveAuthToken, getAuthToken} from '../asyncStorage/authStorage';
 import * as strings from '../constants/strings';
 
 export const fetchPersonInfoSuccess = (person) => {
@@ -13,14 +13,13 @@ export const fetchPersonInfoSuccess = (person) => {
 };
 
 export function authLoginUserSuccess (token) {
-  saveAuthToken(token).then(
-    () => {
-      console.log('本地token');
-      console.log(token);
-      return {
-        type: types.AUTH_LOGIN_USER_SUCCESS, payload: { token }
-      };
-    });
+   // saveAuthToken(token).then(
+   //  () => {
+   //    getAuthToken();
+   //  });
+  return {
+    type: types.AUTH_LOGIN_USER_SUCCESS, payload: { token }
+  };
 }
 
 export function authLoginUserFailure (error) {

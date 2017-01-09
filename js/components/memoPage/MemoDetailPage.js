@@ -93,7 +93,7 @@ class MemoDetailPage extends Component {
               <Text>{memo.modified}</Text>
             </CardItem>
           </Card>
-          <Button danger onPress={()=>{this.handleDelete(memo._id)}}> delete </Button>
+          <Button danger bordered small style={styles.button} onPress={()=>{this.handleDelete(memo._id)}}> delete </Button>
         </Content>
       </Container>
     );

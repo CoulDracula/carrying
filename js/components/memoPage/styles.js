@@ -9,6 +9,9 @@ module.exports = StyleSheet.create({
   },
   card:{
     margin:8,
+  },
+  button:{
+    margin:8
   }
 
 });

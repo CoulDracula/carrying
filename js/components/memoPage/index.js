@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 
 import {actions} from 'react-native-navigation-redux-helpers';
 import {Container, Header, Title, Content, Tabs, Button, Icon} from 'native-base';
+import {PullView} from 'react-native-pull';
 
 import {loadPublicMemos,loadPublicMemo} from '../../actions/memoActions';
 import TabOne from './TabOne';
@@ -57,16 +58,23 @@ class MemoPage extends Component {
     this.props.loadPublicMemo(index);
     this.props.pushRoute({ key: route, index: 1 }, this.props.navigation.key);
   }
-
+  onPullRelease(resolve) {
+    //do something
+    setTimeout(() => {
+      resolve();
+    }, 3000);
+  }
 
   render () {
     const { publicMemos }=this.props;
     return (
         <Content >
-          <Tabs tabTextColor="#AAAAAA">
-            <TabOne tabLabel='public' tabTextColor="#AAAAAA" publicMemos={publicMemos} pushRoute={this.pushRoute}/>
-            <TabTwo tabLabel='private' />
-          </Tabs>
+          <PullView onPullRelease={this.onPullRelease}>
+            <Tabs tabTextColor="#AAAAAA">
+              <TabOne tabLabel='public' tabTextColor="#AAAAAA" publicMemos={publicMemos} pushRoute={this.pushRoute}/>
+              <TabTwo tabLabel='private' />
+            </Tabs>
+          </PullView>
         </Content>
     );
   }
