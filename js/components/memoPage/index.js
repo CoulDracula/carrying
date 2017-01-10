@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import {actions} from 'react-native-navigation-redux-helpers';
 import {Container, Header, Title,Spinner, Content, Tabs, Button, Icon} from 'native-base';
 
-import {loadPublicMemos, loadPublicMemo} from '../../actions/memoActions';
+import {loadPublicMemos, loadPublicMemo,loadPrivateMemos} from '../../actions/memoActions';
 import TabOne from './TabOne';
 import TabTwo from './TabTwo';
 import {openDrawer} from '../../actions/drawer';
@@ -35,6 +35,7 @@ class MemoPage extends Component {
     openDrawer: React.PropTypes.func,
     loadPublicMemo: React.PropTypes.func,
     loadPublicMemos: React.PropTypes.func,
+    loadPrivateMemos: React.PropTypes.func,
     pushRoute: React.PropTypes.func,
     popRoute: React.PropTypes.func,
     navigation: React.PropTypes.shape({
@@ -43,8 +44,9 @@ class MemoPage extends Component {
   }
 
   componentWillMount () {
-    // const {loadPublicMemos}=this.props.memoActions;
-    // loadPrivateMemos();
+    if(this.props.privateMemos.length<=0){
+      this.props.loadPrivateMemos();
+    }
     if (this.props.publicMemos.length <= 0) {
       this.props.loadPublicMemos();
     }
@@ -60,12 +62,12 @@ class MemoPage extends Component {
   }
 
   render () {
-    const { publicMemos }=this.props;
+    const { publicMemos,privateMemos }=this.props;
     return (
       <Content >
-          <Tabs tabTextColor="#AAAAAA">
-            <TabOne tabLabel='public' tabTextColor="#AAAAAA" publicMemos={publicMemos} pushRoute={this.pushRoute}/>
-            <TabTwo tabLabel='private'/>
+          <Tabs>
+            <TabOne tabLabel='public'  publicMemos={publicMemos} pushRoute={this.pushRoute}/>
+            <TabTwo tabLabel='private' privateMemos={privateMemos} pushRoute={this.pushRoute}/>
           </Tabs>
       </Content>
     );
@@ -76,6 +78,7 @@ function bindAction (dispatch) {
   return {
     loadPublicMemo: (index) => dispatch(loadPublicMemo(index)),
     loadPublicMemos: () => dispatch(loadPublicMemos()),
+    loadPrivateMemos: () => dispatch(loadPrivateMemos()),
     openDrawer: () => dispatch(openDrawer()),
     pushRoute: (route, key) => dispatch(pushRoute(route, key)),
     popRoute: key => dispatch(popRoute(key)),
@@ -88,6 +91,7 @@ const mapStateToProps = state => ({
   index: state.list.selectedIndex,
   list: state.list.list,
   publicMemos: state.memo.publicMemos,
+  privateMemos:[],
 
 });
 

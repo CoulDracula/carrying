@@ -8,6 +8,10 @@ export const loadPublicMemosSuccess = (publicMemos) => {
   return { type: types.LOAD_PUBLIC_MEMOS_SUCCESS, publicMemos }
 };
 
+export const loadPrivateMemosSuccess = (privateMemos) => {
+  return { type: types.LOAD_PRIVATE_MEMOS_SUCCESS, privateMemos }
+};
+
 export const loadPublicMemoSuccess = (publicMemo) => {
   return { type: types.LOAD_PUBLIC_MEMO_SUCCESS, publicMemo }
 };
@@ -27,7 +31,15 @@ export const loadPublicMemos = () => {
     );
   };
 };
-
+export const loadPrivateMemos = () => {
+  return dispatch => {
+    return api.get(`memos/private`).then(
+      json => {
+        dispatch(loadPrivateMemosSuccess(json));
+      }
+    );
+  };
+};
 export const loadPublicMemo = (publicMemo) => {
   return dispatch => {
         dispatch(loadPublicMemoSuccess(publicMemo));

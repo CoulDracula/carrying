@@ -7,6 +7,7 @@ import { Col, Row, Grid } from 'react-native-easy-grid';
 import { Image } from 'react-native';
 
 import { openDrawer } from '../../actions/drawer';
+import Geolocation from './Geolocation';
 import styles from './styles';
 
 const {
@@ -48,10 +49,10 @@ class MapPage extends Component {
           <Button transparent onPress={() => this.popRoute()}>
             <Icon name="ios-arrow-back" />
           </Button>
-          <Title>Strong Box</Title>
+          <Title>Map</Title>
         </Header>
         <Content padder>
-
+          <Geolocation/>
         </Content>
       </Container>
     );

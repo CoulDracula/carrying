@@ -5,6 +5,7 @@ import {Container, Content, List, ListItem, Text,Button, Icon, Badge} from 'nati
 
 import {openDrawer} from '../../actions/drawer';
 import {authLogout} from '../../actions/authActions';
+import {getAuthToken} from  '../../asyncStorage/authStorage';
 import styles from './styles';
 
 const {
@@ -21,6 +22,7 @@ class UserPage extends Component {
       password: '',
     };
     this.handleLogOut = this.handleLogOut.bind(this);
+    console.log(getAuthToken());
   }
 
   static propTypes = {

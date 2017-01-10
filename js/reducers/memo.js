@@ -20,7 +20,7 @@ export default function (state: State = initialState, action: Action): State {
     case types.LOAD_PUBLIC_MEMO_SUCCESS:
       return Object.assign({}, state, { memo: action.publicMemo });
     case types.LOAD_PRIVATE_MEMOS_SUCCESS:
-      return Object.assign({}, state, { privateMemo: action.privateMemos });
+      return Object.assign({}, state, { privateMemos: action.privateMemos });
     case types.LOAD_PRIVATE_MEMO_SUCCESS:
       return Object.assign({}, state, { privateMemo: action.privateMemo });
     case types.UPDATE_PUBLIC_MEMO_SUCCESS:

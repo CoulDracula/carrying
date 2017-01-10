@@ -83588,7 +83588,7 @@ var _reactNativeModalbox=require(859 /* react-native-modalbox */);var _reactNati
 var _AppNavigator=require(860 /* ./AppNavigator */);var _AppNavigator2=_interopRequireDefault(_AppNavigator);
 var _ProgressBar=require(984 /* ./components/loaders/ProgressBar */);var _ProgressBar2=_interopRequireDefault(_ProgressBar);
 
-var _baseTheme=require(886 /* ./themes/base-theme */);var _baseTheme2=_interopRequireDefault(_baseTheme);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={App:{displayName:'App'}};var _node_modulesReactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/js/App.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _node_modulesReactTransformHmrLibIndexJs2(Component,id);};}
+var _baseTheme=require(887 /* ./themes/base-theme */);var _baseTheme2=_interopRequireDefault(_baseTheme);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={App:{displayName:'App'}};var _node_modulesReactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/js/App.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _node_modulesReactTransformHmrLibIndexJs2(Component,id);};}
 
 var styles=_reactNative.StyleSheet.create({
 container:{
@@ -115319,19 +115319,19 @@ var _reactNativeNavigationReduxHelpers=require(861 /* react-native-navigation-re
 var _drawer=require(862 /* ./actions/drawer */);
 
 var _login=require(863 /* ./components/login/ */);var _login2=_interopRequireDefault(_login);
-var _home=require(877 /* ./components/home/ */);var _home2=_interopRequireDefault(_home);
+var _home=require(878 /* ./components/home/ */);var _home2=_interopRequireDefault(_home);
 var _blankPage=require(899 /* ./components/blankPage */);var _blankPage2=_interopRequireDefault(_blankPage);
 var _splashscreen=require(902 /* ./components/splashscreen/ */);var _splashscreen2=_interopRequireDefault(_splashscreen);
 var _sideBar=require(903 /* ./components/sideBar */);var _sideBar2=_interopRequireDefault(_sideBar);
 var _userPage=require(897 /* ./components/userPage */);var _userPage2=_interopRequireDefault(_userPage);
-var _memoPage=require(888 /* ./components/memoPage */);var _memoPage2=_interopRequireDefault(_memoPage);
+var _memoPage=require(889 /* ./components/memoPage */);var _memoPage2=_interopRequireDefault(_memoPage);
 var _appPage=require(895 /* ./components/appPage */);var _appPage2=_interopRequireDefault(_appPage);
 var _timeTablePage=require(905 /* ./components/timeTablePage */);var _timeTablePage2=_interopRequireDefault(_timeTablePage);
 var _MemoEditPage=require(907 /* ./components/memoPage/MemoEditPage */);var _MemoEditPage2=_interopRequireDefault(_MemoEditPage);
 var _strongBoxPage=require(979 /* ./components/strongBoxPage */);var _strongBoxPage2=_interopRequireDefault(_strongBoxPage);
 var _Map=require(981 /* ./components/map/Map */);var _Map2=_interopRequireDefault(_Map);
 var _MemoDetailPage=require(983 /* ./components/memoPage/MemoDetailPage */);var _MemoDetailPage2=_interopRequireDefault(_MemoDetailPage);
-var _baseTheme=require(886 /* ./themes/base-theme */);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={AppNavigator:{displayName:'AppNavigator'}};var _node_modulesReactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/js/AppNavigator.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _node_modulesReactTransformHmrLibIndexJs2(Component,id);};}var
+var _baseTheme=require(887 /* ./themes/base-theme */);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={AppNavigator:{displayName:'AppNavigator'}};var _node_modulesReactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/js/AppNavigator.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _node_modulesReactTransformHmrLibIndexJs2(Component,id);};}var
 
 
 _popRoute=_reactNativeNavigationReduxHelpers.actions.popRoute;var
@@ -115936,14 +115936,14 @@ var _reactNativeNavigationReduxHelpers=require(861 /* react-native-navigation-re
 var _nativeBase=require(690 /* native-base */);
 
 var _authActions=require(864 /* ../../actions/authActions */);
-var _user=require(874 /* ../../actions/user */);
-var _styles=require(875 /* ./styles */);var _styles2=_interopRequireDefault(_styles);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={Login:{displayName:'Login'}};var _node_modulesReactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/js/components/login/index.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _node_modulesReactTransformHmrLibIndexJs2(Component,id);};}var
+var _user=require(875 /* ../../actions/user */);
+var _styles=require(876 /* ./styles */);var _styles2=_interopRequireDefault(_styles);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={Login:{displayName:'Login'}};var _node_modulesReactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/js/components/login/index.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _node_modulesReactTransformHmrLibIndexJs2(Component,id);};}var
 
 
 _replaceAt=_reactNativeNavigationReduxHelpers.actions.replaceAt;
 
 
-var background=require(876 /* ../../../images/shadow.png */);var Login=_wrapComponent('Login')((_temp=_class=function(_Component){_inherits(Login,_Component);
+var background=require(877 /* ../../../images/shadow.png */);var Login=_wrapComponent('Login')((_temp=_class=function(_Component){_inherits(Login,_Component);
 
 
 
@@ -116086,7 +116086,7 @@ authLogout=authLogout;exports.
 
 
 
-authLoginUser=authLoginUser;var _jwtDecode=require(865 /* jwt-decode */);var _jwtDecode2=_interopRequireDefault(_jwtDecode);var _api=require(890 /* ./api */);var _api2=_interopRequireDefault(_api);var _config=require(868 /* ../constants/config */);var _utils=require(869 /* ../businessLogic/utils */);var _ajaxStatusActions=require(870 /* ./ajaxStatusActions */);var _actionTypes=require(871 /* ../constants/actionTypes */);var types=_interopRequireWildcard(_actionTypes);var _authStorage=require(872 /* ../asyncStorage/authStorage */);var token=_interopRequireWildcard(_authStorage);var _strings=require(873 /* ../constants/strings */);var strings=_interopRequireWildcard(_strings);function _interopRequireWildcard(obj){if(obj&&obj.__esModule){return obj;}else{var newObj={};if(obj!=null){for(var key in obj){if(Object.prototype.hasOwnProperty.call(obj,key))newObj[key]=obj[key];}}newObj.default=obj;return newObj;}}function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var fetchPersonInfoSuccess=exports.fetchPersonInfoSuccess=function fetchPersonInfoSuccess(person){return{type:types.LOAD_PERSON_INFO,payload:{person:person}};};function authLoginUserSuccess(token){return{type:types.AUTH_LOGIN_USER_SUCCESS,payload:{token:token}};}function authLoginUserRequest(){return{type:types.AUTH_LOGIN_USER_REQUEST};}function authLogoutSuccess(){return{type:types.AUTH_LOGOUT_USER};}function authLoginUserFailure(error){return{type:types.AUTH_LOGIN_USER_FAILURE,payload:{status:error.response.status,statusText:error.response.statusText}};}function authLogout(){return function(dispatch){dispatch(authLogoutSuccess());token.deleteAuthToken();};}var fetchPersonInfo=exports.fetchPersonInfo=function fetchPersonInfo(username,token){console.log('get persons message');return function(dispatch){return _api2.default.get().then(function(json){console.log('user information');console.log(json);dispatch(fetchPersonInfoSuccess(json));});};};function authLoginUser(username,password){
+authLoginUser=authLoginUser;var _jwtDecode=require(865 /* jwt-decode */);var _jwtDecode2=_interopRequireDefault(_jwtDecode);var _api=require(868 /* ./api */);var _api2=_interopRequireDefault(_api);var _config=require(872 /* ../constants/config */);var _utils=require(869 /* ../businessLogic/utils */);var _ajaxStatusActions=require(870 /* ./ajaxStatusActions */);var _actionTypes=require(871 /* ../constants/actionTypes */);var types=_interopRequireWildcard(_actionTypes);var _authStorage=require(873 /* ../asyncStorage/authStorage */);var token=_interopRequireWildcard(_authStorage);var _strings=require(874 /* ../constants/strings */);var strings=_interopRequireWildcard(_strings);function _interopRequireWildcard(obj){if(obj&&obj.__esModule){return obj;}else{var newObj={};if(obj!=null){for(var key in obj){if(Object.prototype.hasOwnProperty.call(obj,key))newObj[key]=obj[key];}}newObj.default=obj;return newObj;}}function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var fetchPersonInfoSuccess=exports.fetchPersonInfoSuccess=function fetchPersonInfoSuccess(person){return{type:types.LOAD_PERSON_INFO,payload:{person:person}};};function authLoginUserSuccess(token){return{type:types.AUTH_LOGIN_USER_SUCCESS,payload:{token:token}};}function authLoginUserRequest(){return{type:types.AUTH_LOGIN_USER_REQUEST};}function authLogoutSuccess(){return{type:types.AUTH_LOGOUT_USER};}function authLoginUserFailure(error){return{type:types.AUTH_LOGIN_USER_FAILURE,payload:{status:error.response.status,statusText:error.response.statusText}};}function authLogout(){return function(dispatch){dispatch(authLogoutSuccess());token.deleteAuthToken();};}var fetchPersonInfo=exports.fetchPersonInfo=function fetchPersonInfo(username,token){console.log('get persons message');return function(dispatch){return _api2.default.get().then(function(json){console.log('user information');console.log(json);dispatch(fetchPersonInfoSuccess(json));});};};function authLoginUser(username,password){
 return function(dispatch){
 return _api2.default.post('auth',{username:username,password:password}).then(
 function(json){
@@ -116185,10 +116185,10 @@ return output;
 
 module.exports=typeof window!=='undefined'&&window.atob&&window.atob.bind(window)||polyfill;
 }, "jwt-decode/lib/atob.js");
-__d(890 /* NativeStarterKit/js/actions/api.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++){var source=arguments[i];for(var key in source){if(Object.prototype.hasOwnProperty.call(source,key)){target[key]=source[key];}}}return target;};var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _utils=require(869 /* ../businessLogic/utils */);
+__d(868 /* NativeStarterKit/js/actions/api.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++){var source=arguments[i];for(var key in source){if(Object.prototype.hasOwnProperty.call(source,key)){target[key]=source[key];}}}return target;};var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _utils=require(869 /* ../businessLogic/utils */);
 var _ajaxStatusActions=require(870 /* ./ajaxStatusActions */);
-var _config=require(868 /* ../constants/config */);
-var _authStorage=require(872 /* ../asyncStorage/authStorage */);function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}var
+var _config=require(872 /* ../constants/config */);
+var _authStorage=require(873 /* ../asyncStorage/authStorage */);function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}var
 
 api=function(){function api(){_classCallCheck(this,api);}_createClass(api,null,[{key:"headers",value:function headers()
 {
@@ -116301,16 +116301,14 @@ var SET_TITLE=exports.SET_TITLE='SET_TITLE';
 var BEGIN_AJAX_CALL=exports.BEGIN_AJAX_CALL='BEGIN_AJAX_CALL';
 var AJAX_CALL_ERROR=exports.AJAX_CALL_ERROR='AJAX_CALL_ERROR';
 }, "NativeStarterKit/js/constants/actionTypes.js");
-__d(868 /* NativeStarterKit/js/constants/config.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var SERVER_URL=exports.SERVER_URL='http://192.168.0.118:8000';
+__d(872 /* NativeStarterKit/js/constants/config.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var SERVER_URL=exports.SERVER_URL='http://192.168.0.118:8000';
 var Authorization=exports.Authorization='111111';
 }, "NativeStarterKit/js/constants/config.js");
-__d(872 /* NativeStarterKit/js/asyncStorage/authStorage.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});exports.deleteAuthToken=exports.getAuthToken=exports.saveAuthToken=undefined;var _reactNative=require(12 /* react-native */);
+__d(873 /* NativeStarterKit/js/asyncStorage/authStorage.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});exports.deleteAuthToken=exports.getAuthToken=exports.saveAuthToken=undefined;var _reactNative=require(12 /* react-native */);
 var _jwtDecode=require(865 /* jwt-decode */);var _jwtDecode2=_interopRequireDefault(_jwtDecode);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}
 
 var key='token';
 var saveAuthToken=exports.saveAuthToken=function saveAuthToken(token){
-console.log(token);
-
 var key='token';
 _reactNative.AsyncStorage.setItem(key,token,function(error){
 if(error){
@@ -116324,11 +116322,11 @@ console.log('succ');
 var getAuthToken=exports.getAuthToken=function getAuthToken(){
 _reactNative.AsyncStorage.getItem(key,function(errs,result){
 if(!errs){
-console.log('result = '+result);
 return result;
 }
 });
 };
+
 
 var deleteAuthToken=exports.deleteAuthToken=function deleteAuthToken(){
 _reactNative.AsyncStorage.removeItem(key,function(err){
@@ -116339,7 +116337,7 @@ console.log(err);
 });
 };
 }, "NativeStarterKit/js/asyncStorage/authStorage.js");
-__d(873 /* NativeStarterKit/js/constants/strings.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var LOGIN_PAGE_TITLE=exports.LOGIN_PAGE_TITLE='登  录';
+__d(874 /* NativeStarterKit/js/constants/strings.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var LOGIN_PAGE_TITLE=exports.LOGIN_PAGE_TITLE='登  录';
 var LOGIN_PAGE_SUBTITLE=exports.LOGIN_PAGE_SUBTITLE='欢迎访问洛阳师范学院网络学习空间';
 
 var LOGIN_SUCCESS_MESSAGE=exports.LOGIN_SUCCESS_MESSAGE='用户登录成功!';
@@ -116349,7 +116347,7 @@ var ASSIGNMENT_NO_DEADLINE=exports.ASSIGNMENT_NO_DEADLINE='无截止日期';
 
 var WRONG_CREATE_KNOWLEDGE_MESSAGE=exports.WRONG_CREATE_KNOWLEDGE_MESSAGE='新增知识点失败';
 }, "NativeStarterKit/js/constants/strings.js");
-__d(874 /* NativeStarterKit/js/actions/user.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});exports.setTitle=undefined;exports.
+__d(875 /* NativeStarterKit/js/actions/user.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});exports.setTitle=undefined;exports.
 
 
 setUser=setUser;var _actionTypes=require(871 /* ../constants/actionTypes */);var types=_interopRequireWildcard(_actionTypes);function _interopRequireWildcard(obj){if(obj&&obj.__esModule){return obj;}else{var newObj={};if(obj!=null){for(var key in obj){if(Object.prototype.hasOwnProperty.call(obj,key))newObj[key]=obj[key];}}newObj.default=obj;return newObj;}}function setUser(user){
@@ -116357,7 +116355,7 @@ setUser=setUser;var _actionTypes=require(871 /* ../constants/actionTypes */);var
 var setTitle=exports.setTitle=function setTitle(title){
 };
 }, "NativeStarterKit/js/actions/user.js");
-__d(875 /* NativeStarterKit/js/components/login/styles.js */, function(global, require, module, exports) {
+__d(876 /* NativeStarterKit/js/components/login/styles.js */, function(global, require, module, exports) {
 var React=require(12 /* react-native */);var
 
 StyleSheet=React.StyleSheet,Dimensions=React.Dimensions;
@@ -116394,22 +116392,22 @@ btn:{
 marginTop:20,
 alignSelf:'center'}});
 }, "NativeStarterKit/js/components/login/styles.js");
-__d(876 /* NativeStarterKit/images/shadow.png */, function(global, require, module, exports) {module.exports = require(323 /* react-native/Libraries/Image/AssetRegistry */).registerAsset({"__packager_asset":true,"httpServerLocation":"/assets/images","width":406,"height":720,"scales":[1],"hash":"267f6920c66b72f43e330aa377d4fe03","name":"shadow","type":"png"});
+__d(877 /* NativeStarterKit/images/shadow.png */, function(global, require, module, exports) {module.exports = require(323 /* react-native/Libraries/Image/AssetRegistry */).registerAsset({"__packager_asset":true,"httpServerLocation":"/assets/images","width":406,"height":720,"scales":[1],"hash":"267f6920c66b72f43e330aa377d4fe03","name":"shadow","type":"png"});
 }, "NativeStarterKit/images/shadow.png");
-__d(877 /* NativeStarterKit/js/components/home/index.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _react2=require(16 /* react */);var _react3=_interopRequireDefault(_react2);var _index=require(46 /* ./../../../node_modules/react-transform-hmr/lib/index.js */);var _index2=_interopRequireDefault(_index);var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _class,_temp;
+__d(878 /* NativeStarterKit/js/components/home/index.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _react2=require(16 /* react */);var _react3=_interopRequireDefault(_react2);var _index=require(46 /* ./../../../node_modules/react-transform-hmr/lib/index.js */);var _index2=_interopRequireDefault(_index);var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _class,_temp;
 var _reactNative=require(12 /* react-native */);
 var _reactRedux=require(660 /* react-redux */);
 var _reactNativeNavigationReduxHelpers=require(861 /* react-native-navigation-redux-helpers */);
 var _nativeBase=require(690 /* native-base */);
-var _reactNativeEasyGrid=require(878 /* react-native-easy-grid */);
+var _reactNativeEasyGrid=require(879 /* react-native-easy-grid */);
 
 var _drawer=require(862 /* ../../actions/drawer */);
-var _list=require(884 /* ../../actions/list */);
-var _user=require(874 /* ../../actions/user */);
-var _sideBarNav=require(885 /* ../../actions/sideBarNav */);var _sideBarNav2=_interopRequireDefault(_sideBarNav);
-var _baseTheme=require(886 /* ../../themes/base-theme */);var _baseTheme2=_interopRequireDefault(_baseTheme);
-var _styles=require(887 /* ./styles */);var _styles2=_interopRequireDefault(_styles);
-var _memoPage=require(888 /* ../memoPage */);var _memoPage2=_interopRequireDefault(_memoPage);
+var _list=require(885 /* ../../actions/list */);
+var _user=require(875 /* ../../actions/user */);
+var _sideBarNav=require(886 /* ../../actions/sideBarNav */);var _sideBarNav2=_interopRequireDefault(_sideBarNav);
+var _baseTheme=require(887 /* ../../themes/base-theme */);var _baseTheme2=_interopRequireDefault(_baseTheme);
+var _styles=require(888 /* ./styles */);var _styles2=_interopRequireDefault(_styles);
+var _memoPage=require(889 /* ../memoPage */);var _memoPage2=_interopRequireDefault(_memoPage);
 var _appPage=require(895 /* ../appPage */);var _appPage2=_interopRequireDefault(_appPage);
 var _userPage=require(897 /* ../userPage */);var _userPage2=_interopRequireDefault(_userPage);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={Home:{displayName:'Home'}};var _node_modulesReactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/js/components/home/index.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _node_modulesReactTransformHmrLibIndexJs2(Component,id);};}var
 
@@ -116442,7 +116440,6 @@ page:'Home'};return _this;
 
 
 route,index){
-
 
 this.props.pushRoute({key:route,index:1},this.props.navigation.key);
 }},{key:'popRoute',value:function popRoute()
@@ -116557,12 +116554,12 @@ navigation:state.cardNavigation};};exports.default=
 
 (0,_reactRedux.connect)(mapStateToProps,bindAction)(Home);
 }, "NativeStarterKit/js/components/home/index.js");
-__d(878 /* react-native-easy-grid/index.js */, function(global, require, module, exports) {
+__d(879 /* react-native-easy-grid/index.js */, function(global, require, module, exports) {
 'use strict';
 
-var _Row=require(879 /* ./Components/Row */);var _Row2=_interopRequireDefault(_Row);
-var _Grid=require(882 /* ./Components/Grid */);var _Grid2=_interopRequireDefault(_Grid);
-var _Col=require(883 /* ./Components/Col */);var _Col2=_interopRequireDefault(_Col);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}
+var _Row=require(880 /* ./Components/Row */);var _Row2=_interopRequireDefault(_Row);
+var _Grid=require(883 /* ./Components/Grid */);var _Grid2=_interopRequireDefault(_Grid);
+var _Col=require(884 /* ./Components/Col */);var _Col2=_interopRequireDefault(_Col);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}
 
 
 module.exports={
@@ -116570,14 +116567,14 @@ Row:_Row2.default,
 Col:_Col2.default,
 Grid:_Grid2.default};
 }, "react-native-easy-grid/index.js");
-__d(879 /* react-native-easy-grid/Components/Row.js */, function(global, require, module, exports) {
+__d(880 /* react-native-easy-grid/Components/Row.js */, function(global, require, module, exports) {
 'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _react2=require(16 /* react */);var _react3=_interopRequireDefault(_react2);var _index=require(46 /* ./../../react-transform-hmr/lib/index.js */);var _index2=_interopRequireDefault(_index);var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();
 
 
 var _reactNative=require(12 /* react-native */);
 
-var _computeProps=require(880 /* ../Utils/computeProps */);var _computeProps2=_interopRequireDefault(_computeProps);
-var _lodash=require(881 /* lodash */);var _lodash2=_interopRequireDefault(_lodash);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={RowNB:{displayName:'RowNB'}};var _reactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/node_modules/react-native-easy-grid/Components/Row.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _reactTransformHmrLibIndexJs2(Component,id);};}var RowNB=_wrapComponent('RowNB')(function(_Component){_inherits(RowNB,_Component);function RowNB(){_classCallCheck(this,RowNB);return _possibleConstructorReturn(this,(RowNB.__proto__||Object.getPrototypeOf(RowNB)).apply(this,arguments));}_createClass(RowNB,[{key:'prepareRootProps',value:function prepareRootProps()
+var _computeProps=require(881 /* ../Utils/computeProps */);var _computeProps2=_interopRequireDefault(_computeProps);
+var _lodash=require(882 /* lodash */);var _lodash2=_interopRequireDefault(_lodash);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={RowNB:{displayName:'RowNB'}};var _reactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/node_modules/react-native-easy-grid/Components/Row.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _reactTransformHmrLibIndexJs2(Component,id);};}var RowNB=_wrapComponent('RowNB')(function(_Component){_inherits(RowNB,_Component);function RowNB(){_classCallCheck(this,RowNB);return _possibleConstructorReturn(this,(RowNB.__proto__||Object.getPrototypeOf(RowNB)).apply(this,arguments));}_createClass(RowNB,[{key:'prepareRootProps',value:function prepareRootProps()
 
 
 
@@ -116600,11 +116597,11 @@ _react3.default.createElement(_reactNative.View,this.prepareRootProps(),this.pro
 
 }}]);return RowNB;}(_react2.Component));exports.default=RowNB;
 }, "react-native-easy-grid/Components/Row.js");
-__d(880 /* react-native-easy-grid/Utils/computeProps.js */, function(global, require, module, exports) {var React=require(16 /* react */);
+__d(881 /* react-native-easy-grid/Utils/computeProps.js */, function(global, require, module, exports) {var React=require(16 /* react */);
 
 var ReactNativePropRegistry=require(204 /* react/lib/ReactNativePropRegistry */);
 
-var _=require(881 /* lodash */);
+var _=require(882 /* lodash */);
 
 module.exports=function(incomingProps,defaultProps){
 
@@ -116643,7 +116640,7 @@ return computedProps;
 
 };
 }, "react-native-easy-grid/Utils/computeProps.js");
-__d(881 /* lodash/lodash.js */, function(global, require, module, exports) {/**
+__d(882 /* lodash/lodash.js */, function(global, require, module, exports) {/**
  * @license
  * Lodash <https://lodash.com/>
  * Copyright JS Foundation and other contributors <https://js.foundation/>
@@ -133728,15 +133725,15 @@ root._=_;
 }
 }).call(this);
 }, "lodash/lodash.js");
-__d(882 /* react-native-easy-grid/Components/Grid.js */, function(global, require, module, exports) {
+__d(883 /* react-native-easy-grid/Components/Grid.js */, function(global, require, module, exports) {
 'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _react2=require(16 /* react */);var _react3=_interopRequireDefault(_react2);var _index=require(46 /* ./../../react-transform-hmr/lib/index.js */);var _index2=_interopRequireDefault(_index);var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();
 
 
 var _reactNative=require(12 /* react-native */);
-var _computeProps=require(880 /* ../Utils/computeProps */);var _computeProps2=_interopRequireDefault(_computeProps);
-var _lodash=require(881 /* lodash */);var _lodash2=_interopRequireDefault(_lodash);
-var _Col=require(883 /* ./Col */);var _Col2=_interopRequireDefault(_Col);
-var _Row=require(879 /* ./Row */);var _Row2=_interopRequireDefault(_Row);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={GridNB:{displayName:'GridNB'}};var _reactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/node_modules/react-native-easy-grid/Components/Grid.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _reactTransformHmrLibIndexJs2(Component,id);};}var GridNB=_wrapComponent('GridNB')(function(_Component){_inherits(GridNB,_Component);function GridNB(){_classCallCheck(this,GridNB);return _possibleConstructorReturn(this,(GridNB.__proto__||Object.getPrototypeOf(GridNB)).apply(this,arguments));}_createClass(GridNB,[{key:'prepareRootProps',value:function prepareRootProps()
+var _computeProps=require(881 /* ../Utils/computeProps */);var _computeProps2=_interopRequireDefault(_computeProps);
+var _lodash=require(882 /* lodash */);var _lodash2=_interopRequireDefault(_lodash);
+var _Col=require(884 /* ./Col */);var _Col2=_interopRequireDefault(_Col);
+var _Row=require(880 /* ./Row */);var _Row2=_interopRequireDefault(_Row);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={GridNB:{displayName:'GridNB'}};var _reactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/node_modules/react-native-easy-grid/Components/Grid.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _reactTransformHmrLibIndexJs2(Component,id);};}var GridNB=_wrapComponent('GridNB')(function(_Component){_inherits(GridNB,_Component);function GridNB(){_classCallCheck(this,GridNB);return _possibleConstructorReturn(this,(GridNB.__proto__||Object.getPrototypeOf(GridNB)).apply(this,arguments));}_createClass(GridNB,[{key:'prepareRootProps',value:function prepareRootProps()
 
 
 
@@ -133768,13 +133765,13 @@ _react3.default.createElement(_reactNative.View,this.prepareRootProps(),this.pro
 
 }}]);return GridNB;}(_react2.Component));exports.default=GridNB;
 }, "react-native-easy-grid/Components/Grid.js");
-__d(883 /* react-native-easy-grid/Components/Col.js */, function(global, require, module, exports) {
+__d(884 /* react-native-easy-grid/Components/Col.js */, function(global, require, module, exports) {
 'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _react2=require(16 /* react */);var _react3=_interopRequireDefault(_react2);var _index=require(46 /* ./../../react-transform-hmr/lib/index.js */);var _index2=_interopRequireDefault(_index);var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();
 
 
 var _reactNative=require(12 /* react-native */);
-var _computeProps=require(880 /* ../Utils/computeProps */);var _computeProps2=_interopRequireDefault(_computeProps);
-var _lodash=require(881 /* lodash */);var _lodash2=_interopRequireDefault(_lodash);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={ColunmNB:{displayName:'ColunmNB'}};var _reactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/node_modules/react-native-easy-grid/Components/Col.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _reactTransformHmrLibIndexJs2(Component,id);};}var ColunmNB=_wrapComponent('ColunmNB')(function(_Component){_inherits(ColunmNB,_Component);function ColunmNB(){_classCallCheck(this,ColunmNB);return _possibleConstructorReturn(this,(ColunmNB.__proto__||Object.getPrototypeOf(ColunmNB)).apply(this,arguments));}_createClass(ColunmNB,[{key:'prepareRootProps',value:function prepareRootProps()
+var _computeProps=require(881 /* ../Utils/computeProps */);var _computeProps2=_interopRequireDefault(_computeProps);
+var _lodash=require(882 /* lodash */);var _lodash2=_interopRequireDefault(_lodash);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={ColunmNB:{displayName:'ColunmNB'}};var _reactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/node_modules/react-native-easy-grid/Components/Col.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _reactTransformHmrLibIndexJs2(Component,id);};}var ColunmNB=_wrapComponent('ColunmNB')(function(_Component){_inherits(ColunmNB,_Component);function ColunmNB(){_classCallCheck(this,ColunmNB);return _possibleConstructorReturn(this,(ColunmNB.__proto__||Object.getPrototypeOf(ColunmNB)).apply(this,arguments));}_createClass(ColunmNB,[{key:'prepareRootProps',value:function prepareRootProps()
 
 
 
@@ -133797,7 +133794,7 @@ _react3.default.createElement(_reactNative.View,this.prepareRootProps(),this.pro
 
 }}]);return ColunmNB;}(_react2.Component));exports.default=ColunmNB;
 }, "react-native-easy-grid/Components/Col.js");
-__d(884 /* NativeStarterKit/js/actions/list.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});exports.
+__d(885 /* NativeStarterKit/js/actions/list.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});exports.
 
 
 
@@ -133809,7 +133806,7 @@ payload:index};
 
 }
 }, "NativeStarterKit/js/actions/list.js");
-__d(885 /* NativeStarterKit/js/actions/sideBarNav.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});exports.default=
+__d(886 /* NativeStarterKit/js/actions/sideBarNav.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});exports.default=
 
 
 
@@ -133836,7 +133833,7 @@ dispatch(pushRoute({key:route,index:1},navigation.key));
 };
 }
 }, "NativeStarterKit/js/actions/sideBarNav.js");
-__d(886 /* NativeStarterKit/js/themes/base-theme.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _color=require(697 /* color */);var _color2=_interopRequireDefault(_color);
+__d(887 /* NativeStarterKit/js/themes/base-theme.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _color=require(697 /* color */);var _color2=_interopRequireDefault(_color);
 
 var _reactNative=require(12 /* react-native */);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}exports.default=
 
@@ -134062,7 +134059,7 @@ inputLineHeight:24,
 jumbotronBg:'#C9C9CE',
 jumbotronPadding:30};
 }, "NativeStarterKit/js/themes/base-theme.js");
-__d(887 /* NativeStarterKit/js/components/home/styles.js */, function(global, require, module, exports) {
+__d(888 /* NativeStarterKit/js/components/home/styles.js */, function(global, require, module, exports) {
 var React=require(12 /* react-native */);var
 
 StyleSheet=React.StyleSheet;
@@ -134083,13 +134080,13 @@ alignItems:'center'},
 mt:{
 marginTop:18}});
 }, "NativeStarterKit/js/components/home/styles.js");
-__d(888 /* NativeStarterKit/js/components/memoPage/index.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _react2=require(16 /* react */);var _react3=_interopRequireDefault(_react2);var _index=require(46 /* ./../../../node_modules/react-transform-hmr/lib/index.js */);var _index2=_interopRequireDefault(_index);var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _class,_temp;
+__d(889 /* NativeStarterKit/js/components/memoPage/index.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _react2=require(16 /* react */);var _react3=_interopRequireDefault(_react2);var _index=require(46 /* ./../../../node_modules/react-transform-hmr/lib/index.js */);var _index2=_interopRequireDefault(_index);var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _class,_temp;
 var _reactRedux=require(660 /* react-redux */);
 
 var _reactNativeNavigationReduxHelpers=require(861 /* react-native-navigation-redux-helpers */);
 var _nativeBase=require(690 /* native-base */);
 
-var _memoActions=require(889 /* ../../actions/memoActions */);
+var _memoActions=require(890 /* ../../actions/memoActions */);
 var _TabOne=require(891 /* ./TabOne */);var _TabOne2=_interopRequireDefault(_TabOne);
 var _TabTwo=require(894 /* ./TabTwo */);var _TabTwo2=_interopRequireDefault(_TabTwo);
 var _drawer=require(862 /* ../../actions/drawer */);
@@ -134127,9 +134124,11 @@ _this.pushRoute=_this.pushRoute.bind(_this);return _this;
 
 
 
+
 {
-
-
+if(this.props.privateMemos.length<=0){
+this.props.loadPrivateMemos();
+}
 if(this.props.publicMemos.length<=0){
 this.props.loadPublicMemos();
 }
@@ -134144,23 +134143,24 @@ this.props.loadPublicMemo(index);
 this.props.pushRoute({key:route,index:1},this.props.navigation.key);
 }},{key:'render',value:function render()
 
-{var
-publicMemos=this.props.publicMemos;
+{var _props=
+this.props,publicMemos=_props.publicMemos,privateMemos=_props.privateMemos;
 return(
 _react3.default.createElement(_nativeBase.Content,null,
-_react3.default.createElement(_nativeBase.Tabs,{tabTextColor:'#AAAAAA'},
-_react3.default.createElement(_TabOne2.default,{tabLabel:'public',tabTextColor:'#AAAAAA',publicMemos:publicMemos,pushRoute:this.pushRoute}),
-_react3.default.createElement(_TabTwo2.default,{tabLabel:'private'}))));
+_react3.default.createElement(_nativeBase.Tabs,null,
+_react3.default.createElement(_TabOne2.default,{tabLabel:'public',publicMemos:publicMemos,pushRoute:this.pushRoute}),
+_react3.default.createElement(_TabTwo2.default,{tabLabel:'private',privateMemos:privateMemos,pushRoute:this.pushRoute}))));
 
 
 
-}}]);return MemoPage;}(_react2.Component),_class.propTypes={name:_react3.default.PropTypes.string,index:_react3.default.PropTypes.number,list:_react3.default.PropTypes.arrayOf(_react3.default.PropTypes.string),openDrawer:_react3.default.PropTypes.func,loadPublicMemo:_react3.default.PropTypes.func,loadPublicMemos:_react3.default.PropTypes.func,pushRoute:_react3.default.PropTypes.func,popRoute:_react3.default.PropTypes.func,navigation:_react3.default.PropTypes.shape({key:_react3.default.PropTypes.string})},_temp));
+}}]);return MemoPage;}(_react2.Component),_class.propTypes={name:_react3.default.PropTypes.string,index:_react3.default.PropTypes.number,list:_react3.default.PropTypes.arrayOf(_react3.default.PropTypes.string),openDrawer:_react3.default.PropTypes.func,loadPublicMemo:_react3.default.PropTypes.func,loadPublicMemos:_react3.default.PropTypes.func,loadPrivateMemos:_react3.default.PropTypes.func,pushRoute:_react3.default.PropTypes.func,popRoute:_react3.default.PropTypes.func,navigation:_react3.default.PropTypes.shape({key:_react3.default.PropTypes.string})},_temp));
 
 
 function bindAction(dispatch){
 return{
 loadPublicMemo:function loadPublicMemo(index){return dispatch((0,_memoActions.loadPublicMemo)(index));},
 loadPublicMemos:function loadPublicMemos(){return dispatch((0,_memoActions.loadPublicMemos)());},
+loadPrivateMemos:function loadPrivateMemos(){return dispatch((0,_memoActions.loadPrivateMemos)());},
 openDrawer:function openDrawer(){return dispatch((0,_drawer.openDrawer)());},
 pushRoute:function pushRoute(route,key){return dispatch(_pushRoute(route,key));},
 popRoute:function popRoute(key){return dispatch(_popRoute(key));}};
@@ -134172,21 +134172,26 @@ navigation:state.cardNavigation,
 name:state.user.name,
 index:state.list.selectedIndex,
 list:state.list.list,
-publicMemos:state.memo.publicMemos};};exports.default=
+publicMemos:state.memo.publicMemos,
+privateMemos:[]};};exports.default=
 
 
 
 
 (0,_reactRedux.connect)(mapStateToProps,bindAction)(MemoPage);
 }, "NativeStarterKit/js/components/memoPage/index.js");
-__d(889 /* NativeStarterKit/js/actions/memoActions.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});exports.deletePublicMemo=exports.deletePrivateMemo=exports.updatePublicMemo=exports.updatePrivateMemo=exports.loadPublicMemo=exports.loadPublicMemos=exports.deletePublicMemoSuccess=exports.updatePublicMemoSuccess=exports.loadPublicMemoSuccess=exports.loadPublicMemosSuccess=undefined;var _actionTypes=require(871 /* ../constants/actionTypes */);var types=_interopRequireWildcard(_actionTypes);
-var _api=require(890 /* ./api */);var _api2=_interopRequireDefault(_api);
+__d(890 /* NativeStarterKit/js/actions/memoActions.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});exports.deletePublicMemo=exports.deletePrivateMemo=exports.updatePublicMemo=exports.updatePrivateMemo=exports.loadPublicMemo=exports.loadPrivateMemos=exports.loadPublicMemos=exports.deletePublicMemoSuccess=exports.updatePublicMemoSuccess=exports.loadPublicMemoSuccess=exports.loadPrivateMemosSuccess=exports.loadPublicMemosSuccess=undefined;var _actionTypes=require(871 /* ../constants/actionTypes */);var types=_interopRequireWildcard(_actionTypes);
+var _api=require(868 /* ./api */);var _api2=_interopRequireDefault(_api);
 var _utils=require(869 /* ../businessLogic/utils */);
 var _ajaxStatusActions=require(870 /* ./ajaxStatusActions */);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _interopRequireWildcard(obj){if(obj&&obj.__esModule){return obj;}else{var newObj={};if(obj!=null){for(var key in obj){if(Object.prototype.hasOwnProperty.call(obj,key))newObj[key]=obj[key];}}newObj.default=obj;return newObj;}}
 
 
 var loadPublicMemosSuccess=exports.loadPublicMemosSuccess=function loadPublicMemosSuccess(publicMemos){
 return{type:types.LOAD_PUBLIC_MEMOS_SUCCESS,publicMemos:publicMemos};
+};
+
+var loadPrivateMemosSuccess=exports.loadPrivateMemosSuccess=function loadPrivateMemosSuccess(privateMemos){
+return{type:types.LOAD_PRIVATE_MEMOS_SUCCESS,privateMemos:privateMemos};
 };
 
 var loadPublicMemoSuccess=exports.loadPublicMemoSuccess=function loadPublicMemoSuccess(publicMemo){
@@ -134208,7 +134213,15 @@ dispatch(loadPublicMemosSuccess(json));
 
 };
 };
+var loadPrivateMemos=exports.loadPrivateMemos=function loadPrivateMemos(){
+return function(dispatch){
+return _api2.default.get("memos/private").then(
+function(json){
+dispatch(loadPrivateMemosSuccess(json));
+});
 
+};
+};
 var loadPublicMemo=exports.loadPublicMemo=function loadPublicMemo(publicMemo){
 return function(dispatch){
 dispatch(loadPublicMemoSuccess(publicMemo));
@@ -134352,25 +134365,36 @@ margin:8}});
 }, "NativeStarterKit/js/components/memoPage/styles.js");
 __d(893 /* NativeStarterKit/js/components/memoPage/img/logo.png */, function(global, require, module, exports) {module.exports = require(323 /* react-native/Libraries/Image/AssetRegistry */).registerAsset({"__packager_asset":true,"httpServerLocation":"/assets/js/components/memoPage/img","width":120,"height":120,"scales":[1],"hash":"285c36b25a9b320db3c1902489ae6019","name":"logo","type":"png"});
 }, "NativeStarterKit/js/components/memoPage/img/logo.png");
-__d(894 /* NativeStarterKit/js/components/memoPage/TabTwo.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});
-var _react=require(16 /* react */);var _react2=_interopRequireDefault(_react);
-
+__d(894 /* NativeStarterKit/js/components/memoPage/TabTwo.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _react=require(16 /* react */);var _react2=_interopRequireDefault(_react);
+var _reactNative=require(12 /* react-native */);
 var _reactNativeNavigationReduxHelpers=require(861 /* react-native-navigation-redux-helpers */);
-var _nativeBase=require(690 /* native-base */);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}
+var _nativeBase=require(690 /* native-base */);
 
+var _styles=require(892 /* ./styles */);var _styles2=_interopRequireDefault(_styles);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}
 
-
-
-
-
-
-var TabTwo=function TabTwo(){
+var TabTwo=function TabTwo(_ref){var privateMemos=_ref.privateMemos,pushRoute=_ref.pushRoute;
 
 
 return(
 _react2.default.createElement(_nativeBase.Container,null,
 _react2.default.createElement(_nativeBase.Content,null,
-_react2.default.createElement(_nativeBase.Text,null,'two'))));
+privateMemos.length<=0&&
+_react2.default.createElement(_nativeBase.Spinner,null),
+
+privateMemos.map(
+function(privateMemo){
+return(
+_react2.default.createElement(_nativeBase.List,{key:privateMemo._id},
+_react2.default.createElement(_nativeBase.ListItem,{onPress:function onPress(){return pushRoute('memoDetail',privateMemo);}},
+_react2.default.createElement(_nativeBase.Thumbnail,{square:true,source:require(893 /* ./img/logo.png */)}),
+_react2.default.createElement(_nativeBase.Text,null,privateMemo.title),
+_react2.default.createElement(_nativeBase.Text,{note:true},privateMemo.grade))));
+
+
+
+
+
+}))));
 
 
 
@@ -134384,7 +134408,7 @@ __d(895 /* NativeStarterKit/js/components/appPage/index.js */, function(global, 
 var _reactRedux=require(660 /* react-redux */);
 var _reactNativeNavigationReduxHelpers=require(861 /* react-native-navigation-redux-helpers */);
 var _nativeBase=require(690 /* native-base */);
-var _reactNativeEasyGrid=require(878 /* react-native-easy-grid */);
+var _reactNativeEasyGrid=require(879 /* react-native-easy-grid */);
 var _reactNative=require(12 /* react-native */);
 
 var _drawer=require(862 /* ../../actions/drawer */);
@@ -134422,7 +134446,7 @@ this.props.pushRoute({key:route,index:1},this.props.navigation.key);
 return(
 _react3.default.createElement(_nativeBase.Content,{padder:true},
 _react3.default.createElement(_nativeBase.Card,{style:_styles2.default.card},
-_react3.default.createElement(_nativeBase.CardItem,{onPress:function onPress(){return _this2.pushRoute('memoEditPage');}},
+_react3.default.createElement(_nativeBase.CardItem,{onPress:function onPress(){return _this2.pushRoute('timeTable');}},
 _react3.default.createElement(_nativeBase.Thumbnail,null),
 _react3.default.createElement(_nativeBase.Text,null,'TimeTable'),
 _react3.default.createElement(_nativeBase.Text,{note:true},'when and where'))),
@@ -134484,6 +134508,7 @@ var _nativeBase=require(690 /* native-base */);
 
 var _drawer=require(862 /* ../../actions/drawer */);
 var _authActions=require(864 /* ../../actions/authActions */);
+var _authStorage=require(873 /* ../../asyncStorage/authStorage */);
 var _styles=require(898 /* ./styles */);var _styles2=_interopRequireDefault(_styles);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={UserPage:{displayName:'UserPage'}};var _node_modulesReactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/js/components/userPage/index.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _node_modulesReactTransformHmrLibIndexJs2(Component,id);};}var
 
 
@@ -134499,7 +134524,8 @@ _this.state={
 name:'',
 password:''};
 
-_this.handleLogOut=_this.handleLogOut.bind(_this);return _this;
+_this.handleLogOut=_this.handleLogOut.bind(_this);
+console.log((0,_authStorage.getAuthToken)());return _this;
 }_createClass(UserPage,[{key:'popRoute',value:function popRoute()
 
 
@@ -134739,7 +134765,7 @@ __d(902 /* NativeStarterKit/js/components/splashscreen/index.js */, function(glo
 
 var _reactNative=require(12 /* react-native */);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={SplashPage:{displayName:'SplashPage'}};var _node_modulesReactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/js/components/splashscreen/index.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _node_modulesReactTransformHmrLibIndexJs2(Component,id);};}
 
-var launchscreen=require(876 /* ../../../images/shadow.png */);var SplashPage=_wrapComponent('SplashPage')((_temp=_class=function(_Component){_inherits(SplashPage,_Component);function SplashPage(){_classCallCheck(this,SplashPage);return _possibleConstructorReturn(this,(SplashPage.__proto__||Object.getPrototypeOf(SplashPage)).apply(this,arguments));}_createClass(SplashPage,[{key:'componentWillMount',value:function componentWillMount()
+var launchscreen=require(877 /* ../../../images/shadow.png */);var SplashPage=_wrapComponent('SplashPage')((_temp=_class=function(_Component){_inherits(SplashPage,_Component);function SplashPage(){_classCallCheck(this,SplashPage);return _possibleConstructorReturn(this,(SplashPage.__proto__||Object.getPrototypeOf(SplashPage)).apply(this,arguments));}_createClass(SplashPage,[{key:'componentWillMount',value:function componentWillMount()
 
 
 
@@ -134767,9 +134793,9 @@ __d(903 /* NativeStarterKit/js/components/sideBar/index.js */, function(global, 
 var _reactRedux=require(660 /* react-redux */);
 var _nativeBase=require(690 /* native-base */);
 
-var _list=require(884 /* ../../actions/list */);
-var _sideBarNav=require(885 /* ../../actions/sideBarNav */);var _sideBarNav2=_interopRequireDefault(_sideBarNav);
-var _baseTheme=require(886 /* ../../themes/base-theme */);var _baseTheme2=_interopRequireDefault(_baseTheme);
+var _list=require(885 /* ../../actions/list */);
+var _sideBarNav=require(886 /* ../../actions/sideBarNav */);var _sideBarNav2=_interopRequireDefault(_sideBarNav);
+var _baseTheme=require(887 /* ../../themes/base-theme */);var _baseTheme2=_interopRequireDefault(_baseTheme);
 
 var _style=require(904 /* ./style */);var _style2=_interopRequireDefault(_style);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={SideBar:{displayName:'SideBar'}};var _node_modulesReactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/js/components/sideBar/index.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _node_modulesReactTransformHmrLibIndexJs2(Component,id);};}var SideBar=_wrapComponent('SideBar')((_temp=_class=function(_Component){_inherits(SideBar,_Component);function SideBar(){_classCallCheck(this,SideBar);return _possibleConstructorReturn(this,(SideBar.__proto__||Object.getPrototypeOf(SideBar)).apply(this,arguments));}_createClass(SideBar,[{key:'navigateTo',value:function navigateTo(
 
@@ -134831,7 +134857,7 @@ __d(905 /* NativeStarterKit/js/components/timeTablePage/index.js */, function(gl
 var _reactRedux=require(660 /* react-redux */);
 var _reactNativeNavigationReduxHelpers=require(861 /* react-native-navigation-redux-helpers */);
 var _nativeBase=require(690 /* native-base */);
-var _reactNativeEasyGrid=require(878 /* react-native-easy-grid */);
+var _reactNativeEasyGrid=require(879 /* react-native-easy-grid */);
 var _reactNative=require(12 /* react-native */);
 
 var _drawer=require(862 /* ../../actions/drawer */);
@@ -134935,7 +134961,7 @@ var _nativeBase=require(690 /* native-base */);
 
 var _drawer=require(862 /* ../../actions/drawer */);
 
-var _memoActions=require(889 /* ../../actions/memoActions */);
+var _memoActions=require(890 /* ../../actions/memoActions */);
 var _MemoEditForm=require(908 /* ./MemoEditForm */);var _MemoEditForm2=_interopRequireDefault(_MemoEditForm);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={MemoEditPage:{displayName:'MemoEditPage'}};var _node_modulesReactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/js/components/memoPage/MemoEditPage.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _node_modulesReactTransformHmrLibIndexJs2(Component,id);};}var
 
 
@@ -138889,7 +138915,7 @@ __d(979 /* NativeStarterKit/js/components/strongBoxPage/index.js */, function(gl
 var _reactRedux=require(660 /* react-redux */);
 var _reactNativeNavigationReduxHelpers=require(861 /* react-native-navigation-redux-helpers */);
 var _nativeBase=require(690 /* native-base */);
-var _reactNativeEasyGrid=require(878 /* react-native-easy-grid */);
+var _reactNativeEasyGrid=require(879 /* react-native-easy-grid */);
 var _reactNative=require(12 /* react-native */);
 
 var _drawer=require(862 /* ../../actions/drawer */);
@@ -138979,7 +139005,7 @@ __d(981 /* NativeStarterKit/js/components/map/Map.js */, function(global, requir
 var _reactRedux=require(660 /* react-redux */);
 var _reactNativeNavigationReduxHelpers=require(861 /* react-native-navigation-redux-helpers */);
 var _nativeBase=require(690 /* native-base */);
-var _reactNativeEasyGrid=require(878 /* react-native-easy-grid */);
+var _reactNativeEasyGrid=require(879 /* react-native-easy-grid */);
 var _reactNative=require(12 /* react-native */);
 
 var _drawer=require(862 /* ../../actions/drawer */);
@@ -139068,10 +139094,10 @@ __d(983 /* NativeStarterKit/js/components/memoPage/MemoDetailPage.js */, functio
 var _reactRedux=require(660 /* react-redux */);
 var _reactNativeNavigationReduxHelpers=require(861 /* react-native-navigation-redux-helpers */);
 var _nativeBase=require(690 /* native-base */);
-var _reactNativeEasyGrid=require(878 /* react-native-easy-grid */);
+var _reactNativeEasyGrid=require(879 /* react-native-easy-grid */);
 var _reactNative=require(12 /* react-native */);
 
-var _memoActions=require(889 /* ../../actions/memoActions */);
+var _memoActions=require(890 /* ../../actions/memoActions */);
 var _drawer=require(862 /* ../../actions/drawer */);
 var _styles=require(892 /* ./styles */);var _styles2=_interopRequireDefault(_styles);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var _components={MemoDetailPage:{displayName:'MemoDetailPage'}};var _node_modulesReactTransformHmrLibIndexJs2=(0,_index2.default)({filename:'/Users/shuai/workspace/test/carrying/js/components/memoPage/MemoDetailPage.js',components:_components,locals:[module],imports:[_react3.default]});function _wrapComponent(id){return function(Component){return _node_modulesReactTransformHmrLibIndexJs2(Component,id);};}var
 
@@ -144721,7 +144747,7 @@ name:action.payload});
 
 }
 return state;
-};var _user=require(874 /* ../actions/user */);var initialState={name:''};
+};var _user=require(875 /* ../actions/user */);var initialState={name:''};
 }, "NativeStarterKit/js/reducers/user.js");
 __d(1044 /* NativeStarterKit/js/reducers/list.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++){var source=arguments[i];for(var key in source){if(Object.prototype.hasOwnProperty.call(source,key)){target[key]=source[key];}}}return target;};exports.default=
 
@@ -144750,7 +144776,7 @@ selectedIndex:action.payload});
 
 }
 return state;
-};var _list=require(884 /* ../actions/list */);var initialState={list:['React Native Starter Kit','Navigation Experimental','NativeBase Easy Grid','NativeBase','CodePush','Redux'],selectedIndex:undefined};
+};var _list=require(885 /* ../actions/list */);var initialState={list:['React Native Starter Kit','Navigation Experimental','NativeBase Easy Grid','NativeBase','CodePush','Redux'],selectedIndex:undefined};
 }, "NativeStarterKit/js/reducers/list.js");
 __d(1045 /* NativeStarterKit/js/reducers/memo.js */, function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++){var source=arguments[i];for(var key in source){if(Object.prototype.hasOwnProperty.call(source,key)){target[key]=source[key];}}}return target;};exports.default=
 
@@ -144774,7 +144800,7 @@ return _extends({},state,{publicMemos:action.publicMemos.results});
 case types.LOAD_PUBLIC_MEMO_SUCCESS:
 return _extends({},state,{memo:action.publicMemo});
 case types.LOAD_PRIVATE_MEMOS_SUCCESS:
-return _extends({},state,{privateMemo:action.privateMemos});
+return _extends({},state,{privateMemos:action.privateMemos});
 case types.LOAD_PRIVATE_MEMO_SUCCESS:
 return _extends({},state,{privateMemo:action.privateMemo});
 case types.UPDATE_PUBLIC_MEMO_SUCCESS:

@@ -1,26 +1,34 @@
+import React, {Component} from 'react';
+import { Image ,View} from 'react-native';
+import {actions} from 'react-native-navigation-redux-helpers';
+import { Container, Content, Card, CardItem, Text, Spinner,  List, ListItem, Thumbnail, Icon } from 'native-base';
 
-import React, { Component } from 'react';
-// import { connect } from 'react-redux';
-import { actions } from 'react-native-navigation-redux-helpers';
-import { Container, Header, Title, Content, Text, Button, Icon } from 'native-base';
-// import TabOne from './tabOne';
-// import TabTwo from './tabTwo';
-//
-// import { openDrawer } from '../../actions/drawer';
-// import styles from './styles';
+import styles from './styles';
+
+const TabTwo = ({ privateMemos ,pushRoute}) => {
 
 
-const TabTwo = ()=> {
+  return (
+    <Container>
+      <Content>
+        {privateMemos.map(
+          privateMemo => {
+            return (
+              <List key={privateMemo._id} >
+                <ListItem onPress={() => pushRoute('memoDetail', privateMemo)}>
+                  <Thumbnail square  source={require('./img/logo.png')}  />
+                  <Text>{privateMemo.title}</Text>
+                  <Text note>{privateMemo.grade}</Text>
+                </ListItem>
+              </List>
 
 
-    return (
-      <Container>
-        <Content>
-          <Text>two</Text>
-        </Content>
-      </Container>
-    );
-
+            )
+          }
+        )}
+      </Content>
+    </Container>
+  );
 }
 
 
