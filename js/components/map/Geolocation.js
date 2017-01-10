@@ -15,7 +15,6 @@ class Geolocation extends Component {
       initialPosition: 'unknown',
       lastPosition: 'unknown'
     };
-    this.pushRoute = this.pushRoute.bind(this);
   }
 
   componentDidMount () {

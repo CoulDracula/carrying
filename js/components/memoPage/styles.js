@@ -12,6 +12,5 @@ module.exports = StyleSheet.create({
   },
   button:{
     margin:8
-  }
-
+  },
 });

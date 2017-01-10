@@ -5,8 +5,6 @@ import { Container, Content, Card, CardItem, Text, Spinner,  List, ListItem, Thu
 
 import styles from './styles';
 const TabOne = ({ publicMemos ,pushRoute}) => {
-
-
   return (
     <Container>
       <Content>
@@ -21,11 +19,9 @@ const TabOne = ({ publicMemos ,pushRoute}) => {
               <ListItem onPress={() => pushRoute('memoDetail', publicMemo)}>
                 <Thumbnail square  source={require('./img/logo.png')}  />
                 <Text>{publicMemo.title}</Text>
-                <Text note>{publicMemo.grade}</Text>
+                <Text note >{publicMemo.grade}</Text>
               </ListItem>
             </List>
-
-
             )
           }
         )}

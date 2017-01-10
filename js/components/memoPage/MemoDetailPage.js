@@ -1,7 +1,16 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {actions} from 'react-native-navigation-redux-helpers';
-import {Container, Header, Button, Title, Content, Text, Icon, Card, CardItem, Thumbnail} from 'native-base';
+import {
+  Container, Header, Button, Title,
+  List,
+  ListItem,
+  InputGroup,
+  Input,
+  Icon,
+  Text,
+  Picker,
+  Content, Card, CardItem, Thumbnail} from 'native-base';
 import {Col, Row, Grid} from 'react-native-easy-grid';
 import {Image} from 'react-native';
 

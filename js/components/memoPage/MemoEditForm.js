@@ -1,40 +1,58 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {
-  Container,
-  Content,
-  Header,
-  Title,
-  List,
-  ListItem,
-  InputGroup,
-  Input,
-  Icon,
-  Text,
-  Picker,
-  Button
-} from 'native-base';
+var i18n = require('tcomb-form-native/lib/i18n/en');
+import {Container, Content, Button} from 'native-base';
 import  tcomb from 'tcomb-form-native';
 
 import styles from './styles';
 
 const Form = tcomb.form.Form;
+const Country = tcomb.enums({
+  'high': 'high',
+  'middle': 'middle',
+  'low':'low'
+});
 
-let Person = tcomb.struct({
+const Person = tcomb.struct({
   title: tcomb.String,
   content: tcomb.maybe(tcomb.String),
   date:tcomb.Date,
-  grade: tcomb.String,
+  grade: Country,
   author: tcomb.String,
   private: tcomb.Boolean,
 });
-
-let options = {
+tcomb.form.Form.i18n = i18n;
+const options = {
+  i18n: {
+    optional: ' (可选的)',
+    required: '',
+    add: 'Add',   // add button
+    remove: '✘',  // remove button
+    up: '↑',      // move up button
+    down: '↓'     // move down button
+  },
   fields: {
     title: {
-      error: 'Insert a valid title'
+      label: '标题' , //自定义label,
+      placeholder:'initial title',
+      // help: 'Your help message here',
+    },
+    content: {
+      label: 'content',
+      multiline:true,
+      },
+    grade: {
+      label: 'grade',
+      nullOption : false,
+    },
+    date: {
+      label: 'date'
     }
-  }
+  },
+  // auto: 'placeholders',
+};
+let value ={
+  grade:'low'
 };
 
 class MemoEditForm extends Component {
@@ -44,7 +62,7 @@ class MemoEditForm extends Component {
   }
 
   onPress () {
-  var value = this.refs.form.getValue();
+  const value = this.refs.form.getValue();
   if (value) {
     const {pushValue}=this.props;
     pushValue(value);
@@ -59,6 +77,7 @@ class MemoEditForm extends Component {
           <Form
             ref='form'
             type={Person}
+            value={value}
             options={options}
           />
           <Button bordered
