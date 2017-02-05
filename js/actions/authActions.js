@@ -58,9 +58,9 @@ export function authLoginUser (username, password) {
   return (dispatch) => {
     return api.post('auth', { username, password }).then(
       json => {
+        console.log(json.token);
         token.saveAuthToken(json.token);
         dispatch(authLoginUserSuccess(json.token));
-        // dispatch(fetchPersonInfo(json.token));
       }
     );
   };

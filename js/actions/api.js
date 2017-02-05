@@ -11,7 +11,7 @@ class api {
       return {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
-        'x-access-token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIxMTEiLCJleHAiOjE0ODQwNDgwMDc3NzB9.Nc1DAoc7SHHaoxTkDJVPBt10XF-tQl2mOetZFPR1M4E'
+        'x-access-token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ6aGFuZ3NhbiIsImV4cCI6MTQ4NjM1NzcwMzgwMH0.UG3_RscpfvefGP2mzLfup-dVRlvpqaVvskWLB5_kzBY'
       }
   }
 
@@ -31,9 +31,9 @@ class api {
     return this.fetchFunc(route, params, 'PATCH');
   }
 
-  static  put (route, parms) {
-    return this.fetchFunc(route, parms, 'PUT');
-  }
+  // static  put (route, parms) {
+  //   return this.fetchFunc(route, parms, 'PUT');
+  // }
 
   static fetchFunc (route, params, verb) {
     const url = `${SERVER_URL}/api/${route}`;
